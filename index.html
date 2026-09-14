@@ -1,1369 +1,433 @@
-
-
-
-Yapıştırılan metin.txt
-Belge
- web sitemizin kodu
-Evet, web sitenizin kodu bu dosyada. İlk bölümde sitenin temel SEO/meta yapısı da görünüyor: furkanyaylacik.com, başlık, açıklama ve canonical adresi tanımlanmış. 
-Kodun tamamı oldukça uzun ve dosyada devam ediyor. İstersen bunu baştan sona inceleyip:
-
-tasarım ve mobil uyumluluk,
-
-SEO,
-
-hız/performance,
-
-teknik hatalar,
-
-Google indeksleme,
-
-WhatsApp/randevu dönüşümü,
-
-güvenlik,
-
-erişilebilirlik,
-
-psikolojik danışmanlık sitesi açısından profesyonellik
-başlıklarında tek tek değerlendirebilirim.
-
-
-şimdilik dur senden ricam buna harita eklemeni istiyorum ben sana kodu vereceğim
-
-Tabii. 👍
-Kodu gönder; mevcut tasarımı ve yapıyı bozmadan harita bölümünü ekleyelim.
-Özellikle şunlara dikkat ederim:
-📍 Konya’daki danışmanlık ofisinin konumunu gösterme
-🗺️ Google Maps / harita entegrasyonu
-📱 Mobil uyumlu görünüm
-🔗 “Yol Tarifi Al” butonu
-🌐 SEO açısından uygun yapı
-Tasarımın mevcut renk, font ve genel estetiğiyle uyum
-Gereksiz kod yükü oluşturmama
-Kodu gönderdiğinde doğrudan onun üzerinden çalışalım.
-
-
-<!-- Google Haritalar Konum Alanı -->
-<div class="map-container" style="width: 100%; max-width: 1200px; margin: 2rem auto; padding: 0 1rem;">
-  <iframe 
-    src="https://maps.google.com/maps?q=Psikolojik%20Dan%C3%B1%C5%9Fman%20Furkan%20Yaylac%C4%B1k%20Yaka%20Aziz%20Mahmut%20Hudai%20Cd.%20%C4%B0%C3%A7kon%20Plaza%20No%3A185A%2F302%2C%2042090%20Meram%2FKonya&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-    width="100%" 
-    height="420" 
-    style="border:0; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
-
-Evet, bu kod harita alanını eklemek için uygun. Verdiğin konum sorgusu da şu adresi hedefliyor:
-İçkon Plaza No:185A/302, Meram/Konya
-Bunu mevcut sitene eklerken kodu biraz daha temiz ve profesyonel hale getirebiliriz. Özellikle haritanın yanında/altında “Yol Tarifi Al” butonu eklemek iyi olur.
-Ama şimdilik kodun tamamını değiştirmiyorum. Sen ana site kodunu gönder; ben bu harita bölümünü uygun yere yerleştirip, mevcut tasarımı bozmadan sana düzenlenmiş tam kodu hazırlayayım.
-
-
-<a href="https://maps.google.com/maps?cid=1207920154398275596" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #233f38; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 500;">
-  Google Haritalar'da Yol Tarifi Al
-</a>
-
-Anladım. O zaman durum farklı: elindeki kod, şu anda GitHub'da bulunan sitenin kodunun kendisi ve eski kodun ayrı bir yedeği yok.
-Bu durumda sorun değil. Elimizdeki kod üzerinden ilerleyebiliriz. Dosyanın görünen başlangıcında zaten sitenin temel yapısı, SEO bilgileri ve renk/font sistemi mevcut. 
-Ancak dosyanın geri kalanının bana aktarımı şu anda eksik görünüyor. Eksik kısmı tahmin ederek yeniden yazmak istemiyorum, çünkü sitenin mevcut bölümlerini kaybedebiliriz.
-En güvenli çözüm
-GitHub'da şu şekilde yap:
-Repository → index.html → Raw
-Açılan sayfada Ctrl+A → Ctrl+C yapıp buraya yapıştır.
-Eğer GitHub'daki dosya gerçekten yalnızca elimizdeki koddan ibaretse, o zaman sorun yok; onu temel alarak harita eklenmiş, baştan sona çalışır tek HTML dosyasını oluşturabiliriz.
-İstersen ayrıca mevcut GitHub sürümünü kaybetmemek için önce GitHub'da yeni bir branch/commit oluşturarak yedek alma konusunda da seni adım adım yönlendirebilirim.
-
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furkan Yaylacık — Psikolojik Danışman | Konya & Online</title>
-    
-    <!-- SEO Meta Etiketleri -->
-    <meta name="description" content="Konya Meram'da yüz yüze ve online psikolojik danışmanlık hizmetleri. Yetişkin, ergen ve çift danışmanlığı, ACT, MBSR ve MOXO Dikkat Performans Testi.">
-    <meta name="keywords" content="Psikolojik Danışman, Konya Psikolog, Meram Psikolojik Danışmanlık, ACT Terapisi, MBSR, Online Danışmanlık, MOXO Testi, Çift Danışmanlığı">
-    <meta name="author" content="Furkan Yaylacık">
-    <link rel="canonical" href="https://furkanyaylacik.com/">
-    <meta name="theme-color" content="#233f38">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psikolojik Danışman Furkan Yaylacık | Konya Meram Psikolojik Danışmanlık</title>
+  
+  <!-- SEO & Meta Etiketleri -->
+  <meta name="description" content="Konya Meram'da yetişkin, ergen ve çiftlere yönelik psikolojik danışmanlık hizmetleri, MOXO dikkat testi ve online seanslar. Ruh sağlığınız için güvenli bir alan.">
+  <meta name="keywords" content="Psikolojik Danışman Furkan Yaylacık, Konya Psikolog, Meram Psikolojik Danışmanlık, Çift Terapisi Konya, MOXO Dikkat Testi, Bireysel Psikolojik Danışmanlık">
+  <meta name="author" content="Furkan Yaylacık">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://furkanyaylacik.com/">
 
-    <!-- Open Graph (Sosyal Medya Paylaşım) Etiketleri -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Furkan Yaylacık — Psikolojik Danışman | Konya & Online">
-    <meta property="og:description" content="Kabul ve Kararlılık Terapisi (ACT) ve Mindfulness (MBSR) odaklı yüz yüze ve online psikolojik danışmanlık.">
-    <meta property="og:url" content="https://furkanyaylacik.com/">
-    <meta property="og:image" content="https://furkanyaylacik.com/assets/og-image.jpg">
-    <meta property="og:locale" content="tr_TR">
+  <!-- Open Graph (Sosyal Medya Paylaşım Etiketleri) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://furkanyaylacik.com/">
+  <meta property="og:title" content="Psikolojik Danışman Furkan Yaylacık">
+  <meta property="og:description" content="Konya Meram'da yüz yüze ve online psikolojik danışmanlık hizmetleri. Kaliteli ve güvenilir bir terapi süreci.">
+  <meta property="og:image" content="https://furkanyaylacik.com/og-image.jpg">
+  <meta property="og:site_name" content="Psikolojik Danışman Furkan Yaylacık">
+  <meta property="og:locale" content="tr_TR">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Furkan Yaylacık — Psikolojik Danışman">
-    <meta name="twitter:description" content="Konya Meram ve Online Psikolojik Danışmanlık Hizmetleri.">
-    <meta name="twitter:image" content="https://furkanyaylacik.com/assets/og-image.jpg">
+  <!-- Google Fonts Entegrasyonu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Schema.org Yapısal Veri (Google Arama & Harita Uyumlu) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Psikolojik Danışman Furkan Yaylacık",
+    "url": "https://furkanyaylacik.com",
+    "logo": "https://furkanyaylacik.com/logo.png",
+    "image": "https://furkanyaylacik.com/og-image.jpg",
+    "description": "Konya Meram'da yetişkin, ergen ve çiftlere yönelik yüz yüze ve online psikolojik danışmanlık hizmetleri.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Meram",
+      "addressRegion": "Konya",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 37.8801402,
+      "longitude": 32.4315839
+    },
+    "hasMap": "https://maps.google.com/?q=Psikolojik+Dan%C4%B1%C5%9Fman+Furkan+Yaylac%C4%B1k",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/pd.furkanyaylack"
+    ]
+  }
+  </script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Site İçi CSS Stilleri -->
+  <style>
+    /* Temel Ayarlar ve Değişkenler */
+    :root {
+      --primary: #233f38;
+      --primary-hover: #192f29;
+      --secondary: #eef4f1;
+      --text-dark: #2d3748;
+      --text-light: #64748b;
+      --white: #ffffff;
+      --bg-light: #fcfcfc;
+      --border-color: #e2e8f0;
+      --font-title: 'Fraunces', serif;
+      --font-body: 'Inter', sans-serif;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
 
-    <!-- Schema.org Yapısal Veri (Google Yerel İşletme Kaydı) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Furkan Yaylacık — Psikolojik Danışman",
-      "url": "https://furkanyaylacik.com",
-      "image": "https://furkanyaylacik.com/assets/og-image.jpg",
-      "description": "Konya Meram'da yüz yüze ve online psikolojik danışmanlık, ACT, MBSR ve MOXO Dikkat Testi hizmetleri.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Meram",
-        "addressRegion": "Konya",
-        "addressCountry": "TR"
-      },
-      "sameAs": [
-        "https://www.instagram.com/pd.furkanyaylack",
-        "https://www.linkedin.com/in/furkanyaylacik"
-      ]
-    }
-    </script>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <style>
-        /* Modern, Minimalist & Doğal Renk Paleti */
-        :root {
-            --primary: #233f38;        /* Koyu Çam / Orman Yeşili */
-            --accent: #5e8c7b;         /* Yumuşak Mint Yeşili */
-            --accent-light: #e8f0ec;   /* Açık Mint Tonu */
-            --bg: #faf9f6;             /* Kırık Beyaz / Krem */
-            --text-main: #2b302e;      /* Koyu Nötr Gri */
-            --text-muted: #626a66;     /* Yumuşak Nötr Gri */
-            --white: #ffffff;
-            --font-heading: 'Fraunces', serif;
-            --font-body: 'Plus Jakarta Sans', sans-serif;
-            --transition: all 0.3s ease;
-        }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      line-height: 1.6;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        body {
-            font-family: var(--font-body);
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        /* Tipografi */
-        h1, h2, h3, h4 {
-            font-family: var(--font-heading);
-            color: var(--primary);
-            font-weight: 600;
-            line-height: 1.25;
-        }
+    /* Üst Menü (Header) */
+    header {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1140px;
-            margin: 0 auto;
-        }
+    .logo {
+      font-family: var(--font-title);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
 
-        /* Header / Navigasyon */
-        header {
-            position: sticky;
-            top: 0;
-            background-color: rgba(250, 249, 246, 0.95);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(35, 63, 56, 0.08);
-            padding: 1rem 0;
-        }
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
 
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
 
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
+    .nav-links a:hover {
+      color: var(--primary);
+    }
 
-        .logo span {
-            display: block;
-            font-family: var(--font-body);
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease;
+      display: inline-block;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
-        }
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+    }
 
-        .nav-links a {
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
+    /* Hero (Giriş) Bölümü */
+    .hero {
+      padding: 80px 0;
+      text-align: center;
+      background: linear-gradient(180deg, var(--white) 0%, var(--bg-light) 100%);
+    }
 
-        .nav-links a:hover {
-            color: var(--accent);
-        }
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
 
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            display: inline-block;
-        }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      max-width: 680px;
+      margin: 0 auto 30px auto;
+    }
 
-        .btn-primary:hover {
-            background-color: var(--accent);
-            transform: translateY(-2px);
-        }
+    /* Hizmetlerimiz Bölümü */
+    .services {
+      padding: 60px 0;
+    }
 
-        /* Hero Bölümü */
-        .hero {
-            padding: 5rem 0 4rem;
-            display: flex;
-            align-items: center;
-            min-height: 75vh;
-        }
+    .section-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
-            align-items: center;
-        }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
 
-        .hero-content h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1.25rem;
-        }
+    .service-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+      transition: transform 0.2s ease;
+    }
 
-        .hero-content p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
 
-        .hero-tags {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
+    .service-card h3 {
+      font-family: var(--font-title);
+      color: var(--primary);
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
 
-        .tag {
-            background-color: var(--accent-light);
-            color: var(--primary);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
+    .service-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
 
-        .hero-card {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(35, 63, 56, 0.05);
-            border: 1px solid rgba(35, 63, 56, 0.05);
-            text-align: center;
-        }
+    /* Konum & Harita Bölümü */
+    .location-section {
+      padding: 70px 0;
+      background-color: var(--white);
+      border-top: 1px solid var(--border-color);
+    }
 
-        .hero-card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
+    .location-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: center;
+      background-color: var(--bg-light);
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+    }
 
-        .hero-card p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
+    .location-info h2 {
+      font-family: var(--font-title);
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
 
-        /* Genel Bölümler */
-        section {
-            padding: 5rem 0;
-        }
+    .location-info .subtitle {
+      color: var(--text-light);
+      margin-bottom: 28px;
+    }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
+    .info-block {
+      margin-bottom: 20px;
+    }
 
-        .section-title h2 {
-            font-size: 2.2rem;
-            margin-bottom: 0.75rem;
-        }
+    .info-block strong {
+      display: block;
+      color: var(--primary);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+    }
 
-        .section-title p {
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    .info-block span {
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
 
-        /* Hakkımda Bölümü */
-        .about {
-            background-color: var(--white);
-        }
+    /* Harita Duyarlılık (Responsive) Yapısı */
+    .map-responsive {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
 
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
+    .map-responsive iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-        .about-text p {
-            margin-bottom: 1.25rem;
-            color: var(--text-muted);
-        }
+    /* Alt Bilgi (Footer) */
+    footer {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.95;
+    }
 
-        /* Hizmetler / Çalışma Alanları */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
+    /* Mobil Ekran Uyumluluğu (Media Queries) */
+    @media (max-width: 900px) {
+      .location-wrapper {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
 
-        .service-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(35, 63, 56, 0.06);
-            transition: var(--transition);
-        }
+      .map-responsive {
+        min-height: 320px;
+      }
+    }
 
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(35, 63, 56, 0.06);
-            border-color: var(--accent);
-        }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none; /* İsteğe bağlı olarak mobil menüye dönüştürülebilir */
+      }
 
-        .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-        }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
 
-        .service-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Yaklaşımım (ACT & MBSR) */
-        .approach {
-            background-color: var(--accent-light);
-            border-radius: 24px;
-            margin: 2rem 0;
-            padding: 4rem 2rem;
-        }
-
-        .approach-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-
-        .approach-box h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.4rem;
-        }
-
-        .approach-box p {
-            color: var(--text-muted);
-        }
-
-        /* Footer / İletişim */
-        footer {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 4rem 0 2rem;
-            text-align: center;
-        }
-
-        footer h2 {
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        footer p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-            list-style: none;
-        }
-
-        .social-links a {
-            color: var(--white);
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 1.5rem;
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-        /* Mobil Uyum */
-        @media (max-width: 768px) {
-            .hero-grid, .about-grid, .approach-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container nav-wrapper">
-            <a href="#" class="logo">
-                Furkan Yaylacık
-                <span>Psikolojik Danışman</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#hakkimda">Hakkımda</a></li>
-                <li><a href="#hizmetler">Hizmetler</a></li>
-                <li><a href="#yaklasim">Yaklaşımım</a></li>
-                <li><a href="#iletisim" class="btn-primary">İletişim & Randevu</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <!-- Hero Bölümü -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="hero-tags">
-                    <span class="tag">Konya / Meram</span>
-                    <span class="tag">Yüz Yüze & Online</span>
-                </div>
-                <h1>Daha Bilinçli ve Dengeli Bir Yaşam İçin Profesyonel Destek</h1>
-                <p>Yetişkin, ergen ve çiftler için Kabul ve Kararlılık Terapisi (ACT) ve Mindfulness tabanlı psikolojik danışmanlık hizmetleri.</p>
-                <a href="#iletisim" class="btn-primary">Seans Planla</a>
-            </div>
-            <div class="hero-card">
-                <h3>Danışmanlık Süreçleri</h3>
-                <p>Yaşamınızdaki zorluklarla baş ederken güvenli, yargılamayan ve bilimsel temelli bir rehberlik.</p>
-                <a href="#hizmetler" style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Hizmetleri İncele →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hakkımda -->
-    <section id="hakkimda" class="about">
-        <div class="container about-grid">
-            <div class="about-text">
-                <div class="section-title" style="text-align: left; margin-bottom: 1.5rem;">
-                    <h2>Hakkımda</h2>
-                </div>
-                <p>2020 yılından bu yana yetişkinler, ergenler ve çiftlerle psikolojik danışmanlık alanında çalışmaktayım. Lisans eğitimimin ardından bireylerin içsel potansiyellerini keşfetmelerine ve psikolojik esneklik kazanmalarına odaklanan ekollerle pratik yapmaktayım.</p>
-                <p>Konya Meram'daki ofisimde yüz yüze görüşmelerin yanı sıra, farklı şehirlerden ve ülkelerden danışanlarım için online seanslar yürütmekte, akademik ve bireysel gelişim süreçlerinde rehberlik sunmaktayım.</p>
-            </div>
-            <div style="background: var(--accent-light); padding: 3rem; border-radius: 20px; text-align: center;">
-                <h3 style="margin-bottom: 1rem;">Çalışma Alanlarım</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Bireysel Danışmanlık, Çift Terapisi, Ergen Rehberliği, Sınav ve Akademik Odak Danışmanlığı, MOXO Dikkat Testi Değerlendirmeleri.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hizmetler -->
-    <section id="hizmetler" class="container">
-        <div class="section-title">
-            <h2>Hizmetlerimiz</h2>
-            <p>Bilimsel temelli yaklaşımlarla ihtiyaçlarınıza uygun profesyonel destek alanları.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Yetişkin Danışmanlığı</h3>
-                <p>Kaygı, stres, yaşam geçişleri ve duygusal zorluklarla başa çıkma becerilerini güçlendirme.</p>
-            </div>
-            <div class="service-card">
-                <h3>Çift Danışmanlığı</h3>
-                <p>İlişkilerde iletişim engellerini aşma, bağları güçlendirme ve çatışma çözüm süreçleri.</p>
-            </div>
-            <div class="service-card">
-                <h3>Ergen & Eğitim Danışmanlığı</h3>
-                <p>Sınav süreçleri, odak problemleri ve ergenlik döneminin getirdiği psikolojik uyum süreçleri.</p>
-            </div>
-            <div class="service-card">
-                <h3>MOXO Dikkat Testi</h3>
-                <p>Çocuk, ergen ve yetişkinler için dikkat, zamanlama, impulsivite ve hiperaktivite ölçümü.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Yaklaşımım -->
-    <div class="container">
-        <section id="yaklasim" class="approach">
-            <div class="section-title" style="margin-bottom: 2.5rem;">
-                <h2>Terapötik Yaklaşımım</h2>
-                <p>Görüşmelerimizde benimsediğim temel bilimsel çerçeveler.</p>
-            </div>
-            <div class="approach-grid">
-                <div class="approach-box">
-                    <h3>Kabul ve Kararlılık Terapisi (ACT)</h3>
-                    <p>Düşüncelerimizle savaşmak yerine onları kabul etmeyi, değerlerimiz doğrultusunda anlamlı ve esnek bir yaşam kurmayı hedefleyen çağdaş bir yaklaşım.</p>
-                </div>
-                <div class="approach-box">
-                    <h3>Mindfulness (Bilinçli Farkındalık)</h3>
-                    <p>Şu anki deneyime yargılamadan dikkat kesilmeyi, zihinsel berraklık kazanmayı ve içsel huzuru artırmayı sağlayan pratik farkındalık egzersizleri.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer / İletişim -->
-    <footer id="iletisim">
-        <div class="container">
-            <h2>İletişim & Randevu</h2>
-            <p>Konya Meram'da yüz yüze seanslar veya online görüşmeler için iletişime geçebilirsiniz.</p>
-            
-            <ul class="social-links">
-                <li><a href="https://www.instagram.com/pd.furkanyaylack" target="_blank">Instagram (@pd.furkanyaylack)</a></li>
-                <li><a href="https://www.linkedin.com/in/furkanyaylacik" target="_blank">LinkedIn</a></li>
-                <li><a href="mailto:iletisim@furkanyaylacik.com">E-Posta Gönder</a></li>
-            </ul>
-
-            <div class="copyright">
-                &copy; 2026 Furkan Yaylacık — Tüm Hakları Saklıdır.
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
-
-Evet, şimdi kodun tamamı elimizde. Buna doğrudan Google Haritalar konumunu ve “Google Haritalar'da Yol Tarifi Al” butonunu ekleyebiliriz.
-Ayrıca kodda gözüme çarpan birkaç ifadeyi de sitenin profesyonel dili açısından düzelttim:
-“Hizmetlerimiz” → Hizmetler
-“Terapötik Yaklaşımım” → Yaklaşımım
-“Çift Terapisi” → Çift Danışmanlığı
-“seans” yerine gerektiği yerlerde görüşme / psikolojik danışmanlık
-Harita adresini Schema.org verisine de ekledim.
-Haritayı iletişim bölümüne ekledim.
-Mobil görünüm için harita ve butonu uyumlu hale getirdim.
-Instagram/LinkedIn bağlantılarına rel="noopener noreferrer" ekledim.
-Aşağıdaki kodu GitHub'daki index.html dosyanın tamamının yerine yapıştırabilirsin.
-
-<!DOCTYPE html><html lang="tr"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Furkan Yaylacık — Psikolojik Danışman | Konya & Online</title>
-
-    <!-- SEO Meta Etiketleri -->
-    <meta name="description" content="Konya Meram'da yüz yüze ve online psikolojik danışmanlık hizmetleri. Yetişkin, ergen ve çift danışmanlığı, ACT, MBSR ve MOXO Dikkat Performans Testi.">
-    <meta name="keywords" content="Psikolojik Danışman, Konya Psikolojik Danışman, Meram Psikolojik Danışmanlık, ACT, MBSR, Online Psikolojik Danışmanlık, MOXO Testi, Çift Danışmanlığı">
-    <meta name="author" content="Furkan Yaylacık">
-
-    <link rel="canonical" href="https://furkanyaylacik.com/">
-    <meta name="theme-color" content="#233f38">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Furkan Yaylacık — Psikolojik Danışman | Konya & Online">
-    <meta property="og:description" content="ACT ve MBSR temelli yüz yüze ve online psikolojik danışmanlık. Konya Meram'da ofis görüşmeleri ve online danışmanlık.">
-    <meta property="og:url" content="https://furkanyaylacik.com/">
-    <meta property="og:image" content="https://furkanyaylacik.com/assets/og-image.jpg">
-    <meta property="og:locale" content="tr_TR">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Furkan Yaylacık — Psikolojik Danışman">
-    <meta name="twitter:description" content="Konya Meram ve online psikolojik danışmanlık hizmetleri.">
-    <meta name="twitter:image" content="https://furkanyaylacik.com/assets/og-image.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Schema.org Yapısal Veri -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Furkan Yaylacık — Psikolojik Danışman",
-      "url": "https://furkanyaylacik.com/",
-      "image": "https://furkanyaylacik.com/assets/og-image.jpg",
-      "description": "Konya Meram'da yüz yüze ve online psikolojik danışmanlık, ACT, MBSR ve MOXO Dikkat Testi hizmetleri.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Yaka Aziz Mahmut Hudai Cd. İçkon Plaza No:185A/302",
-        "postalCode": "42090",
-        "addressLocality": "Meram",
-        "addressRegion": "Konya",
-        "addressCountry": "TR"
-      },
-      "sameAs": [
-        "https://www.instagram.com/pd.furkanyaylack",
-        "https://www.linkedin.com/in/furkanyaylacik"
-      ]
-    }
-    </script>
-
-    <style>
-
-        /* =========================
-           RENKLER & DEĞİŞKENLER
-        ========================== */
-
-        :root {
-            --primary: #233f38;
-            --accent: #5e8c7b;
-            --accent-light: #e8f0ec;
-            --bg: #faf9f6;
-            --text-main: #2b302e;
-            --text-muted: #626a66;
-            --white: #ffffff;
-
-            --font-heading: 'Fraunces', serif;
-            --font-body: 'Plus Jakarta Sans', sans-serif;
-
-            --transition: all 0.3s ease;
-        }
-
-
-        /* =========================
-           GENEL
-        ========================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--bg);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: var(--font-heading);
-            color: var(--primary);
-            font-weight: 600;
-            line-height: 1.25;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1140px;
-            margin: 0 auto;
-        }
-
-
-        /* =========================
-           HEADER / NAVİGASYON
-        ========================== */
-
-        header {
-            position: sticky;
-            top: 0;
-
-            background-color: rgba(250, 249, 246, 0.95);
-            backdrop-filter: blur(8px);
-
-            z-index: 1000;
-
-            border-bottom: 1px solid rgba(35, 63, 56, 0.08);
-
-            padding: 1rem 0;
-        }
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .logo span {
-            display: block;
-
-            font-family: var(--font-body);
-
-            font-size: 0.75rem;
-            font-weight: 500;
-
-            color: var(--accent);
-
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-
-            list-style: none;
-
-            align-items: center;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            font-size: 0.95rem;
-
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-
-        /* =========================
-           BUTON
-        ========================== */
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-
-            padding: 0.75rem 1.5rem;
-
-            border-radius: 30px;
-
-            font-weight: 600;
-            font-size: 0.9rem;
-
-            transition: var(--transition);
-
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        .btn-map {
-            display: inline-block;
-
-            margin-top: 1rem;
-
-            padding: 0.85rem 1.5rem;
-
-            background-color: var(--primary);
-            color: var(--white);
-
-            border-radius: 30px;
-
-            font-weight: 600;
-            font-size: 0.9rem;
-
-            transition: var(--transition);
-        }
-
-        .btn-map:hover {
-            background-color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-
-        /* =========================
-           HERO
-        ========================== */
-
-        .hero {
-            padding: 5rem 0 4rem;
-
-            display: flex;
-            align-items: center;
-
-            min-height: 75vh;
-        }
-
-        .hero-grid {
-            display: grid;
-
-            grid-template-columns: 1.2fr 0.8fr;
-
-            gap: 4rem;
-
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 2.8rem;
-
-            margin-bottom: 1.25rem;
-        }
-
-        .hero-content p {
-            font-size: 1.15rem;
-
-            color: var(--text-muted);
-
-            margin-bottom: 2rem;
-        }
-
-        .hero-tags {
-            display: flex;
-
-            gap: 0.75rem;
-
-            flex-wrap: wrap;
-
-            margin-bottom: 2rem;
-        }
-
-        .tag {
-            background-color: var(--accent-light);
-
-            color: var(--primary);
-
-            padding: 0.4rem 1rem;
-
-            border-radius: 20px;
-
-            font-size: 0.85rem;
-
-            font-weight: 600;
-        }
-
-        .hero-card {
-            background: var(--white);
-
-            border-radius: 20px;
-
-            padding: 2.5rem;
-
-            box-shadow: 0 10px 30px rgba(35, 63, 56, 0.05);
-
-            border: 1px solid rgba(35, 63, 56, 0.05);
-
-            text-align: center;
-        }
-
-        .hero-card h3 {
-            margin-bottom: 1rem;
-
-            font-size: 1.5rem;
-        }
-
-        .hero-card p {
-            color: var(--text-muted);
-
-            margin-bottom: 1.5rem;
-
-            font-size: 0.95rem;
-        }
-
-
-        /* =========================
-           GENEL BÖLÜMLER
-        ========================== */
-
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-
-            margin-bottom: 3.5rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-
-            margin-bottom: 0.75rem;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-
-            max-width: 600px;
-
-            margin: 0 auto;
-        }
-
-
-        /* =========================
-           HAKKIMDA
-        ========================== */
-
-        .about {
-            background-color: var(--white);
-        }
-
-        .about-grid {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 4rem;
-
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 1.25rem;
-
-            color: var(--text-muted);
-        }
-
-        .about-card {
-            background: var(--accent-light);
-
-            padding: 3rem;
-
-            border-radius: 20px;
-
-            text-align: center;
-        }
-
-        .about-card h3 {
-            margin-bottom: 1rem;
-        }
-
-        .about-card p {
-            color: var(--text-muted);
-
-            font-size: 0.95rem;
-        }
-
-
-        /* =========================
-           HİZMETLER
-        ========================== */
-
-        .services-grid {
-            display: grid;
-
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(250px, 1fr)
-            );
-
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--white);
-
-            padding: 2.5rem 2rem;
-
-            border-radius: 16px;
-
-            border: 1px solid rgba(35, 63, 56, 0.06);
-
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-
-            box-shadow: 0 12px 30px rgba(35, 63, 56, 0.06);
-
-            border-color: var(--accent);
-        }
-
-        .service-card h3 {
-            font-size: 1.3rem;
-
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-
-            font-size: 0.95rem;
-        }
-
-
-        /* =========================
-           YAKLAŞIM
-        ========================== */
-
-        .approach {
-            background-color: var(--accent-light);
-
-            border-radius: 24px;
-
-            margin: 2rem 0;
-
-            padding: 4rem 2rem;
-        }
-
-        .
-     .approach-grid {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 3rem;
-        }
-
-        .approach-box h3 {
-            margin-bottom: 0.5rem;
-
-            font-size: 1.4rem;
-        }
-
-        .approach-box p {
-            color: var(--text-muted);
-        }
-
-
-        /* =========================
-           İLETİŞİM & HARİTA
-        ========================== */
-
-        .contact-content {
-            text-align: center;
-
-            max-width: 700px;
-
-            margin: 0 auto 3rem;
-        }
-
-        .contact-content h2 {
-            font-size: 2.2rem;
-
-            margin-bottom: 1rem;
-        }
-
-        .contact-content p {
-            color: var(--text-muted);
-
-            font-size: 1.05rem;
-        }
-
-        .map-container {
-            width: 100%;
-
-            max-width: 1140px;
-
-            margin: 0 auto;
-        }
-
-        .map-wrapper {
-            border-radius: 20px;
-
-            overflow: hidden;
-
-            border: 1px solid rgba(35, 63, 56, 0.08);
-
-            box-shadow: 0 10px 30px rgba(35, 63, 56, 0.05);
-
-            background: var(--white);
-        }
-
-        .map-wrapper iframe {
-            display: block;
-
-            width: 100%;
-
-            height: 420px;
-
-            border: 0;
-        }
-
-        .map-action {
-            text-align: center;
-
-            margin-top: 1.5rem;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            background-color: var(--primary);
-
-            color: var(--white);
-
-            padding: 4rem 0 2rem;
-
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-
-            justify-content: center;
-
-            gap: 1.5rem;
-
-            margin: 2rem 0 3rem;
-
-            list-style: none;
-        }
-
-        .social-links a {
-            color: var(--white);
-
-            font-weight: 500;
-
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-        }
-
-        .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-
-            padding-top: 1.5rem;
-
-            font-size: 0.85rem;
-
-            color: rgba(255, 255, 255, 0.6);
-        }
-
-
-        /* =========================
-           MOBİL UYUM
-        ========================== */
-
-        @media (max-width: 768px) {
-            .hero-grid,
-            .about-grid,
-            .approach-grid {
-                grid-template-columns: 1fr;
-
-                gap: 2rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .map-wrapper iframe {
-                height: 320px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Header -->
-    <header>
-        <div class="container nav-wrapper">
-            <a href="#" class="logo">
-                Furkan Yaylacık
-                <span>Psikolojik Danışman</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#hakkimda">Hakkımda</a></li>
-                <li><a href="#hizmetler">Hizmetler</a></li>
-                <li><a href="#yaklasim">Yaklaşımım</a></li>
-                <li><a href="#iletisim" class="btn-primary">İletişim & Randevu</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <!-- Hero Bölümü -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="hero-tags">
-                    <span class="tag">Konya / Meram</span>
-                    <span class="tag">Yüz Yüze & Online</span>
-                </div>
-                <h1>Daha Bilinçli ve Dengeli Bir Yaşam İçin Profesyonel Destek</h1>
-                <p>Yetişkin, ergen ve çiftler için Kabul ve Kararlılık Terapisi (ACT) ve Mindfulness tabanlı psikolojik danışmanlık hizmetleri.</p>
-                <a href="#iletisim" class="btn-primary">Görüşme Planla</a>
-            </div>
-            <div class="hero-card">
-                <h3>Danışmanlık Süreçleri</h3>
-                <p>Yaşamınızdaki zorluklarla baş ederken güvenli, yargılamayan ve bilimsel temelli bir rehberlik.</p>
-                <a href="#hizmetler" style="color: var(--primary); font-weight: 600; font-size: 0.9rem;">Hizmetleri İncele →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hakkımda -->
-    <section id="hakkimda" class="about">
-        <div class="container about-grid">
-            <div class="about-text">
-                <div class="section-title" style="text-align: left; margin-bottom: 1.5rem;">
-                    <h2>Hakkımda</h2>
-                </div>
-                <p>2020 yılından bu yana yetişkinler, ergenler ve çiftlerle psikolojik danışmanlık alanında çalışmaktayım. Lisans eğitimimin ardından bireylerin içsel potansiyellerini keşfetmelerine ve psikolojik esneklik kazanmalarına odaklanan ekollerle pratik yapmaktayım.</p>
-                <p>Konya Meram'daki ofisimde yüz yüze görüşmelerin yanı sıra, farklı şehirlerden ve ülkelerden danışanlarım için online seanslar yürütmekte, akademik ve bireysel gelişim süreçlerinde rehberlik sunmaktayım.</p>
-            </div>
-            <div class="about-card">
-                <h3 style="margin-bottom: 1rem;">Çalışma Alanlarım</h3>
-                <p>Bireysel Danışmanlık, Çift Danışmanlığı, Ergen Rehberliği, Sınav ve Akademik Odak Danışmanlığı, MOXO Dikkat Testi Değerlendirmeleri.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hizmetler -->
-    <section id="hizmetler" class="container">
-        <div class="section-title">
-            <h2>Hizmetler</h2>
-            <p>Bilimsel temelli yaklaşımlarla ihtiyaçlarınıza uygun profesyonel destek alanları.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Yetişkin Danışmanlığı</h3>
-                <p>Kaygı, stres, yaşam geçişleri ve duygusal zorluklarla başa çıkma becerilerini güçlendirme.</p>
-            </div>
-            <div class="service-card">
-                <h3>Çift Danışmanlığı</h3>
-                <p>İlişkilerde iletişim engellerini aşma, bağları güçlendirme ve çatışma çözüm süreçleri.</p>
-            </div>
-            <div class="service-card">
-                <h3>Ergen & Eğitim Danışmanlığı</h3>
-                <p>Sınav süreçleri, odak problemleri ve ergenlik döneminin getirdiği psikolojik uyum süreçleri.</p>
-            </div>
-            <div class="service-card">
-                <h3>MOXO Dikkat Testi</h3>
-                <p>Çocuk, ergen ve yetişkinler için dikkat, zamanlama, impulsivite ve hiperaktivite ölçümü.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Yaklaşım -->
-    <div class="container">
-        <section id="yaklasim" class="approach">
-            <div class="section-title" style="margin-bottom: 2.5rem;">
-                <h2>Yaklaşımım</h2>
-                <p>Görüşmelerimizde benimsediğim temel bilimsel çerçeveler.</p>
-            </div>
-            <div class="approach-grid">
-                <div class="approach-box">
-                    <h3>Kabul ve Kararlılık Terapisi (ACT)</h3>
-                    <p>Düşüncelerimizle savaşmak yerine onları kabul etmeyi, değerlerimiz doğrultusunda anlamlı ve esnek bir yaşam kurmayı hedefleyen çağdaş bir yaklaşım.</p>
-                </div>
-                <div class="approach-box">
-                    <h3>Mindfulness (Bilinçli Farkındalık)</h3>
-                    <p>Şu anki deneyime yargılamadan dikkat kesilmeyi, zihinsel berraklık kazanmayı ve içsel huzuru artırmayı sağlayan pratik farkındalık egzersizleri.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- İletişim & Harita Bölümü -->
-    <section id="iletisim">
-        <div class="container">
-            <div class="contact-content">
-                <h2>İletişim & Ofis Konumu</h2>
-                <p>Konya Meram'daki ofisimizde yüz yüze görüşmeler veya online danışmanlık hizmetleri için randevu alabilir, harita üzerinden konumumuza ulaşabilirsiniz.</p>
-            </div>
-
-            <div class="map-container">
-                <div class="map-wrapper">
-                    <iframe 
-                        src="https://maps.google.com/maps?q=Psikolojik%20Dan%C4%B1%C5%9Fman%20Furkan%20Yaylac%C4%B1k%20Yaka%20Aziz%20Mahmut%20Hudai%20Cd.%20%C4%B0%C3%A7kon%20Plaza%20No%3A185A%2F302%2C%2042090%20Meram%2FKonya&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-                <div class="map-action">
-                    <a href="https://maps.google.com/maps?cid=1207920154398275596" target="_blank" rel="noopener noreferrer" class="btn-map">
-                        Google Haritalar'da Yol Tarifi Al
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <h2>Furkan Yaylacık</h2>
-            <p>Konya Meram'da yüz yüze seanslar ve online görüşmeler için iletişime geçebilirsiniz.</p>
-            
-            <ul class="social-links">
-                <li><a href="https://www.instagram.com/pd.furkanyaylack" target="_blank" rel="noopener noreferrer">Instagram (@pd.furkanyaylack)</a></li>
-                <li><a href="https://www.linkedin.com/in/furkanyaylacik" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="mailto:iletisim@furkanyaylacik.com">E-Posta Gönder</a></li>
-            </ul>
-
-            <div class="copyright">
-                &copy; 2026 Furkan Yaylacık — Tüm Hakları Saklıdır.
-            </div>
-        </div>
-    </footer>
+  <!-- Header / Nav -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">Psikolojik Danışman Furkan Yaylacık</a>
+      <ul class="nav-links">
+        <li><a href="#hakkimda">Hakkımda</a></li>
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#iletisim">Konum & İletişim</a></li>
+      </ul>
+      <a href="#iletisim" class="btn-primary">Randevu Al</a>
+    </div>
+  </header>
+
+  <!-- Hero Bölümü -->
+  <section class="hero" id="hakkimda">
+    <div class="container">
+      <h1>Sağlıklı Bir Zihin, Dengeli Bir Yaşam</h1>
+      <p>Yetişkin, ergen ve çiftlere yönelik psikolojik danışmanlık hizmetleri ile Konya Meram'daki ofisimizde ve online platformlarda yanınızdayız.</p>
+      <a href="#iletisim" class="btn-primary">Detaylı Bilgi & İletişim</a>
+    </div>
+  </section>
+
+  <!-- Hizmetlerimiz Bölümü -->
+  <section class="services" id="hizmetler">
+    <div class="container">
+      <h2 class="section-title">Çalışma Alanları</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Bireysel Terapi</h3>
+          <p>Kabul ve Kararlılık Terapisi (ACT) ve Farkındalık (Mindfulness) temelli yetişkin danışmanlığı.</p>
+        </div>
+        <div class="service-card">
+          <h3>Çift Danışmanlığı</h3>
+          <p>İlişkilerde iletişim dinamiklerini güçlendirme ve sağlıklı çözüm yolları geliştirme.</p>
+        </div>
+        <div class="service-card">
+          <h3>Ergen Danışmanlığı</h3>
+          <p>Gelişimsel süreçlerde duygusal denge, akademik süreçler ve sınav oryantasyonu desteği.</p>
+        </div>
+        <div class="service-card">
+          <h3>MOXO Dikkat Testi</h3>
+          <p>Çocuk, ergen ve yetişkinlerde dikkat, zamanlama, dürtüsellik ve hiperaktivitenin objektif ölçümü.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Konum & İletişim Bölümü (Google Maps İle Birlikte) -->
+  <section class="location-section" id="iletisim">
+    <div class="container">
+      <div class="location-wrapper">
+        
+        <!-- Sol Taraf: İletişim Bilgileri -->
+        <div class="location-info">
+          <h2>Ofisimiz ve Konum</h2>
+          <p class="subtitle">Yüz yüze seanslar için Meram'daki adresimizi ziyaret edebilirsiniz.</p>
+          
+          <div class="info-block">
+            <strong>Adres</strong>
+            <span>Meram, Konya / Türkiye</span>
+          </div>
+
+          <div class="info-block">
+            <strong>Çalışma Saatleri</strong>
+            <span>Pazartesi - Cumartesi: 09:00 - 18:00</span>
+          </div>
+
+          <div class="info-block">
+            <strong>Seans Seçenekleri</strong>
+            <span>Yüz Yüze (Meram Ofis) & Online Danışmanlık</span>
+          </div>
+
+          <a href="https://maps.google.com/?q=Psikolojik+Dan%C4%B1%C5%9Fman+Furkan+Yaylac%C4%B1k" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 10px;">
+            Google Haritalar'da Aç
+          </a>
+        </div>
+
+        <!-- Sağ Taraf: Eklediğiniz Google Haritası -->
+        <div class="map-responsive">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3149.1514720877763!2d32.43158397641654!3d37.88014020608264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d085a27da3e6c7%3A0x10c364fb07f1b80c!2sPsikolojik%20Dan%C4%B1%C5%9Fman%20Furkan%20Yaylac%C4%B1k!5e0!3m2!1str!2str!4v1789419101998!5m2!1str!2str" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Alt Bilgi (Footer) -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Psikolojik Danışman Furkan Yaylacık. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
