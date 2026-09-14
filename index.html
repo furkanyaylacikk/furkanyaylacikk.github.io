@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furkan Yaylacık — Psikolojik Danışman | Konya & Online</title>
+    <title>Furkan Yaylacık — Psikolojik Danışman | Konya Meram & Online</title>
     
     <!-- SEO Meta Etiketleri -->
     <meta name="description" content="Konya Meram'da yüz yüze ve online psikolojik danışmanlık hizmetleri. Yetişkin, ergen ve çift danışmanlığı, ACT, MBSR ve MOXO Dikkat Performans Testi.">
@@ -14,7 +14,7 @@
 
     <!-- Open Graph (Sosyal Medya Paylaşım) Etiketleri -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Furkan Yaylacık — Psikolojik Danışman | Konya & Online">
+    <meta property="og:title" content="Furkan Yaylacık — Psikolojik Danışman | Konya Meram & Online">
     <meta property="og:description" content="Kabul ve Kararlılık Terapisi (ACT) ve Mindfulness (MBSR) odaklı yüz yüze ve online psikolojik danışmanlık.">
     <meta property="og:url" content="https://furkanyaylacik.com/">
     <meta property="og:image" content="https://furkanyaylacik.com/assets/og-image.jpg">
@@ -326,7 +326,47 @@
             color: var(--text-muted);
         }
 
-        /* Footer / İletişim */
+        /* İletişim & Konum (Google Maps Harita Bölümü) */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(35, 63, 56, 0.06);
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(35, 63, 56, 0.05);
+            border: 1px solid rgba(35, 63, 56, 0.06);
+            background: var(--white);
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Footer */
         footer {
             background-color: var(--primary);
             color: var(--white);
@@ -371,7 +411,7 @@
 
         /* Mobil Uyum */
         @media (max-width: 768px) {
-            .hero-grid, .about-grid, .approach-grid {
+            .hero-grid, .about-grid, .approach-grid, .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
@@ -380,6 +420,9 @@
             }
             .nav-links {
                 display: none;
+            }
+            .map-container {
+                height: 300px;
             }
         }
     </style>
@@ -397,7 +440,8 @@
                 <li><a href="#hakkimda">Hakkımda</a></li>
                 <li><a href="#hizmetler">Hizmetler</a></li>
                 <li><a href="#yaklasim">Yaklaşımım</a></li>
-                <li><a href="#iletisim" class="btn-primary">İletişim & Randevu</a></li>
+                <li><a href="#iletisim">İletişim & Konum</a></li>
+                <li><a href="#iletisim" class="btn-primary">Randevu Al</a></li>
             </ul>
         </div>
     </header>
@@ -485,11 +529,37 @@
         </section>
     </div>
 
-    <!-- Footer / İletişim -->
-    <footer id="iletisim">
+    <!-- İletişim & Konum Bölümü (Google Maps İframe Entegrasyonu) -->
+    <section id="iletisim" class="container" style="padding-bottom: 5rem;">
+        <div class="section-title">
+            <h2>İletişim & Konum</h2>
+            <p>Konya Meram'daki ofisimizi ziyaret edebilir ya da online seanslar için iletişime geçebilirsiniz.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Ofis Bilgileri</h3>
+                <p><strong>Adres:</strong> Meram, Konya / Türkiye</p>
+                <p><strong>Hizmet Türleri:</strong> Yüz Yüze Görüşme & Online Danışmanlık</p>
+                <p>Randevu almak ve detaylı bilgi edinmek için sosyal medya hesaplarımız veya e-posta yoluyla bize ulaşabilirsiniz.</p>
+                <a href="mailto:iletisim@furkanyaylacik.com" class="btn-primary" style="margin-top: 1rem;">E-Posta Gönder</a>
+            </div>
+            <div class="map-container">
+                <!-- Google Maps Embed İframe (Meram, Konya) -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9!2d32.48!3d37.87!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d085!2sMeram%2FKonya!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <h2>İletişim & Randevu</h2>
-            <p>Konya Meram'da yüz yüze seanslar veya online görüşmeler için iletişime geçebilirsiniz.</p>
+            <h2>Furkan Yaylacık</h2>
+            <p>Psikolojik Danışmanlık ve Rehberlik Hizmetleri</p>
             
             <ul class="social-links">
                 <li><a href="https://www.instagram.com/pd.furkanyaylack" target="_blank">Instagram (@pd.furkanyaylack)</a></li>
