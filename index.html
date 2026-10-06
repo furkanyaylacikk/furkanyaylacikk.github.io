@@ -169,6 +169,7 @@
                 <a href="#hakkimda" class="hover:text-brand-sage transition-colors">Hakkımda</a>
                 <a href="#yaklasim" class="hover:text-brand-sage transition-colors">Danışmanlık Yaklaşımı</a>
                 <a href="#hizmetler" class="hover:text-brand-sage transition-colors">Hizmetler</a>
+                <a href="#blog" class="hover:text-brand-sage transition-colors">Yazılarım</a>
                 <a href="#oz-farkindalik" class="hover:text-brand-sage transition-colors flex items-center gap-1.5">
                     <i class="fa-solid fa-compass text-brand-accent text-xs"></i>
                     <span>Yaşam Dengesi İbresi</span>
@@ -196,6 +197,7 @@
                 <a href="#hakkimda" onclick="toggleMobileMenu()" class="py-1 hover:text-brand-sage">Hakkımda</a>
                 <a href="#yaklasim" onclick="toggleMobileMenu()" class="py-1 hover:text-brand-sage">Danışmanlık Yaklaşımı</a>
                 <a href="#hizmetler" onclick="toggleMobileMenu()" class="py-1 hover:text-brand-sage">Hizmetler</a>
+                <a href="#blog" onclick="toggleMobileMenu()" class="py-1 hover:text-brand-sage">Yazılarım</a>
                 <a href="#oz-farkindalik" onclick="toggleMobileMenu()" class="py-1 hover:text-brand-sage flex items-center gap-2 text-brand-accent">
                     <i class="fa-solid fa-compass"></i>
                     <span>Yaşam Dengesi Testi</span>
@@ -832,6 +834,97 @@
             </div>
         </section>
 
+        <!-- Blog / Yazılarım Section -->
+        <section id="blog" class="py-24 bg-brand-bg border-b border-brand-border">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-accent bg-brand-accentSoft px-4 py-1.5 rounded-full inline-block">
+                            Farkındalık & Psikoloji
+                        </span>
+                        <h2 class="font-serif-heading text-3xl sm:text-4xl text-brand-dark mt-3">
+                            Yazılarım & Paylaşımlar
+                        </h2>
+                    </div>
+                    <p class="text-brand-muted text-sm max-w-md leading-relaxed">
+                        Kabul ve Kararlılık (ACT), bilinçli farkındalık pratikleri ve zihinsel esneklik üzerine kısa ve pratik okumalar.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Blog Kartı 1 -->
+                    <article class="agency-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between text-xs text-brand-muted mb-4">
+                                <span class="font-semibold text-brand-sage bg-brand-softSage px-3 py-1 rounded-full">Kabul ve Kararlılık</span>
+                                <span>4 dk okuma</span>
+                            </div>
+                            <h3 class="font-serif-heading text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-sage transition-colors">
+                                Zihnimizle Savaşmayı Bırakmak: Bilişsel Ayrışma
+                            </h3>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Düşünceler birer mutlak gerçek midir yoksa zihnin ürettiği geçici hikayeler mi? Zihinsel kancalardan kurtulmanın yolları.
+                            </p>
+                        </div>
+                        <div class="p-8 pt-0">
+                            <button onclick="openBlogModal('post1')" class="text-xs font-bold text-brand-dark group-hover:text-brand-sage flex items-center gap-2 transition-colors">
+                                <span>Yazının Devamını Oku</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Blog Kartı 2 -->
+                    <article class="agency-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between text-xs text-brand-muted mb-4">
+                                <span class="font-semibold text-brand-accent bg-brand-accentSoft px-3 py-1 rounded-full">Değerler Odaklı Yaşam</span>
+                                <span>5 dk okuma</span>
+                            </div>
+                            <h3 class="font-serif-heading text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-sage transition-colors">
+                                Hedefler mi, Değerler mi? Hayatın Pusulasını Ayarlamak
+                            </h3>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Hedefler varılacak duraklar, değerler ise yoldaki yönümüzdür. Belirsizlik anlarında değerlerle hareket etmenin önemi.
+                            </p>
+                        </div>
+                        <div class="p-8 pt-0">
+                            <button onclick="openBlogModal('post2')" class="text-xs font-bold text-brand-dark group-hover:text-brand-sage flex items-center gap-2 transition-colors">
+                                <span>Yazının Devamını Oku</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Blog Kartı 3 -->
+                    <article class="agency-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+                        <div class="p-8">
+                            <div class="flex items-center justify-between text-xs text-brand-muted mb-4">
+                                <span class="font-semibold text-brand-sage bg-brand-softSage px-3 py-1 rounded-full">Bilinçli Farkındalık</span>
+                                <span>3 dk okuma</span>
+                            </div>
+                            <h3 class="font-serif-heading text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-sage transition-colors">
+                                Stres Anında Otomatik Pilottan Bilinçli Yanıta Geçiş
+                            </h3>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Bedenimiz strese girdiğinde nefesi ve duyumları bir çapa gibi kullanarak otomatik tepkileri nasıl dönüştürebiliriz?
+                            </p>
+                        </div>
+                        <div class="p-8 pt-0">
+                            <button onclick="openBlogModal('post3')" class="text-xs font-bold text-brand-dark group-hover:text-brand-sage flex items-center gap-2 transition-colors">
+                                <span>Yazının Devamını Oku</span>
+                                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
         <!-- İnteraktif Öz-Farkındalık Section -->
         <section id="oz-farkindalik" class="py-24 bg-brand-dark text-white relative overflow-hidden">
             <div class="absolute -right-20 -top-20 w-80 h-80 bg-brand-light rounded-full blur-3xl opacity-50"></div>
@@ -1157,6 +1250,7 @@
                         <li><a href="#hakkimda" class="hover:text-brand-accent transition-colors">Hakkımda</a></li>
                         <li><a href="#yaklasim" class="hover:text-brand-accent transition-colors">ACT & MBSR Yaklaşımı</a></li>
                         <li><a href="#hizmetler" class="hover:text-brand-accent transition-colors">Hizmetler</a></li>
+                        <li><a href="#blog" class="hover:text-brand-accent transition-colors">Yazılarım</a></li>
                         <li><a href="#oz-farkindalik" class="hover:text-brand-accent transition-colors">Yaşam Dengesi İbresi</a></li>
                     </ul>
                 </div>
@@ -1227,6 +1321,18 @@
                     Talep Oluştur
                 </button>
             </form>
+        </div>
+    </div>
+
+    <!-- Blog Okuma Modal -->
+    <div id="blogModal" class="fixed inset-0 z-50 hidden bg-brand-dark/70 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeBlogModal()">
+        <div class="bg-white max-w-2xl w-full rounded-3xl p-6 sm:p-10 shadow-2xl relative border border-brand-border max-h-[85vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <button onclick="closeBlogModal()" class="absolute top-5 right-5 text-brand-muted hover:text-brand-dark text-lg" aria-label="Kapat">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="blogModalCategory" class="text-xs font-bold text-brand-sage uppercase tracking-wider mb-2"></div>
+            <h3 id="blogModalTitle" class="font-serif-heading text-2xl sm:text-3xl font-bold text-brand-dark mb-6"></h3>
+            <div id="blogModalContent" class="text-brand-muted text-sm leading-relaxed space-y-4 border-t border-brand-border pt-6"></div>
         </div>
     </div>
 
@@ -1357,12 +1463,59 @@
             document.getElementById('bookingModal').classList.add('hidden');
         }
 
+        // Blog Modal Data & Control
+        const blogPosts = {
+            post1: {
+                category: "Kabul ve Kararlılık (ACT)",
+                title: "Zihnimizle Savaşmayı Bırakmak: Bilişsel Ayrışma",
+                content: `
+                    <p>İnsan zihni sürekli problem çözmek, tehlikeleri öngörmek ve geçmişi analiz etmek üzere evrimleşmiştir. Ancak çoğu zaman zihnimizin ürettiği senaryolar, kaygılar ve kendini eleştiren seslerle o kadar özdeşleşiriz ki, onları sorgulanamaz birer 'mutlak gerçek' sanırız.</p>
+                    <p>ACT (Kabul ve Adanmışlık Terapisi) yaklaşımında bilişsel ayrışma, düşüncelerimizi yok etmeye ya da olumluya çevirmeye çalışmak demek değildir. Düşünceyi olduğu gibi, zihinden geçen kelimeler ve görüntüler olarak fark edebilme sanatıdır.</p>
+                    <p><strong>Pratik bir adım:</strong> Bir dahaki sefere zihniniz 'Bunu asla başaramayacaksın' dediğinde, kendinize nazikçe şunu hatırlatmayı deneyin: <em>'Şu an zihnimin bana başaramayacağıma dair bir hikaye anlattığını fark ediyorum.'</em> Bu küçük dilsel ayrışma, düşünce ile eylemleriniz arasına sağlıklı bir özgürlük alanı açar.</p>
+                `
+            },
+            post2: {
+                category: "Değerler Odaklı Yaşam",
+                title: "Hedefler mi, Değerler mi? Hayatın Pusulasını Ayarlamak",
+                content: `
+                    <p>Çoğu zaman hayatı hedefler üzerinden tanımlarız: Bir sınavı kazanmak, bir işe girmek, bir ilişki başlatmak... Ancak bir hedefe ulaştığımızda ya da beklenmedik bir engelle karşılaştığımızda içsel bir boşluk hissetmek çok yaygındır.</p>
+                    <p>Değerler ise hedeflerden farklıdır; onlar varılacak bir durak değil, yol boyunca hangi yöne doğru yürüyeceğinizi belirleyen bir pusuladır. Örneğin 'çocuğuma iyi bir anne/baba olmak' tamamlanıp kenara bırakılacak bir hedef değil, her gün yeniden yaşanabilecek bir değerdir.</p>
+                    <p>Hayat fırtınalı olduğunda hedefleriniz sekteye uğrayabilir; ancak değerleriniz her zaman oradadır. Zorlayıcı duyguların ortasında bile değerlerinize uygun küçük bir adım atmak mümkündür.</p>
+                `
+            },
+            post3: {
+                category: "Bilinçli Farkındalık (MBSR)",
+                title: "Stres Anında Otomatik Pilottan Bilinçli Yanıta Geçiş",
+                content: `
+                    <p>Günlük yaşamın telaşı içinde çoğunlukla 'otomatik pilot' modunda hareket ederiz. Beklenmedik bir stres faktörüyle karşılaştığımızda omuzlarımız kasılır, nefesimiz sığlaşır ve zihnimiz otomatik savunma reaksiyonları verir.</p>
+                    <p>MBSR temelli farkındalık pratikleri, bu reaksiyon zincirini fark etmemizi sağlar. Stres anında durmak, dikkati bedendeki gerilime ve nefese getirmek, otomatik bir tepki vermek yerine bilinçli ve şefkatli bir yanıt seçme alanı tanır.</p>
+                    <p>Nefesinizi değiştirmeye çalışmadan sadece 3 nefes boyunca havanın burun deliklerinizden girişini ve çıkışını izlemek bile sinir sisteminize güvenli bir alanda olduğu sinyalini verir.</p>
+                `
+            }
+        };
+
+        function openBlogModal(postId) {
+            const post = blogPosts[postId];
+            if (!post) return;
+            document.getElementById('blogModalCategory').innerText = post.category;
+            document.getElementById('blogModalTitle').innerText = post.title;
+            document.getElementById('blogModalContent').innerHTML = post.content;
+            document.getElementById('blogModal').classList.remove('hidden');
+        }
+
+        function closeBlogModal() {
+            document.getElementById('blogModal').classList.add('hidden');
+        }
+
         function handleBackdropClick(e) {
             closeBookingModal();
         }
 
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeBookingModal();
+            if (e.key === 'Escape') {
+                closeBookingModal();
+                closeBlogModal();
+            }
         });
 
         // Toast Feedback
