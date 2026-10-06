@@ -76,28 +76,17 @@
             border-color: #7C9A92;
         }
 
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F4F6F4;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #7C9A92;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #1B332D;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F4F6F4; }
+        ::-webkit-scrollbar-thumb { background: #7C9A92; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1B332D; }
 
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
             background: transparent;
         }
-        input[type=range]:focus {
-            outline: none;
-        }
+        input[type=range]:focus { outline: none; }
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 8px;
@@ -266,11 +255,10 @@
                             </p>
                         </div>
 
-                        <!-- Fotoğraf Alanı: Doğrudan çalışması için harici dosya + onerror güvenliği -->
+                        <!-- Fotoğraf Alanı: Doğrudan URL Bağlantısı -->
                         <div class="relative rounded-[2.5rem] overflow-hidden bg-brand-softSage border-4 border-white shadow-2xl aspect-[4/5]">
-                            <img id="profilePhoto"
-                                 src="furkan-yaylacik-psikolojik-danisman.webp" 
-                                 onerror="if(this.src.indexOf('images') === -1) { this.src='images (1).jpeg'; } else { this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=800'; }"
+                            <img src="https://media.licdn.com/dms/image/v2/D4D03AQE41w4_v3B6iQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715421570775?e=1733356800&v=beta&t=7hQn5u_0X3xZgR2aC0aP2w8x8eD6_lR_4L8qE2Q7-Z0"
+                                 onerror="this.onerror=null; this.src='furkan-yaylacik-psikolojik-danisman.webp';"
                                  alt="Psikolojik Danışman Furkan Yaylacık - Konya Psikolojik Danışman" 
                                  class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700">
                             
@@ -460,7 +448,6 @@
                     </div>
                 </div>
 
-                <!-- ACT 6 Panel -->
                 <div id="actPanel" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
                         <div>
@@ -535,7 +522,6 @@
                     </div>
                 </div>
 
-                <!-- MBSR 6 Panel -->
                 <div id="mbsrPanel" class="hidden sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
                         <div>
@@ -722,7 +708,6 @@
                     </div>
                 </div>
 
-                <!-- Başlıca Çalışma Alanları -->
                 <div class="bg-brand-bg rounded-3xl p-8 sm:p-10 border border-brand-border">
                     <div class="mb-6">
                         <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Süreçte Ele Alınan Temalar</span>
@@ -783,7 +768,7 @@
             </div>
         </section>
 
-        <!-- Blog / Yazılarım Section -->
+        <!-- Blog Section -->
         <section id="blog" class="py-24 bg-brand-bg border-b border-brand-border">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
