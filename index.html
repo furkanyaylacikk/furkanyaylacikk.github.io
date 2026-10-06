@@ -1,1073 +1,486 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furkan Yaylacık — Psikolojik Danışman | ACT & MBSR</title>
-    <meta name="description" content="Ergen ve yetişkin danışanlarla, Kabul ve Adanmışlık yaklaşımı (ACT) ve Bilinçli Farkındalık (Mindfulness / MBSR) temelli süreç. Konya'da yüz yüze, Türkiye geneli ve yurt dışında online.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            --bg-body: #f4f6f4;
-            --bg-card: #ffffff;
-            --primary-dark: #1b332d;
-            --primary-light: #233f38;
-            --accent-green: #7c9a92;
-            --accent-soft: #eaf0ee;
-            --text-main: #1e2927;
-            --text-muted: #556360;
-            --border-color: #e2e8e5;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, .brand-font {
-            font-family: 'Fraunces', serif;
-        }
-
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-area {
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-        }
-
-        .logo-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            font-family: 'Fraunces', serif;
-        }
-
-        .logo-sub {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 0.92rem;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-dark);
-        }
-
-        .btn-dark {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 0.65rem 1.4rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-dark:hover {
-            background-color: var(--primary-light);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline-dark {
-            border: 2px solid var(--primary-dark);
-            color: var(--primary-dark);
-            padding: 0.6rem 1.4rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-outline-dark:hover {
-            background: var(--primary-dark);
-            color: white;
-        }
-
-        /* Sections General */
-        section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            padding-top: 10rem;
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .hero-tag {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .hero-section h1 {
-            font-size: 3.2rem;
-            color: var(--primary-dark);
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-section p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            max-width: 540px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-
-        .hero-badges-text {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            display: flex;
-            gap: 1.25rem;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-
-        .hero-badges-text li::before {
-            content: "•";
-            color: var(--accent-green);
-            font-weight: bold;
-            margin-right: 5px;
-        }
-
-        .hero-graphic {
-            background: var(--accent-soft);
-            border-radius: 2rem;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(27, 51, 45, 0.05);
-            border: 1px solid var(--border-color);
-        }
-
-        .concentric-circle {
-            width: 260px;
-            height: 260px;
-            border-radius: 50%;
-            border: 1.5px dashed rgba(124, 154, 146, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .inner-dot {
-            width: 100px;
-            height: 100px;
-            background: var(--primary-dark);
-            border-radius: 50%;
-            box-shadow: 0 10px 25px rgba(27, 51, 45, 0.3);
-        }
-
-        .graphic-label {
-            position: absolute;
-            bottom: 25px;
-            font-size: 0.85rem;
-            font-style: italic;
-            color: var(--text-muted);
-        }
-
-        /* Approach Section */
-        .section-header-tag {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .section-title {
-            font-size: 2.4rem;
-            color: var(--primary-dark);
-            margin-bottom: 1.5rem;
-        }
-
-        .approach-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .approach-card {
-            background: var(--bg-card);
-            padding: 2.5rem;
-            border-radius: 1.25rem;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .approach-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
-        }
-
-        .approach-card span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            display: block;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .approach-card h3 {
-            font-size: 1.35rem;
-            color: var(--primary-dark);
-            margin-bottom: 1rem;
-        }
-
-        .approach-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: var(--bg-card);
-            padding: 2.2rem;
-            border-radius: 1.25rem;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .service-card:hover {
-            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
-            border-color: var(--accent-green);
-        }
-
-        .service-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--accent-soft);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-dark);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.25rem;
-            color: var(--primary-dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card > p {
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .card-link {
-            text-decoration: none;
-            color: var(--primary-dark);
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .card-link:hover {
-            gap: 0.75rem;
-        }
-
-        /* Topics Tags Grid */
-        .topics-wrapper {
-            background: var(--bg-card);
-            padding: 3rem;
-            border-radius: 1.5rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .topic-pill {
-            background: var(--bg-body);
-            padding: 1rem 1.25rem;
-            border-radius: 8px;
-            font-size: 0.92rem;
-            color: var(--primary-dark);
-            font-weight: 500;
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .topic-pill i {
-            color: var(--accent-green);
-            font-size: 0.8rem;
-        }
-
-        /* About Section Expanded */
-        .about-detailed {
-            background: var(--bg-card);
-            border-radius: 1.5rem;
-            padding: 4rem;
-            border: 1px solid var(--border-color);
-            margin: 4rem auto;
-        }
-
-        .about-grid-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .cert-box {
-            background: var(--bg-body);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-top: 1rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .cert-box h4 {
-            font-size: 1rem;
-            color: var(--primary-dark);
-            margin-bottom: 0.3rem;
-        }
-
-        .cert-box p {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
-
-        .principles-list {
-            list-style: none;
-            margin-top: 2rem;
-        }
-
-        .principles-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            color: var(--primary-dark);
-            font-weight: 500;
-        }
-
-        .principles-list i {
-            color: var(--accent-green);
-            margin-top: 4px;
-        }
-
-        /* Diaspora Section */
-        .diaspora-banner {
-            background: linear-gradient(135deg, #233f38 0%, #162925 100%);
-            border-radius: 1.5rem;
-            padding: 4rem;
-            color: white;
-            margin: 4rem auto;
-        }
-
-        .diaspora-banner h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .diaspora-banner p {
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 650px;
-            margin-bottom: 2.5rem;
-        }
-
-        .country-flags {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .country-tag {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-
-        /* Blog Section */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .blog-card {
-            background: var(--bg-card);
-            border-radius: 1.25rem;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: var(--transition);
-        }
-
-        .blog-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
-        }
-
-        .blog-card-img {
-            height: 180px;
-            background: var(--accent-soft);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-green);
-            font-size: 2rem;
-        }
-
-        .blog-card-body {
-            padding: 2rem;
-        }
-
-        .blog-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-muted);
-            font-weight: 600;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .blog-card h3 {
-            font-size: 1.25rem;
-            color: var(--primary-dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .blog-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* FAQ Section */
-        .faq-container {
-            max-width: 900px;
-            margin: 3rem auto 0;
-        }
-
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .faq-item:hover {
-            border-color: var(--accent-green);
-        }
-
-        .faq-item span {
-            font-weight: 600;
-            color: var(--primary-dark);
-            font-size: 1.05rem;
-        }
-
-        .faq-item i {
-            color: var(--text-muted);
-        }
-
-        /* Dark Wrapper Section (How it works & Footer) */
-        .dark-section {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 6rem 2rem;
-        }
-
-        .dark-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-            margin-bottom: 6rem;
-        }
-
-        .step-item h4 {
-            font-size: 1.35rem;
-            color: white;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .step-num {
-            font-size: 0.95rem;
-            color: var(--accent-green);
-            background: rgba(124, 154, 146, 0.15);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .step-item p {
-            color: rgba(255, 255, 255, 0.75);
-            font-size: 0.95rem;
-        }
-
-        /* Call To Action Box */
-        .cta-box {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, rgba(124, 154, 146, 0.1) 0%, rgba(27, 51, 45, 0.05) 100%);
-            border-radius: 1.5rem;
-            border: 1px solid var(--border-color);
-            margin: 4rem auto;
-        }
-
-        .cta-box h2 {
-            font-size: 2.2rem;
-            color: var(--primary-dark);
-            margin-bottom: 1rem;
-        }
-
-        .cta-box p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        /* Footer */
-        .site-footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 4rem;
-            margin-top: 4rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 3rem;
-        }
-
-        .footer-col h4 {
-            color: white;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-col p, .footer-col a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.75rem;
-            font-size: 0.92rem;
-            transition: var(--transition);
-        }
-
-        .footer-col a:hover {
-            color: white;
-        }
-
-        .copyright-bar {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.4);
-            font-size: 0.85rem;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero-section, .about-grid-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-buttons {
-                justify-content: center;
-            }
-            .hero-badges-text {
-                justify-content: center;
-            }
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konya Psikolojik Danışmanlık & Online Danışmanlık</title>
+  <style>
+    /* Temel Sıfırlama ve Genel Stil Tanımlamaları */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #2d3748;
+      background-color: #ffffff;
+      line-height: 1.6;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    a {
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    /* Kart Geçişleri ve Efektler */
+    .service-card:hover, .country-card:hover, .blog-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06) !important;
+    }
+
+    /* Form Stilleri */
+    .form-group {
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #233f38;
+      margin-bottom: 0.4rem;
+    }
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #cbd5e0;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #2d3748;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus, 
+    .form-group select:focus, 
+    .form-group textarea:focus {
+      border-color: #233f38;
+      box-shadow: 0 0 0 3px rgba(35, 63, 56, 0.1);
+    }
+    .submit-btn {
+      width: 100%;
+      background-color: #233f38;
+      color: #ffffff;
+      padding: 0.85rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .submit-btn:hover {
+      background-color: #1a302a;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo-area">
-                <span class="logo-title">Furkan Yaylacık</span>
-                <span class="logo-sub">Psikolojik Danışman · ACT & MBSR</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#anaseyfe">Ana Sayfa</a></li>
-                <li><a href="#hakkimda">Hakkımda</a></li>
-                <li><a href="#hizmetler">Hizmetler</a></li>
-                <li><a href="#diaspora">Diaspora</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-            <a href="#iletisim" class="btn-dark">Randevu Al</a>
-        </div>
+  <!-- 1. BÖLÜM: Hakkımda / Detaylı Tanıtım Metni -->
+  <article class="about-section" style="max-width: 1200px; margin: 3rem auto; padding: 0 1rem;">
+    <header style="margin-bottom: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1.5rem;">
+      <h1 style="font-size: 2.2rem; color: #233f38; margin-bottom: 0.75rem;">Konya Yüz Yüze & Online Psikolojik Danışmanlık</h1>
+      <p style="font-size: 1.1rem; color: #4a5568; line-height: 1.7;">
+        Konya Meram’daki merkezimizde yüz yüze; Türkiye genelinde ve yurt dışında ise güvenli online platformlar aracılığıyla ergen, yetişkin ve çift danışanlarıma profesyonel psikolojik danışmanlık hizmeti sunmaktayım. 2020 yılından bu yana sürdürdüğüm danışmanlık pratiklerimde, kişilerin zorlayıcı düşünce ve duygularıyla mücadele edip yıpranmak yerine; kendi değerleri doğrultusunda esnek, anlamlı ve sürdürülebilir bir yaşam inşa etmelerine eşlik ediyorum.
+      </p>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="anaseyfe">
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.6rem; color: #233f38; margin-bottom: 0.75rem;">Danışmanlık Yaklaşımım ve Odak Noktalarım</h2>
+      <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
+        Seanslarımın teorik zeminini kanıta dayalı modeller olan <strong>Kabul ve Adanmışlık (ACT)</strong> ile <strong>Mindfulness (Bilinçli Farkındalık / MBSR)</strong> odaklı yaklaşımlar oluşturmaktadır. Bu yöntem, zihnin ürettiği olumsuz düşünceleri zorla değiştirmeye çalışmak yerine, onların yaşamınız üzerindeki baskısını fark edip kabul ederek kişisel değerleriniz yönünde somut adımlar atmanızı hedefler. Sadece semptoma değil, kişiye ve yaşam bağlamına odaklanan bu süreçte; panik atak, yaygın anksiyete, depresyon, travmatik deneyimler, tükenmişlik sendromu, bağımlılık süreçleri ve ilişki-iletişim sorunlarında bireysel psikolojik destek sağlıyorum. Ayrıca sınav kaygısı ve akademik performans takibinin yanı sıra çocuk, ergen ve yetişkinlerde dikkat, zamanlama, dürtüsellik ve hiperaktivite düzeyini objektif olarak ölçen bilgisayar tabanlı <strong>MOXO Dikkat Testi</strong> uygulayıcısı olarak MOXO Türkiye tarafından akredite edildim.
+      </p>
+    </section>
+
+    <section style="margin-bottom: 2.5rem;">
+      <h2 style="font-size: 1.6rem; color: #233f38; margin-bottom: 0.75rem;">Eğitim Mirası, Saha Deneyimi ve Mesleki Yolculuk</h2>
+      <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
+        Mesleki yaklaşımım, akademik eğitimlerimin yanında kriz anlarında edindiğim yoğun saha tecrübeleriyle şekillendi. Kökleri 1896 yılına dayanan Konya’nın en tarihi eğitim kurumlarından Meram Endüstri Meslek Lisesi’nden (Mekteb-i Sanayi) mezun olduktan sonra, lisans eğitimimi Bayburt Üniversitesi Psikolojik Danışmanlık ve Rehberlik (PDR) bölümünde başarıyla tamamladım. Vatani görevim sırasında Suriye Barış Pınarı Harekat bölgesinde TSK Rehberlik ve Danışma Merkezi (RDM) bünyesinde Sağlık Asteğmen olarak görev alarak travma, kaygı, panik atak, yoğun stres ve bağımlılık alanlarında saha çalışmaları yürüttüm. Devamında iki yıl boyunca Konya Şehir Koleji’nde okul psikolojik danışmanı olarak çocuk ve ergenlerin gelişimsel süreçlerine ve ebeveyn danışmanlığına eşlik ettim. Meslek hayatım boyunca Türk Kızılay, AFAD ve İHH gibi sivil toplum kuruluşlarında aktif roller alarak insani yardım ve kentsel psikososyal destek projelerine katkı sundum.
+      </p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.6rem; color: #233f38; margin-bottom: 0.75rem;">Yetkinlikler ve Sürekli Gelişim</h2>
+      <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
+        Sunduğum danışmanlık hizmetinin niteliğini artırmak adına alanın öncü isimlerinden kapsamlı uzmanlık eğitimleri aldım. ACT Türkiye bünyesinde Dr. İbrahim Bilgen’den Kabul ve Kararlılık (ACT) Temel, Orta, İleri Seviye ve Süpervizyon eğitimlerimi; Mindfulness Institute bünyesinde Prof. Dr. Zümra Atalay’dan Mindfulness Temelli Stres Azaltma (MBSR) sertifikasyonumu tamamladım. Uluslararası alanda ise ACT Türkiye aracılığıyla Prof. Dr. Robyn Walser’dan <em>Travmada Süreç Odaklı ACT</em> ve Jim Lucas’tan <em>Depresyonda ACT</em> uzmanlıklarını alarak mesleki pratiğimi güncel bilimsel literatürle beslemeye devam ediyorum. Gizlilik, güven ve koşulsuz kabul ilkelerini esas aldığım seanslarımı Konya Meram’daki merkezimizde de yüz yüze ve dünyanın her yerinden danışanlarım için online randevu sistemiyle sürdürüyorum.
+      </p>
+    </section>
+  </article>
+
+  <!-- 2. BÖLÜM: Çalışma Alanları (Hızlı Erişim Kartları) -->
+  <section class="services-section" style="width: 100%; max-width: 1200px; margin: 4rem auto; padding: 0 1rem;">
+    <header class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
+      <span style="background-color: #e8f0eb; color: #233f38; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Uzmanlık Alanları</span>
+      <h2 style="font-size: 2rem; color: #233f38; margin-top: 0.5rem; margin-bottom: 0.5rem;">Çalışma Alanları</h2>
+      <p style="font-size: 1.05rem; color: #555555; max-width: 600px; margin: 0 auto;">
+        Aşağıdaki konularda kanıta dayalı ve etik ilkelere bağlı psikolojik destek alabilirsiniz.
+      </p>
+    </header>
+
+    <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem;">
+      <a href="/hizmetler/anksiyete-kaygi" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
         <div>
-            <div class="hero-tag">ACT & MBSR Temelli Danışmanlık</div>
-            <h1>Zorlanmayı bastırmadan, değerlerinizle yaşamayı öğrenmek.</h1>
-            <p>Ergen ve yetişkin danışanlarla; kaygı, panik atak, depresyon, travma, bağımlılık, stres ve ilişki sorunlarında Kabul ve Adanmışlık yaklaşımı ile bilinçli farkındalık temelli bir süreç.</p>
-            <div class="hero-buttons">
-                <a href="#iletisim" class="btn-dark">Randevu talebi oluştur</a>
-                <a href="#hizmetler" class="btn-outline-dark">Hizmetleri incele</a>
-            </div>
-            <ul class="hero-badges-text">
-                <li>Konya’da yüz yüze</li>
-                <li>Türkiye geneli online</li>
-                <li>Yurt dışı diasporaya destek</li>
-            </ul>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🌿</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Anksiyete & Kaygı</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Sürekli endişe, yaygın kaygı ve zihinsel yoğunlukla baş etme pratikleri.</p>
         </div>
-        <div class="hero-graphic">
-            <div class="concentric-circle">
-                <div class="inner-dot"></div>
-            </div>
-            <span class="graphic-label">bir an, burada.</span>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
+
+      <a href="/hizmetler/panik-atak" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">⚡</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Panik Atak</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Bedensel duyumların yönetimi ve panik nöbetleri döngüsünü kırma.</p>
         </div>
-    </section>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
 
-    <!-- Approach Section -->
-    <section>
-        <div class="section-header-tag">Yaklaşım</div>
-        <h2 class="section-title">Duygularla savaşmak yerine, onlara alan açmak</h2>
-        <p style="color: var(--text-muted); max-width: 800px;">ACT and MBSR; zor düşünce ve duyguları yok saymadan, sizin için gerçekten önemli olana doğru adım atmanıza yardımcı olan, kanıta dayalı çağdaş yaklaşımlardır.</p>
-        
-        <div class="approach-grid">
-            <div class="approach-card">
-                <span>01</span>
-                <h3>Kabul</h3>
-                <p>Kaygıyı ya da acıyı yok etmeye çalışmadan, ona yer açmayı ve onunla ilişkinizi değiştirmeyi öğrenmek.</p>
-            </div>
-            <div class="approach-card">
-                <span>02</span>
-                <h3>Bilinçli Farkındalık</h3>
-                <p>Geçmişin ve geleceğin döngüsünden çıkıp şimdiki anla temas kurmayı, MBSR pratikleriyle güçlendirmek.</p>
-            </div>
-            <div class="approach-card">
-                <span>03</span>
-                <h3>Değerlere Dayalı Eylem</h3>
-                <p>Sizin için anlamlı olanı netleştirip, o yönde küçük ve sürdürülebilir adımlar atmak.</p>
-            </div>
+      <a href="/hizmetler/depresyon" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🌧</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Depresyon</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">İsteksizlik, tükenmişlik ve yaşam enerjisini yeniden yapılandırma.</p>
         </div>
-    </section>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
 
-    <!-- Services Section -->
-    <section id="hizmetler">
-        <div class="section-header-tag" style="text-align: center;">Hizmetler</div>
-        <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Size uygun formatta çalışalım</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 3rem;">Yüz yüze veya online; bireysel, ergen ve çift görüşmeleri. Tümü ACT ve MBSR yaklaşımıyla.</p>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <div>
-                    <div class="service-icon"><i class="fa-solid fa-user"></i></div>
-                    <h3>Bireysel Danışmanlık</h3>
-                    <p>Yetişkinlerle anksiyete, depresyon, travma ve yaşam geçişleri üzerine birebir çalışma.</p>
-                </div>
-                <a href="#iletisim" class="card-link">Detaylar <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <div class="service-icon"><i class="fa-solid fa-user-shield"></i></div>
-                    <h3>Ergen Danışmanlığı</h3>
-                    <p>Ergen danışanlarla okul, kimlik, kaygı ve ilişki konularında güvenli bir alan.</p>
-                </div>
-                <a href="#iletisim" class="card-link">Detaylar <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <div class="service-icon"><i class="fa-solid fa-users"></i></div>
-                    <h3>Çift Danışmanlığı</h3>
-                    <p>İletişim, çatışma ve bağ kurma üzerine çiftlerle yapılandırılmış görüşmeler.</p>
-                </div>
-                <a href="#iletisim" class="card-link">Detaylar <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-
-            <div class="service-card">
-                <div>
-                    <div class="service-icon"><i class="fa-solid fa-laptop"></i></div>
-                    <h3>Online Seans</h3>
-                    <p>Türkiye’nin her yerinden, güvenli görüntülü görüşmeyle aynı nitelikte destek.</p>
-                </div>
-                <a href="#iletisim" class="card-link">Detaylar <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+      <a href="/hizmetler/travma-tssb" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🛡️</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Travma & TSSB</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Zorlayıcı geçmiş deneyimlerin güvenli ortamda ve şefkatle işlenmesi.</p>
         </div>
-    </section>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
 
-    <!-- Topics Support Section -->
-    <section>
-        <div class="topics-wrapper">
-            <div class="section-header-tag">Çalışma Alanları</div>
-            <h2 style="font-size: 2rem; color: var(--primary-dark); margin-bottom: 0.5rem;" class="brand-font">Hangi konularda destek alabilirsiniz</h2>
-            <div class="topics-grid">
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Anksiyete & kaygı</div>
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Panik atak</div>
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Depresyon</div>
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Travma & TSSB</div>
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Bağımlılık</div>
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> İlişki sorunları</div>
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Stres & tükenmişlik</div>
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Öfke & duygu düzenleme</div>
-                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Yaşam geçişleri</div>
-            </div>
+      <a href="/hizmetler/bagimlilik" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🔄</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Bağımlılık</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Davranışsal ve maddesel bağımlılık kalıplarında öz denetim ve farkındalık.</p>
         </div>
-    </section>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
 
-    <!-- About & Principles Section -->
-    <section id="hakkimda">
-        <div class="about-detailed">
-            <div class="section-header-tag">Hakkımda</div>
-            <h2 class="section-title">Yargısız bir alanda, birlikte çalışmak</h2>
-            
-            <div class="about-grid-content">
-                <div>
-                    <p style="color: var(--text-muted); margin-bottom: 1.2rem;">Konya’da yüz yüze; Türkiye genelinde ve yurt dışında ise online psikolojik danışmanlık hizmeti sunuyorum. Ergen ve yetişkin yaş gruplarıyla çalışıyorum.</p>
-                    <p style="color: var(--text-muted); margin-bottom: 1.2rem;">Kaygı, panik atak, depresyon, travma, bağımlılık, stres ve ilişki sorunları başta olmak üzere pek çok alanda bireysel destek sağlıyorum. Seanslarımda Kabul ve Adanmışlık yaklaşımı (ACT) ve Bilinçli Farkındalık (Mindfulness / MBSR) temelli yaklaşımları esas alıyorum.</p>
-                    <p style="color: var(--text-muted);">Bu yöntem, düşüncelerinizi değiştirmeye zorlamak yerine, kendi değerleriniz doğrultusunda anlamlı bir yaşam inşa etmenize rehberlik ediyor. Yüz yüze seanslarımı Konya’daki ofisimde sürdürürken, online seanslar aracılığıyla Türkiye’nin ve dünyanın her yerindeki danışanlarıma ulaşıyorum.</p>
-                    
-                    <h3 style="font-size: 1.3rem; margin-top: 2.5rem; margin-bottom: 1rem; color: var(--primary-dark);" class="brand-font">Çalışma ilkelerim</h3>
-                    <ul class="principles-list">
-                        <li><i class="fa-solid fa-check"></i> Gizlilik ve güven, sürecin temelidir.</li>
-                        <li><i class="fa-solid fa-check"></i> Semptom değil, kişi ve bağlam merkezdedir.</li>
-                        <li><i class="fa-solid fa-check"></i> Kanıta dayalı, güncel yaklaşımlarla çalışırım.</li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 style="font-size: 1.4rem; color: var(--primary-dark); margin-bottom: 1.5rem;" class="brand-font">Eğitim & Sertifikalar</h3>
-                    
-                    <div class="cert-box">
-                        <h4>Psikolojik Danışmanlık ve Rehberlik (PDR)</h4>
-                        <p>Lisans eğitimi</p>
-                    </div>
-                    
-                    <div class="cert-box">
-                        <h4>ACT — Temel, İleri ve Süpervizyon</h4>
-                        <p>Kabul ve Adanmışlık yaklaşımı sertifika programları · ACT Türkiye</p>
-                    </div>
-
-                    <div class="cert-box">
-                        <h4>MBSR Sertifikası</h4>
-                        <p>Mindfulness Temelli Stres Azaltma Programı · Mindfulness Institute</p>
-                    </div>
-
-                    <div class="cert-box">
-                        <h4>Depresyonda ACT</h4>
-                        <p>ACT Türkiye · Eğitmen: Jim Lucas</p>
-                    </div>
-
-                    <div class="cert-box">
-                        <h4>Travmada Süreç Odaklı ACT</h4>
-                        <p>ACT Türkiye · Eğitmen: Prof. Dr. Robyn D. Walser</p>
-                    </div>
-                </div>
-            </div>
+      <a href="/hizmetler/iliski-sorunlari" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🤝</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">İlişki Sorunları</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">İletişim tıkanıklıkları, sınırlar ve güven ilişkilerini güçlendirme.</p>
         </div>
-    </section>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
 
-    <!-- Diaspora Section -->
-    <section id="diaspora">
-        <div class="diaspora-banner">
-            <div class="section-header-tag" style="color: var(--accent-green);">Yurt Dışındaki Türkler İçin</div>
-            <h2>Nerede olursanız olun, ana dilinizde destek</h2>
-            <p>Almanya’dan Hollanda’ya, yurt dışında yaşayan Türk danışanlar için saat dilimine duyarlı online seanslar. Kültürel bağlamı paylaşan bir danışmanla çalışmanın rahatlığı.</p>
-            <div class="country-flags">
-                <div class="country-tag">🇩🇪 Almanya</div>
-                <div class="country-tag">🇳🇱 Hollanda</div>
-                <div class="country-tag">🇧🇪 Belçika</div>
-                <div class="country-tag">🇦🇹 Avusturya</div>
-                <div class="country-tag">🇨🇭 İsviçre</div>
-                <div class="country-tag">🇫🇷 Fransa</div>
-                <div class="country-tag">🇬🇧 İngiltere</div>
-                <div class="country-tag">🇸🇪 İsveç</div>
-            </div>
+      <a href="/hizmetler/stres-tukenmislik" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🔋</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Stres & Tükenmişlik</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">İş/yaşam dengesi, kronik stres ve tükenmişlik sendromu ile baş etme.</p>
         </div>
-    </section>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
 
-    <!-- Blog Section -->
-    <section id="blog">
-        <div class="section-header-tag">Blog</div>
-        <h2 class="section-title">Yazılar</h2>
-        <p style="color: var(--text-muted);">Kaygı, farkındalık ve günlük yaşamda ACT üzerine kısa notlar.</p>
-
-        <div class="blog-grid">
-            <div class="blog-card">
-                <div>
-                    <div class="blog-card-img"><i class="fa-solid fa-feather"></i></div>
-                    <div class="blog-card-body">
-                        <span class="blog-tag">Farkındalık</span>
-                        <h3>Kaygıyla savaşmayı bırakınca ne oluyor?</h3>
-                        <p>Kabul, teslim olmak değildir. Aradaki farkı günlük örneklerle ele alıyoruz.</p>
-                    </div>
-                </div>
-                <div style="padding: 0 2rem 2rem;">
-                    <a href="#iletisim" class="card-link">Oku <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div>
-                    <div class="blog-card-img"><i class="fa-solid fa-wind"></i></div>
-                    <div class="blog-card-body">
-                        <span class="blog-tag">MBSR</span>
-                        <h3>Nefes: en yakınımızdaki demir atma noktası</h3>
-                        <p>Bilinçli nefesin sinir sistemimizi nasıl yatıştırdığına dair kısa bir rehber.</p>
-                    </div>
-                </div>
-                <div style="padding: 0 2rem 2rem;">
-                    <a href="#iletisim" class="card-link">Oku <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="blog-card">
-                <div>
-                    <div class="blog-card-img"><i class="fa-solid fa-compass"></i></div>
-                    <div class="blog-card-body">
-                        <span class="blog-tag">Değerler</span>
-                        <h3>Değerlerinizi nasıl keşfedersiniz?</h3>
-                        <p>Hedeflerle değerleri ayırt etmek, yön duygusunu güçlendirir.</p>
-                    </div>
-                </div>
-                <div style="padding: 0 2rem 2rem;">
-                    <a href="#iletisim" class="card-link">Oku <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
+      <a href="/hizmetler/ofke-duygu-duzenleme" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🌊</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Öfke & Duygu Düzenleme</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Yoğun duygusal dalgalanmaları tanıma ve sağlıklı ifade yöntemleri.</p>
         </div>
-    </section>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
 
-    <!-- FAQ Section -->
-    <section>
-        <div class="section-header-tag" style="text-align: center;">Sık Sorulanlar</div>
-        <h2 class="section-title" style="text-align: center;">Aklınızdaki sorular</h2>
-        
-        <div class="faq-container">
-            <div class="faq-item">
-                <span>Seanslar gizli mi?</span>
-                <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="faq-item">
-                <span>Online seans yüz yüze kadar etkili mi?</span>
-                <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="faq-item">
-                <span>Bir seans ne kadar sürer?</span>
-                <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="faq-item">
-                <span>Randevu nasıl kesinleşir?</span>
-                <i class="fa-solid fa-plus"></i>
-            </div>
+      <a href="/hizmetler/yasam-gecisleri" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🧭</div>
+          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Yaşam Geçişleri</h3>
+          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Göç, kariyer değişimi, evlilik/boşanma gibi kırılma noktalarına uyum.</p>
         </div>
-    </section>
-
-    <!-- Google Haritalar Konum Alanı -->
-    <div class="map-container" style="width: 100%; max-width: 1200px; margin: 4rem auto; padding: 0 1rem;">
-      <iframe 
-        src="https://maps.google.com/maps?q=Psikolojik%20Dan%C4%B1%C5%9Fman%20Furkan%20Yaylac%C4%B1k%20Yaka%20Aziz%20Mahmut%20Hudai%20Cd.%20%C4%B0%C3%A7kon%20Plaza%20No%3A185A%2F302%2C%2042090%20Meram%2FKonya&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-        width="100%" 
-        height="420" 
-        style="border:0; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
+      </a>
     </div>
+  </section>
 
-    <!-- Dark Section: How It Works -->
-    <div class="dark-section" id="iletisim">
-        <div class="dark-inner">
-            <div class="section-header-tag" style="color: var(--accent-green);">Nasıl İşliyor</div>
-            <h2 style="font-size: 2.4rem; color: white; margin-bottom: 1rem;" class="brand-font">İlk adımdan seanslara</h2>
-            
-            <div class="steps-grid">
-                <div class="step-item">
-                    <h4><span class="step-num">01</span> İletişim</h4>
-                    <p>Randevu formunu doldurun ya da WhatsApp’tan yazın. Kısa sürede size dönüş yapılır.</p>
-                </div>
-                <div class="step-item">
-                    <h4><span class="step-num">02</span> Ön görüşme</h4>
-                    <p>İhtiyacınızı ve beklentinizi konuşup birlikte çalışmanın uygun olup olmadığına bakarız.</p>
-                </div>
-                <div class="step-item">
-                    <h4><span class="step-num">03</span> Seanslar</h4>
-                    <p>Yüz yüze ya da online, düzenli görüşmelerle sizin hızınızda ilerleriz.</p>
-                </div>
-            </div>
+  <!-- 3. BÖLÜM: Hizmet Detayları -->
+  <section class="services-detail-section" style="background-color: #fcfdfc; padding: 4rem 1rem; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7;">
+    <div class="container">
+      <header class="section-header" style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="font-size: 2rem; color: #233f38; margin-bottom: 0.5rem;">Danışmanlık Hizmetlerimiz</h2>
+        <p style="font-size: 1.05rem; color: #4a5568; max-width: 700px; margin: 0 auto;">Yüz yüze veya online; bireysel, eğitim ve çift danışmanlığı süreçlerinde Kabul ve Adanmışlık (ACT) ile Mindfulness (MBSR) odaklı kanıta dayalı yaklaşımlarla yanınızdayım.</p>
+      </header>
 
-            <!-- Call to Action Box Inside Dark Section -->
-            <div class="cta-box" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);">
-                <h2 style="color: white;">Küçük bir adım, yeni bir yön olabilir</h2>
-                <p style="color: rgba(255,255,255,0.7);">Uygun bir tarih seçin, gerisini birlikte konuşalım.</p>
-                <a href="https://wa.me/" target="_blank" class="btn-dark" style="background: white; color: var(--primary-dark);">Randevu talebi oluştur</a>
-            </div>
+      <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+        <!-- 1. Bireysel Danışmanlık -->
+        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">1. Bireysel Psikolojik Danışmanlık</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Yetişkin bireylerle birebir yürütülen bu süreçte, yaşam kalitenizi ve esnekliğinizi artıran somut adımlar atılması hedeflenir.</p>
+          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
+            <li style="margin-bottom: 0.4rem;"><strong>Kaygı ve Anksiyete:</strong> Panik atak, yaygın kaygı, sosyal anksiyete ve korkularla baş etme</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Depresyon ve Tükenmişlik:</strong> İsteksizlik, kronik stres, özsaygı ve tükenmişlik duygusu</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Travma ve Yaşam Geçişleri:</strong> Zorlayıcı yaşam deneyimleri, karar alma, uyum ve yas süreçleri</li>
+          </ul>
+        </article>
 
-            <!-- Footer Inside Dark Area -->
-            <footer class="site-footer">
-                <div class="footer-col">
-                    <h4 class="brand-font">Furkan Yaylacık</h4>
-                    <p>ACT ve MBSR temelli psikolojik danışmanlık. Konya’da yüz yüze, Türkiye geneli ve yurt dışında online.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Sayfalar</h4>
-                    <a href="#anaseyfe">Ana Sayfa</a>
-                    <a href="#hakkimda">Hakkımda</a>
-                    <a href="#hizmetler">Hizmetler</a>
-                    <a href="#diaspora">Diaspora</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#iletisim">İletişim</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Hizmetler</h4>
-                    <a href="#hizmetler">Bireysel Danışmanlık</a>
-                    <a href="#hizmetler">Ergen Danışmanlığı</a>
-                    <a href="#hizmetler">Çift Danışmanlığı</a>
-                    <a href="#hizmetler">Online Seans</a>
-                </div>
-                <div class="footer-col">
-                    <h4>İletişim</h4>
-                    <a href="https://wa.me/" target="_blank">WhatsApp</a>
-                    <a href="https://instagram.com/pd.furkanyaylack" target="_blank">Instagram</a>
-                    <p>0552 938 97 59</p>
-                    <p>Yaka Mah. Aziz Mahmut Hudai Cd. İçkon Plaza No:185A/302, 42090 Meram / Konya</p>
-                </div>
-            </footer>
-            
-            <div class="copyright-bar">
-                <p>&copy; 2026 Furkan Yaylacık · Tüm hakları saklıdır. &nbsp;|&nbsp; Gizlilik & KVKK · Aydınlatma Metni</p>
-            </div>
-        </div>
+        <!-- 2. Eğitim Danışmanlığı -->
+        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">2. Eğitim Danışmanlığı</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Öğrencilerin akademik, zihinsel ve duygusal gelişim süreçlerini destekleyen yapılandırılmış rehberlik çalışmasıdır.</p>
+          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
+            <li style="margin-bottom: 0.4rem;"><strong>Sınav ve Okul Kaygısı:</strong> Sınav stresi, performans kaygısı ve özgüven geliştirme</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Akademik Performans & Hedefler:</strong> Verimli çalışma yöntemleri, zaman yönetimi ve motivasyon</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Akran İlişkileri & Duygu Düzenleme:</strong> Sosyal uyum, iletişim becerileri ve duygu yönetimi</li>
+          </ul>
+        </article>
+
+        <!-- 3. MOXO Dikkat Testi -->
+        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">3. MOXO Dikkat Testi (Objektif Değerlendirme)</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Çocuk, ergen ve yetişkinlerde dikkat ve performans düzeyini ölçen, MOXO Türkiye akreditasyonlu bilgisayar tabanlı objektif değerlendirme aracıdır.</p>
+          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
+            <li style="margin-bottom: 0.4rem;"><strong>Dikkat & Odaklanma:</strong> Çeldiriciler altında odağı sürdürme kapasitesi</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Zamanlama & Dürtüsellik:</strong> Tepki süresi, zaman yönetimi ve dürtü kontrolü</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Hiperaktivite Değerlendirmesi:</strong> Davranışsal hareketliliğin objektif ölçümü ve raporlanması</li>
+          </ul>
+        </article>
+
+        <!-- 4. Çift Danışmanlığı -->
+        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">4. Çift Danışmanlığı</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Çiftlerin ilişki dinamiklerini güçlendirmeye ve tıkanıklıkları aşmaya yönelik yapılandırılmış görüşmelerdir.</p>
+          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
+            <li style="margin-bottom: 0.4rem;"><strong>İletişim ve Çatışma Yönetimi:</strong> Yapıcı diyalog kurma, dinleme ve çözüm odaklı yaklaşım</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Bağ Kurma ve Güven:</strong> Duygusal yakınlığı artırma, sınır yönetimi ve güven tazeleme</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Ortak Değerler:</strong> Yaşam hedeflerinde ve ilişkide ortak paydaya ulaşma</li>
+          </ul>
+        </article>
+
+        <!-- 5. Online Seans -->
+        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">5. Online Psikolojik Danışmanlık</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Şifreli ve güvenli platformlar üzerinden görüntülü görüşme konforu sağlar.</p>
+          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
+            <li style="margin-bottom: 0.4rem;"><strong>Türkiye Geneli:</strong> 81 ilimizden kesintisiz erişim olanağı</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Yurt Dışı:</strong> Farklı saat dilimlerine uygun esnek zaman planlaması</li>
+            <li style="margin-bottom: 0.4rem;"><strong>Mekan Bağımsızlık:</strong> Kendi konfor alanınızdan seanslara katılabilme kolaylığı</li>
+          </ul>
+        </article>
+      </div>
     </div>
+  </section>
+
+  <!-- 4. BÖLÜM: Yurt Dışı Diaspora Online Danışmanlık -->
+  <section class="diaspora-section" style="padding: 4rem 1rem; background-color: #f9fbf9;">
+    <div class="container" style="text-align: center;">
+      <header class="section-header" style="margin-bottom: 3rem;">
+        <span class="badge" style="background: #e8f0eb; color: #233f38; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Sınırları Aşan Destek</span>
+        <h2 style="font-size: 2.2rem; color: #233f38; margin-top: 0.75rem;">Yurt Dışındaki Türkler İçin Online Danışmanlık</h2>
+        <p style="font-size: 1.1rem; color: #4a5568; max-width: 750px; margin: 0.75rem auto 0; line-height: 1.6;">
+          Ana dilinizde, kültürünüzü ve göç deneyiminizi anlayan bir uzmanla çalışın. Yurt dışında yaşamanın getirdiği uyum zorlukları, yalnızlık ve dil bariyerini aşmak için saat diliminize uygun online seanslarla yanınızdayım.
+        </p>
+      </header>
+
+      <div class="country-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇩🇪</div>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">Almanya</h3>
+          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">Almanya genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
+          <a href="/online-danismanlik/almanya" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+        </div>
+
+        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇳🇱</div>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">Hollanda</h3>
+          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">Hollanda genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
+          <a href="/online-danismanlik/hollanda" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+        </div>
+
+        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇧🇪</div>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">Belçika</h3>
+          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">Belçika genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
+          <a href="/online-danismanlik/belcika" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+        </div>
+
+        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇦🇹</div>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">Avusturya</h3>
+          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">Avusturya genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
+          <a href="/online-danismanlik/avusturya" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+        </div>
+
+        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇨🇭</div>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">İsviçre</h3>
+          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">İsviçre genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
+          <a href="/online-danismanlik/isvicre" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+        </div>
+
+        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇫🇷</div>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">Fransa</h3>
+          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">Fransa genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
+          <a href="/online-danismanlik/fransa" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+        </div>
+
+        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇬🇧</div>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">İngiltere</h3>
+          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">İngiltere genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
+          <a href="/online-danismanlik/ingiltere" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+        </div>
+
+        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇸🇪</div>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">İsveç</h3>
+          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">İsveç genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
+          <a href="/online-danismanlik/isvec" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 3rem; background: #ffffff; border-radius: 12px; padding: 1.5rem; border: 1px dashed #cbd5e0; display: inline-block;">
+        <p style="font-size: 0.95rem; color: #4a5568; margin: 0;">
+          ℹ️ <strong>Ülkeniz listede yok mu?</strong> Online psikolojik danışmanlık dünyanın her yerinden mümkündür. Saat diliminize uygun randevu oluşturmak için <a href="https://wa.me/905529389759" target="_blank" rel="noopener" style="color: #233f38; font-weight: 600; text-decoration: underline;">WhatsApp hattımdan</a> iletişime geçebilirsiniz.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. BÖLÜM: Blog Makaleleri -->
+  <section class="blog-section" style="width: 100%; max-width: 1200px; margin: 4rem auto; padding: 0 1rem;">
+    <header class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
+      <span style="background-color: #e8f0eb; color: #233f38; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Güncel Paylaşımlar</span>
+      <h2 style="font-size: 2rem; color: #233f38; margin-top: 0.5rem;">Psikoloji Blogu</h2>
+    </header>
+
+    <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+      <article class="blog-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <span class="category-badge" style="display: inline-block; background: #e8f0eb; color: #233f38; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem;">Farkındalık</span>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem; line-height: 1.4;">Kaygıyla Savaşmayı Bırakınca Ne Oluyor?</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;">Kabul etmek, teslim olmak ya da pes etmek değildir. Kaygıyla mücadeleyi bırakmanın zihinsel alandaki karşılığını günlük örneklerle ele alıyoruz.</p>
+        </div>
+        <a href="/blog/kaygiyla-savasmayi-birakinca-ne-oluyor" style="color: #233f38; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 4px;">
+          Yazıyı Oku →
+        </a>
+      </article>
+
+      <article class="blog-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <span class="category-badge" style="display: inline-block; background: #e8f0eb; color: #233f38; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem;">MBSR</span>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem; line-height: 1.4;">Nefes: En Yakınımızdaki Demir Atma Noktası</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;">Bilinçli farkındalıkla alınan bir nefesin sinir sistemini nasıl yatıştırdığına ve anın içinde kalmamızı sağladığına dair kısa bir rehber.</p>
+        </div>
+        <a href="/blog/nefes-en-yakinimizdaki-demir-atma-noktasi" style="color: #233f38; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 4px;">
+          Yazıyı Oku →
+        </a>
+      </article>
+
+      <article class="blog-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <span class="category-badge" style="display: inline-block; background: #e8f0eb; color: #233f38; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem;">Değerler</span>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem; line-height: 1.4;">Değerlerinizi Nasıl Keşfedersiniz?</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;">Ulaşılacak hedefler ile pusula görevi gören değerleri ayırt etmek, yaşamınızdaki yön duygusunu ve tatmini güçlendirir.</p>
+        </div>
+        <a href="/blog/degerlerinizi-nasil-kesfedersiniz" style="color: #233f38; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 4px;">
+          Yazıyı Oku →
+        </a>
+      </article>
+
+      <article class="blog-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <span class="category-badge" style="display: inline-block; background: #e8f0eb; color: #233f38; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem;">Travma</span>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem; line-height: 1.4;">Bedende Kalan İzler ve Şefkatle Temas</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;">Zorlayıcı yaşantıların ardından iyileşme sürecinde güven hissinin, bedensel farkındalığın ve öz-şefkatin kritik rolü.</p>
+        </div>
+        <a href="/blog/bedende-kalan-izler-ve-sefkatle-temas" style="color: #233f38; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 4px;">
+          Yazıyı Oku →
+        </a>
+      </article>
+
+      <article class="blog-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <span class="category-badge" style="display: inline-block; background: #e8f0eb; color: #233f38; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem;">İlişkiler</span>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem; line-height: 1.4;">Çatışmada “Haklı Olmak” Yerine Yakın Olmak</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;">İlişki gerilimlerinde ve anlaşmazlık anlarında haklı çıkma çabası yerine duygusal bağı korumanın küçük, etkili pratikleri.</p>
+        </div>
+        <a href="/blog/catismada-hakli-olmak-yerine-yakin-olmak" style="color: #233f38; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 4px;">
+          Yazıyı Oku →
+        </a>
+      </article>
+
+      <article class="blog-card" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.75rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+        <div>
+          <span class="category-badge" style="display: inline-block; background: #e8f0eb; color: #233f38; padding: 4px 12px; border-radius: 16px; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem;">Ergenlik</span>
+          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem; line-height: 1.4;">Ergenle Konuşmak: Dinlemenin Gücü</h3>
+          <p style="font-size: 0.95rem; color: #4a5568; line-height: 1.6; margin-bottom: 1.5rem;">Ebeveynler için iletişimde tavsiye vermek yerine yargısız ve etkin dinleme alanları açma üzerine rehber notlar.</p>
+        </div>
+        <a href="/blog/ergenle-konusmak-dinlemenin-gucu" style="color: #233f38; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 4px;">
+          Yazıyı Oku →
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- 6. BÖLÜM: İletişim & Randevu Formu (Tamamlanmış Modül) -->
+  <section class="contact-booking-section" style="padding: 4rem 1rem; background-color: #f7faf7; border-top: 1px solid #e2e8f0;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <header class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
+        <h2 style="font-size: 2rem; color: #233f38; margin-bottom: 0.5rem;">İletişim & Randevu</h2>
+        <p class="subtitle" style="font-size: 1.1rem; font-weight: 600; color: #4a5568; margin-bottom: 0.5rem;">Bir Görüşme Planlayalım</p>
+        <p class="description" style="font-size: 0.95rem; color: #718096; line-height: 1.6;">
+          Aşağıdaki formu doldurun; bilgileriniz tercihiniz doğrultusunda WhatsApp veya e-posta uygulamanızda otomatik olarak hazırlanır. Talebiniz teyit edilince randevunuz kesinleşir.
+        </p>
+      </header>
+
+      <div class="booking-form-container" style="background: #ffffff; padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+        <form class="appointment-form" id="bookingForm">
+          <div class="form-group">
+            <label for="fullname">Ad Soyad *</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Adınız ve Soyadınız">
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Telefon veya E-posta *</label>
+            <input type="text" id="contact" name="contact" required placeholder="05XX XXX XX XX veya ornek@mail.com">
+          </div>
+
+          <div class="form-group">
+            <label for="service">Hizmet Türü *</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Almak istediğiniz hizmeti seçiniz</option>
+              <option value="Bireysel Danışmanlık">Bireysel Psikolojik Danışmanlık</option>
+              <option value="Eğitim Danışmanlığı">Eğitim Danışmanlığı</option>
+              <option value="MOXO Dikkat Testi">MOXO Dikkat Testi</option>
+              <option value="Çift Danışmanlığı">Çift Danışmanlığı</option>
+              <option value="Online Danışmanlık">Online Psikolojik Danışmanlık (Yurt İçi / Yurt Dışı)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="preference">Görüşme Tercihi *</label>
+            <select id="preference" name="preference" required>
+              <option value="Yüz Yüze (Konya Meram)">Yüz Yüze (Konya Meram Offis)</option>
+              <option value="Online Görüşme">Online Görüşme</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Kısa Not / Mesajınız (Opsiyonel)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ulaşmak istediğiniz uygun zaman dilimleri veya iletmek istediğiniz detaylar..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Randevu Talebini Gönder</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
