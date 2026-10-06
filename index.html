@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furkan Yaylacık — Psikolojik Danışman | Konya & Online</title>
-    <meta name="description" content="ACT ve MBSR temelli psikolojik danışmanlık. Konya’da yüz yüze, Türkiye geneli ve yurt dışında online seanslar.">
+    <title>Furkan Yaylacık — Psikolojik Danışman | ACT & MBSR</title>
+    <meta name="description" content="Ergen ve yetişkin danışanlarla, Kabul ve Kararlılık Terapisi (ACT) ve Bilinçli Farkındalık (Mindfulness / MBSR) temelli yaklaşım. Konya'da yüz yüze, Türkiye geneli ve yurt dışında online.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +16,12 @@
 
     <style>
         :root {
-            --primary: #233f38;
-            --primary-light: #32584f;
-            --accent: #7c9a92;
-            --bg-color: #f8faf9;
-            --surface: #ffffff;
+            --bg-body: #f4f6f4;
+            --bg-card: #ffffff;
+            --primary-dark: #1b332d;
+            --primary-light: #233f38;
+            --accent-green: #7c9a92;
+            --accent-soft: #eaf0ee;
             --text-main: #1e2927;
             --text-muted: #556360;
             --border-color: #e2e8e5;
@@ -39,7 +40,7 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-color);
+            background-color: var(--bg-body);
             color: var(--text-main);
             line-height: 1.6;
         }
@@ -69,16 +70,28 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--primary);
+        .logo-area {
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
+        }
+
+        .logo-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-family: 'Fraunces', serif;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.75rem;
             list-style: none;
             align-items: center;
         }
@@ -87,127 +100,213 @@
             text-decoration: none;
             color: var(--text-muted);
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             transition: var(--transition);
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--primary-dark);
         }
 
-        .btn-primary {
-            background-color: var(--primary);
+        .btn-dark {
+            background-color: var(--primary-dark);
             color: white;
-            padding: 0.75rem 1.5rem;
+            padding: 0.65rem 1.4rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: var(--transition);
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .btn-primary:hover {
+        .btn-dark:hover {
             background-color: var(--primary-light);
             transform: translateY(-2px);
         }
 
-        /* Hero Section */
-        hero {
-            padding: 10rem 2rem 5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            min-height: 90vh;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            color: var(--primary);
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-content p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: #eaf0ee;
-            color: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            padding: 0.7rem 1.5rem;
+        .btn-outline-dark {
+            border: 2px solid var(--primary-dark);
+            color: var(--primary-dark);
+            padding: 0.6rem 1.4rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: var(--transition);
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: white;
-        }
-
-        .hero-image {
-            background: var(--accent);
-            border-radius: 2rem;
-            height: 450px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-outline-dark:hover {
+            background: var(--primary-dark);
             color: white;
-            font-size: 5rem;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(35, 63, 56, 0.1);
         }
 
         /* Sections General */
         section {
-            padding: 6rem 2rem;
+            padding: 5rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
+        /* Hero Section */
+        .hero-section {
+            padding-top: 10rem;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
         }
 
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
+        .hero-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-section h1 {
+            font-size: 3.2rem;
+            color: var(--primary-dark);
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 540px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .hero-badges-text {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            gap: 1.25rem;
+            list-style: none;
+        }
+
+        .hero-badges-text li::before {
+            content: "•";
+            color: var(--accent-green);
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .hero-graphic {
+            background: var(--accent-soft);
+            border-radius: 2rem;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(27, 51, 45, 0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .concentric-circle {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            border: 1.5px dashed rgba(124, 154, 146, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .inner-dot {
+            width: 100px;
+            height: 100px;
+            background: var(--primary-dark);
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(27, 51, 45, 0.3);
+        }
+
+        .graphic-label {
+            position: absolute;
+            bottom: 25px;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: var(--text-muted);
+        }
+
+        /* Approach Section */
+        .approach-header {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .approach-title {
+            font-size: 2.4rem;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+        }
+
+        .approach-desc {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .approach-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 1.25rem;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .approach-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+        }
+
+        .approach-card span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .approach-card h3 {
+            font-size: 1.35rem;
+            color: var(--primary-dark);
             margin-bottom: 1rem;
         }
 
-        .section-title p {
+        .approach-card p {
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 0.95rem;
         }
 
         /* Services Grid */
@@ -218,105 +317,326 @@
         }
 
         .service-card {
-            background: var(--surface);
-            padding: 2.5rem;
-            border-radius: 1.5rem;
+            background: var(--bg-card);
+            padding: 2.2rem;
+            border-radius: 1.25rem;
             border: 1px solid var(--border-color);
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-            border-color: var(--accent);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+            border-color: var(--accent-green);
         }
 
-        .service-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-soft);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
             margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
 
         .service-card h3 {
             font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
+            color: var(--primary-dark);
+            margin-bottom: 0.75rem;
         }
 
-        .service-card p {
+        .service-card > p {
             color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-list li {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .service-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-dark);
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .card-link:hover {
+            gap: 0.75rem;
+        }
+
+        /* Topics Tags Grid */
+        .topics-wrapper {
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .topic-pill {
+            background: var(--bg-body);
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            color: var(--primary-dark);
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .topic-pill i {
+            color: var(--accent-green);
+            font-size: 0.8rem;
+        }
+
+        /* Dark Wrapper Section (How it works & Footer) */
+        .dark-section {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 6rem 2rem;
+        }
+
+        .dark-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .steps-header {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-green);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .steps-title {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 6rem;
+            position: relative;
+        }
+
+        .step-item h4 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .step-num {
+            font-size: 1rem;
+            color: var(--accent-green);
+            background: rgba(124, 154, 146, 0.15);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .step-item p {
+            color: rgba(255, 255, 255, 0.75);
             font-size: 0.95rem;
         }
 
-        /* Approaches / About */
-        .about-grid {
+        /* About & Principles Section */
+        .about-section {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
             gap: 4rem;
             align-items: center;
+            background: var(--bg-card);
+            border-radius: 1.5rem;
+            padding: 4rem;
+            border: 1px solid var(--border-color);
+            margin: 4rem auto;
+            max-width: 1200px;
         }
 
-        .about-text h3 {
-            font-size: 2rem;
-            color: var(--primary);
+        .about-image-box {
+            background: var(--accent-soft);
+            height: 450px;
+            border-radius: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-size: 5rem;
+        }
+
+        .about-content h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
             margin-bottom: 1.5rem;
         }
 
-        .about-text p {
+        .about-content p {
             color: var(--text-muted);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
+            font-size: 0.98rem;
         }
 
-        .features-list {
+        .principles-list {
             list-style: none;
             margin-top: 2rem;
         }
 
-        .features-list li {
+        .principles-list li {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 1rem;
             margin-bottom: 1rem;
+            font-size: 0.98rem;
+            color: var(--primary-dark);
             font-weight: 500;
-            color: var(--primary);
         }
 
-        .features-list i {
-            color: var(--accent);
-            background: #eaf0ee;
-            padding: 0.5rem;
-            border-radius: 50%;
+        .principles-list i {
+            color: var(--accent-green);
+            margin-top: 4px;
+        }
+
+        /* Diaspora Section */
+        .diaspora-banner {
+            background: linear-gradient(135deg, #233f38 0%, #162925 100%);
+            border-radius: 1.5rem;
+            padding: 4rem;
+            color: white;
+            margin: 4rem auto;
+            max-width: 1200px;
+        }
+
+        .diaspora-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .diaspora-banner p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+        }
+
+        .country-flags {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .country-tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent-green);
+        }
+
+        .faq-item span {
+            font-weight: 600;
+            color: var(--primary-dark);
+            font-size: 1.05rem;
+        }
+
+        .faq-item i {
+            color: var(--text-muted);
         }
 
         /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 4rem 2rem 2rem;
+        .site-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 4rem;
             margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 3rem;
-            margin-bottom: 3rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 3rem;
         }
 
         .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
-            font-size: 1.2rem;
         }
 
         .footer-col p, .footer-col a {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             display: block;
             margin-bottom: 0.75rem;
+            font-size: 0.92rem;
             transition: var(--transition);
         }
 
@@ -324,43 +644,25 @@
             color: white;
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-links a {
-            background: rgba(255,255,255,0.1);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .social-links a:hover {
-            background: var(--accent);
-        }
-
-        .copyright {
+        .copyright-bar {
             text-align: center;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.85rem;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 968px) {
-            hero, .about-grid {
+            .hero-section, .about-section {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            .hero-content h1 {
-                font-size: 2.75rem;
+            .hero-buttons {
+                justify-content: center;
             }
-            .hero-actions {
+            .hero-badges-text {
                 justify-content: center;
             }
             .nav-links {
@@ -374,114 +676,274 @@
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Furkan Yaylacık</a>
+            <a href="#" class="logo-area">
+                <span class="logo-title">Furkan Yaylacık</span>
+                <span class="logo-sub">Psikolojik Danışman • ACT & MBSR</span>
+            </a>
             <ul class="nav-links">
+                <li><a href="#hakkimda">Ana Sayfa</a></li>
                 <li><a href="#hakkimda">Hakkımda</a></li>
                 <li><a href="#hizmetler">Hizmetler</a></li>
-                <li><a href="#yaklasim">Yaklaşımım</a></li>
+                <li><a href="#diaspora">Diaspora</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
-            <a href="#iletisim" class="btn-primary">Randevu Alın</a>
+            <a href="#iletisim" class="btn-dark">Randevu Alın</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <hero>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fa-solid fa-location-dot"></i> Konya Meram & Online Danışmanlık
+    <section class="hero-section">
+        <div>
+            <div class="hero-tag">ACT & MBSR Temelli Danışmanlık</div>
+            <h1>Zorlanmayı bastırmadan, değerlerinizle yaşamı öğrenmek.</h1>
+            <p>Ergen ve yetişkin danışanlarla; kaygı, panik atak, depresyon, travma, bağımlılık, stres ve ilişki sorunlarında Kabul ve Kararlılık Terapisi ile bilinçli farkındalık temelli bir yaklaşım.</p>
+            <div class="hero-buttons">
+                <a href="#iletisim" class="btn-dark">Randevu talebi oluştur</a>
+                <a href="#hizmetler" class="btn-outline-dark">Hizmetleri incele</a>
             </div>
-            <h1>Bilinçli Farkındalıkla Yaşamınızı Yeniden Keşfedin</h1>
-            <p>Kabul ve Kararlılık Terapisi (ACT) ve Mindfulness temelli yaklaşımlarla bireysel, ergen ve çift danışmanlığı süreçlerinizde yanınızdayım.</p>
-            <div class="hero-actions">
-                <a href="#iletisim" class="btn-primary">Seans Talebi Oluştur</a>
-                <a href="#hakkimda" class="btn-outline">Daha Fazla Bilgi</a>
+            <ul class="hero-badges-text">
+                <li>Konya'da yüz yüze</li>
+                <li>Türkiye geneli online</li>
+                <li>Yurt dışı diasporaya destek</li>
+            </ul>
+        </div>
+        <div class="hero-graphic">
+            <div class="concentric-circle">
+                <div class="inner-dot"></div>
+            </div>
+            <span class="graphic-label">bir an, burada.</span>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section>
+        <div class="approach-header">Yaklaşım</div>
+        <h2 class="approach-title">Duygularla savaşmak yerine, onlara alan açmak</h2>
+        <p class="approach-desc">ACT ve MBSR; zor düşünce ve duyguları yok saymadan, sizin için gerçekten önemli olana doğru adım atmanıza yardımcı olan, kanıta dayalı çağdaş yaklaşımlardır.</p>
+        
+        <div class="approach-grid">
+            <div class="approach-card">
+                <span>01</span>
+                <h3>Kabul</h3>
+                <p>Kaygıyı ya da acıyı yok etmeye çalışmadan, ona yer açmayı ve onunla ilişkinizi değiştirmeyi öğrenmek.</p>
+            </div>
+            <div class="approach-card">
+                <span>02</span>
+                <h3>Bilinçli Farkındalık</h3>
+                <p>Geçmişin ve geleceğin döngüsünden çıkıp şimdiki anla temas kurmayı, MBSR pratikleriyle güçlendirmek.</p>
+            </div>
+            <div class="approach-card">
+                <span>03</span>
+                <h3>Değerlere Dayalı Eylem</h3>
+                <p>Sizin için anlamlı olanı netleştirip, o yönde küçük ve sürdürülebilir adımlar atmak.</p>
             </div>
         </div>
-        <div class="hero-image">
-            <i class="fa-solid fa-seedling"></i>
-        </div>
-    </hero>
+    </section>
 
     <!-- Services Section -->
     <section id="hizmetler">
-        <div class="section-title">
-            <h2>Çalışma Alanlarım</h2>
-            <p>Danışan odaklı, bilimsel temelli ve güvenli bir alan sunarak bireysel ihtiyaçlarınıza yönelik profesyonel destek sağlıyorum.</p>
-        </div>
+        <div class="approach-header" style="text-align: center;">Hizmetler</div>
+        <h2 class="approach-title" style="text-align: center; margin: 0 auto 1rem;">Size uygun formatta çalışalım</h2>
+        <p class="approach-desc" style="text-align: center; margin: 0 auto 4rem;">Yüz yüze veya online; bireysel, ergen ve çift görüşmeleri. Tümü ACT ve MBSR yaklaşımıyla.</p>
+
         <div class="services-grid">
             <div class="service-card">
-                <i class="fa-solid fa-user"></i>
-                <h3>Yetişkin Danışmanlığı</h3>
-                <p>Kaygı, stres yönetimi, yaşam geçişleri ve duygusal zorluklarla başa çıkma becerileri geliştirme.</p>
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-user"></i></div>
+                    <h3>Bireysel Danışmanlık</h3>
+                    <p>Yetişkinlerle birebir görüşmeler.</p>
+                    <ul class="service-list">
+                        <li>Anksiyete, depresyon</li>
+                        <li>Travma</li>
+                        <li>Stres ve tükenmişlik</li>
+                        <li>Yaşam geçişleri ve kararlar</li>
+                    </ul>
+                </div>
+                <a href="#iletisim" class="card-link">Detaylar <i class="fa-solid fa-arrow-right"></i></a>
             </div>
+
             <div class="service-card">
-                <i class="fa-solid fa-users"></i>
-                <h3>Çift Danışmanlığı</h3>
-                <p>İlişkide iletişim problemleri, bağlanma stilleri ve çatışma çözüm süreçleri üzerine yapılandırılmış seanslar.</p>
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3>Ergen Danışmanlığı</h3>
+                    <p>Ergen danışanlar için güvenli alan.</p>
+                    <ul class="service-list">
+                        <li>Okul ve sınav kaygısı</li>
+                        <li>Kimlik ve akran ilişkileri</li>
+                        <li>Duygu düzenleme</li>
+                    </ul>
+                </div>
+                <a href="#iletisim" class="card-link">Detaylar <i class="fa-solid fa-arrow-right"></i></a>
             </div>
+
             <div class="service-card">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <h3>Eğitim & Sınav Danışmanlığı</h3>
-                <p>Öğrenci odaklı sınav kaygısı yönetimi, dikkat geliştirme ve stratejik ders çalışma planlamaları.</p>
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Çift Terapisi</h3>
+                    <p>Çiftlerle yapılandırılmış görüşmeler.</p>
+                    <ul class="service-list">
+                        <li>İletişim ve çatışma</li>
+                        <li>Bağ kurma ve güven</li>
+                        <li>Ortak değerler</li>
+                    </ul>
+                </div>
+                <a href="#iletisim" class="card-link">Detaylar <i class="fa-solid fa-arrow-right"></i></a>
             </div>
+
             <div class="service-card">
-                <i class="fa-solid fa-brain"></i>
-                <h3>MOXO Dikkat Testi</h3>
-                <p>Çocuk, ergen ve yetişkinler için dikkat, zamanlama, impulsivite ve hiperaktivite performans değerlendirmesi.</p>
+                <div>
+                    <div class="service-icon"><i class="fa-solid fa-laptop"></i></div>
+                    <h3>Online Seans</h3>
+                    <p>Görüntülü, güvenli görüşme.</p>
+                    <ul class="service-list">
+                        <li>Türkiye'nin her yerinden</li>
+                        <li>Yurt dışı diaspora</li>
+                        <li>Esnek saat planlama</li>
+                    </ul>
+                </div>
+                <a href="#iletisim" class="card-link">Detaylar <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="hakkimda" style="background: white; border-radius: 2rem; margin: 2rem auto; padding: 6rem 3rem;">
-        <div class="about-grid">
-            <div class="about-text">
-                <h3>Psikolojik Danışman Furkan Yaylacık</h3>
-                <p>20 yılı aşkın süredir psikolojik danışmanlık alanında yetişkin, ergen ve çiftlerle çalışmaktayım. Konya Meram'daki ofisimde yüz yüze, Türkiye geneli ve yurt dışında ise online olarak danışmanlık hizmeti sunuyorum.</p>
-                <p>Seanslarımda ağırlıklı olarak <strong>Kabul ve Kararlılık Terapisi (ACT)</strong> ve <strong>Mindfulness (Bilinçli Farkındalık)</strong> ekollerini benimsiyor; danışanlarımın değerleri doğrultusunda anlamlı ve tatmin edici bir yaşam inşa etmelerini destekliyorum.</p>
-                <ul class="features-list">
-                    <li><i class="fa-solid fa-check"></i> Kabul ve Kararlılık Terapisi (ACT) Odaklı Yaklaşım</li>
-                    <li><i class="fa-solid fa-check"></i> MOXO Dikkat Performans Testi Uygulayıcısı</li>
-                    <li><i class="fa-solid fa-check"></i> Yüz Yüze (Konya) ve Online Seans İmkanı</li>
+    <!-- Topics Support Section -->
+    <section>
+        <div class="topics-wrapper">
+            <div class="approach-header">Çalışma Alanları</div>
+            <h2 style="font-size: 2rem; color: var(--primary-dark); margin-bottom: 0.5rem;" class="brand-font">Hangi konularda destek alabilirsiniz</h2>
+            <div class="topics-grid">
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Anksiyete & Kaygı</div>
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Panik Atak</div>
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Depresyon</div>
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Travma & TSSB</div>
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Bağımlılık</div>
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> İlişki Sorunları</div>
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Stres & Tükenmişlik</div>
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Öfke & Duygu Düzenleme</div>
+                <div class="topic-pill"><i class="fa-solid fa-circle"></i> Yaşam Geçişleri</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Principles Section -->
+    <section id="hakkimda">
+        <div class="about-section">
+            <div class="about-image-box">
+                <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="about-content">
+                <h2>Merhaba, ben Furkan Yaylacık</h2>
+                <p>Ergen ve yetişkin danışanlarla, Kabul ve Kararlılık Terapisi (ACT) ve Bilinçli Farkındalık (Mindfulness / MBSR) temelli bir yaklaşımla çalışıyorum.</p>
+                <p>Amacım düşüncelerinizi değiştirmeye zorlamak değil; kendi değerleriniz doğrultusunda anlamlı bir yaşam inşa etmenize rehberlik etmek. PDR lisansımın ardından ACT Türkiye'den temel, ileri ve süpervizyon düzeyinde sertifikalar ile Mindfulness Institute'ten MBSR sertifikası aldım.</p>
+                
+                <h3 style="font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--primary-dark);" class="brand-font">Çalışma ilkelerim</h3>
+                <ul class="principles-list">
+                    <li><i class="fa-solid fa-check"></i> Gizlilik ve güven, sürecin temelidir.</li>
+                    <li><i class="fa-solid fa-check"></i> Semptom değil, kişi ve bağlam merkezdedir.</li>
+                    <li><i class="fa-solid fa-check"></i> Kanıta dayalı, güncel yaklaşımlarla çalışırım.</li>
                 </ul>
             </div>
-            <div style="background: var(--bg-color); height: 400px; border-radius: 1.5rem; display: flex; align-items: center; justify-content: center; color: var(--accent); font-size: 4rem;">
-                <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+    </section>
+
+    <!-- Diaspora Section -->
+    <section id="diaspora">
+        <div class="diaspora-banner">
+            <div class="approach-header" style="color: var(--accent-green);">Yurt Dışındaki Türkler İçin</div>
+            <h2>Nerede olursanız olun, ana dilinizde destek</h2>
+            <p>Almanya'dan Hollanda'ya, yurt dışında yaşayan Türk danışanlar için saat dilimine duyarlı online seanslar. Kültürel bağlamı paylaşan bir danışmanla çalışmanın rahatlığı.</p>
+            <div class="country-flags">
+                <div class="country-tag">🇩🇪 Almanya</div>
+                <div class="country-tag">🇳🇱 Hollanda</div>
+                <div class="country-tag">🇧🇪 Belçika</div>
+                <div class="country-tag">🇦🇹 Avusturya</div>
+                <div class="country-tag">🇨🇭 İsviçre</div>
+                <div class="country-tag">🇫🇷 Fransa</div>
+                <div class="country-tag">🇬🇧 İngiltere</div>
+                <div class="country-tag">🇸🇪 İsveç</div>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Footer -->
-    <footer id="iletisim">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Furkan Yaylacık</h4>
-                <p>Psikolojik Danışman | Konya & Online Danışmanlık Hizmetleri</p>
-                <div class="social-links">
-                    <a href="https://instagram.com/pd.furkanyaylack" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- FAQ Section -->
+    <section>
+        <div class="approach-header" style="text-align: center;">Sık Sorulanlar</div>
+        <h2 class="approach-title" style="text-align: center; margin: 0 auto 3rem;">Aklınızdaki sorular</h2>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <span>Seanslar gizli mi?</span>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="faq-item">
+                <span>Online seans yüz yüze kadar etkili mi?</span>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="faq-item">
+                <span>Bir seans ne kadar sürer?</span>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="faq-item">
+                <span>Randevu nasıl kesinleşir?</span>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Section: How It Works & Footer -->
+    <div class="dark-section" id="iletisim">
+        <div class="dark-inner">
+            <div class="steps-header">Nasıl İşliyor</div>
+            <h2 class="steps-title">İlk adımdan seanslara</h2>
+            
+            <div class="steps-grid">
+                <div class="step-item">
+                    <h4><span class="step-num">01</span> İletişim</h4>
+                    <p>Randevu formunu doldurun ya da WhatsApp'tan yazın. Kısa sürede size dönüş yapılır.</p>
+                </div>
+                <div class="step-item">
+                    <h4><span class="step-num">02</span> Ön görüşme</h4>
+                    <p>İhtiyacınızı ve beklentinizi konuşup birlikte çalışmanın uygun olup olmadığına bakarız.</p>
+                </div>
+                <div class="step-item">
+                    <h4><span class="step-num">03</span> Seanslar</h4>
+                    <p>Yüz yüze ya da online, düzenli görüşmelerle sizin hızınızda ilerleriz.</p>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Hızlı Bağlantılar</h4>
-                <a href="#hakkimda">Hakkımda</a>
-                <a href="#hizmetler">Hizmetler</a>
-                <a href="#yaklasim">Yaklaşımım</a>
-                <a href="#iletisim">İletişim</a>
-            </div>
-            <div class="footer-col">
-                <h4>İletişim Bilgileri</h4>
-                <p><i class="fa-solid fa-location-dot"></i> Meram / Konya</p>
-                <p><i class="fa-solid fa-envelope"></i> bilgi@furkanyaylacik.com</p>
-                <p><i class="fa-solid fa-phone"></i> Randevu ve bilgi için WhatsApp hattından ulaşabilirsiniz.</p>
+
+            <!-- Footer Inside Dark Area -->
+            <footer class="site-footer">
+                <div class="footer-col">
+                    <h4 class="brand-font">Furkan Yaylacık</h4>
+                    <p>ACT ve MBSR temelli psikolojik danışmanlık. Konya'da yüz yüze, Türkiye geneli ve yurt dışında online.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Sayfalar</h4>
+                    <a href="#hakkimda">Ana Sayfa</a>
+                    <a href="#hakkimda">Hakkımda</a>
+                    <a href="#hizmetler">Hizmetler</a>
+                    <a href="#diaspora">Diaspora</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmetler</h4>
+                    <a href="#hizmetler">Bireysel Danışmanlık</a>
+                    <a href="#hizmetler">Ergen Danışmanlığı</a>
+                    <a href="#hizmetler">Çift Terapisi</a>
+                    <a href="#hizmetler">Online Seans</a>
+                </div>
+                <div class="footer-col">
+                    <h4>İletişim</h4>
+                    <a href="https://wa.me/" target="_blank">WhatsApp</a>
+                    <a href="https://instagram.com/pd.furkanyaylack" target="_blank">Instagram</a>
+                    <p>Meram / Konya</p>
+                </div>
+            </footer>
+            
+            <div class="copyright-bar">
+                <p>&copy; 2026 Furkan Yaylacık. Tüm hakları saklıdır. Gizlilik & KVKK Aydınlatma Metni</p>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2026 Furkan Yaylacık. Tüm hakları saklıdır.</p>
-        </div>
-    </footer>
+    </div>
 
 </body>
 </html>
