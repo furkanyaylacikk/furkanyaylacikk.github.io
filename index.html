@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furkan Yaylacık — Psikolojik Danışman | ACT & MBSR Yaklaşımı</title>
-    <meta name="description" content="Ergen ve yetişkin danışanlarla Kabul ve Adanmışlık (ACT) ile Bilinçli Farkındalık (MBSR) temelli psikolojik danışmanlık. Konya yüz yüze ve online seanslar.">
+    <meta name="description" content="Ergen ve yetişkin danışanlarla Kabul ve Adanmışlık (ACT) ile Bilinçli Farkındalık (MBSR) temelli psikolojik danışmanlık. Konya Meram yüz yüze ve online seanslar.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,6 +56,7 @@
             font-family: 'Playfair Display', serif;
         }
 
+        /* Glassmorphism Navigation */
         .glass-nav {
             background: rgba(244, 246, 244, 0.92);
             backdrop-filter: blur(16px);
@@ -63,6 +64,7 @@
             border-bottom: 1px solid rgba(226, 232, 229, 0.8);
         }
 
+        /* Premium Agency-Grade Hover Cards */
         .agency-card {
             background: #FFFFFF;
             border: 1px solid #E2E8E5;
@@ -76,17 +78,30 @@
             border-color: #7C9A92;
         }
 
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #F4F6F4; }
-        ::-webkit-scrollbar-thumb { background: #7C9A92; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #1B332D; }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4F6F4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7C9A92;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1B332D;
+        }
 
+        /* Custom Range Slider */
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
             background: transparent;
         }
-        input[type=range]:focus { outline: none; }
+        input[type=range]:focus {
+            outline: none;
+        }
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 8px;
@@ -110,6 +125,7 @@
             background: #D4A373;
         }
 
+        /* Accordion Content Smooth Transition */
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -120,6 +136,7 @@
             transition: max-height 0.5s ease-in-out;
         }
 
+        /* Pulse Dot Animation */
         .pulse-dot {
             box-shadow: 0 0 0 0 rgba(124, 154, 146, 0.4);
             animation: pulse 2s infinite;
@@ -133,9 +150,10 @@
 </head>
 <body class="antialiased selection:bg-brand-softSage selection:text-brand-dark">
 
-    <!-- Header / Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+            
+            <!-- Brand Logo -->
             <a href="#" class="group flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-serif-heading text-lg font-bold tracking-wider group-hover:bg-brand-light transition-colors">
                     FY
@@ -146,6 +164,7 @@
                 </div>
             </a>
 
+            <!-- Desktop Navigation Links -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-text">
                 <a href="#hakkimda" class="hover:text-brand-sage transition-colors">Hakkımda</a>
                 <a href="#yaklasim" class="hover:text-brand-sage transition-colors">Danışmanlık Yaklaşımı</a>
@@ -157,6 +176,7 @@
                 <a href="#sss" class="hover:text-brand-sage transition-colors">SSS</a>
             </nav>
 
+            <!-- Action Button -->
             <div class="hidden md:flex items-center gap-4">
                 <button onclick="openBookingModal()" class="bg-brand-dark hover:bg-brand-light text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wide transition-all shadow-sm hover:shadow-md flex items-center gap-2">
                     <i class="fa-regular fa-calendar-check text-xs"></i>
@@ -164,11 +184,13 @@
                 </button>
             </div>
 
+            <!-- Mobile Hamburger Toggle -->
             <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="md:hidden text-brand-dark text-xl p-2 focus:outline-none" aria-label="Menüyü Aç">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
 
+        <!-- Mobile Menu Drawer -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-brand-border px-6 py-6 transition-all duration-300">
             <nav class="flex flex-col gap-4 text-base font-medium text-brand-text">
                 <a href="#hakkimda" onclick="toggleMobileMenu()" class="py-1 hover:text-brand-sage">Hakkımda</a>
@@ -183,7 +205,7 @@
                     <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full bg-brand-dark text-white py-3 rounded-full text-center font-semibold text-sm shadow-sm">
                         Randevu Al
                     </button>
-                    <a href="https://wa.me/905000000000" target="_blank" class="w-full bg-emerald-700 text-white py-3 rounded-full text-center font-semibold text-sm flex items-center justify-center gap-2">
+                    <a href="https://wa.me/905529389759" target="_blank" class="w-full bg-emerald-700 text-white py-3 rounded-full text-center font-semibold text-sm flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
                         <span>WhatsApp'tan Ulaşın</span>
                     </a>
@@ -199,30 +221,39 @@
             <div class="absolute bottom-10 right-0 w-96 h-96 bg-brand-accentSoft rounded-full blur-3xl -z-10 opacity-60"></div>
 
             <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column -->
                 <div class="lg:col-span-7 space-y-8">
+                    
+                    <!-- Location & Status Badge -->
                     <div class="inline-flex items-center gap-2.5 bg-white border border-brand-border rounded-full px-4 py-2 text-xs font-semibold text-brand-dark shadow-sm">
                         <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 pulse-dot"></span>
-                        <span>Konya Yüz Yüze & Online Danışmanlık</span>
+                        <span>Konya Meram Yüz Yüze & Online Danışmanlık</span>
                     </div>
 
+                    <!-- Main Headline -->
                     <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl text-brand-dark font-normal leading-[1.15] tracking-tight">
                         Zihninizle mücadeleyi bırakın, <span class="italic font-serif-heading text-brand-sage">değerlerinizle</span> yaşamaya başlayın.
                     </h1>
 
+                    <!-- Lead Paragraph -->
                     <p class="text-base sm:text-lg text-brand-muted font-normal max-w-2xl leading-relaxed">
                         Kabul ve Adanmışlık Yaklaşımı (ACT) ile Bilinçli Farkındalık (MBSR) temelli yöntemlerle; ergen ve yetişkin danışanlara kaygı, stres ve yaşam krizlerinde rehberlik ediyorum.
                     </p>
 
+                    <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4 pt-2">
                         <button onclick="openBookingModal()" class="bg-brand-dark hover:bg-brand-light text-white px-8 py-4 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
                             <span>Randevu Talebi Oluştur</span>
                             <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
                         </button>
-                        <a href="#yaklasim" class="border border-brand-dark/20 hover:border-brand-dark text-brand-dark bg-white/60 hover:bg-white px-8 py-4 rounded-full text-sm font-semibold transition-all text-center flex items-center justify-center gap-2">
-                            <span>Danışmanlık Modelini Keşfet</span>
+                        <a href="tel:05529389759" class="border border-brand-dark/20 hover:border-brand-dark text-brand-dark bg-white/60 hover:bg-white px-8 py-4 rounded-full text-sm font-semibold transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-xs text-brand-sage"></i>
+                            <span>0552 938 97 59</span>
                         </a>
                     </div>
 
+                    <!-- Trust Stats -->
                     <div class="pt-8 border-t border-brand-border grid grid-cols-2 sm:grid-cols-4 gap-6">
                         <div>
                             <span class="block text-3xl font-serif-heading text-brand-dark font-bold">2020</span>
@@ -237,14 +268,17 @@
                             <span class="text-xs text-brand-muted font-medium">Bilinçli Farkındalık</span>
                         </div>
                         <div>
-                            <span class="block text-3xl font-serif-heading text-brand-dark font-bold">Esnek</span>
+                            <span class="block text-3xl font-serif-heading text-brand-dark font-bold">Meram</span>
                             <span class="text-xs text-brand-muted font-medium">Konya & Online Seans</span>
                         </div>
                     </div>
+
                 </div>
 
+                <!-- Hero Right Column -->
                 <div class="lg:col-span-5 relative flex justify-center">
                     <div class="relative w-full max-w-md">
+                        
                         <div class="absolute -top-6 -left-6 bg-white p-5 rounded-2xl border border-brand-border shadow-xl z-20 max-w-[220px] hidden sm:block">
                             <i class="fa-solid fa-quote-left text-brand-accent text-lg mb-2 block"></i>
                             <p class="text-xs text-brand-dark italic font-serif-heading leading-snug">
@@ -252,6 +286,7 @@
                             </p>
                         </div>
 
+                        <!-- Image Container -->
                         <div class="relative rounded-[2.5rem] overflow-hidden bg-brand-softSage border-4 border-white shadow-2xl aspect-[4/5]">
                             <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=800" 
                                  alt="Furkan Yaylacık — Psikolojik Danışman" 
@@ -265,15 +300,17 @@
 
                         <div class="absolute -bottom-6 -right-4 bg-brand-dark text-white p-4 rounded-2xl shadow-xl z-20 flex items-center gap-3 border border-brand-light">
                             <div class="w-10 h-10 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center text-lg">
-                                <i class="fa-solid fa-leaf"></i>
+                                <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <span class="block text-[10px] font-bold uppercase tracking-wider text-brand-accent">Seans Türü</span>
-                                <span class="text-xs font-semibold">Konya & Online Görüşme</span>
+                                <span class="block text-[10px] font-bold uppercase tracking-wider text-brand-accent">Seans Ortamı</span>
+                                <span class="text-xs font-semibold">İçkon Plaza Meram & Online</span>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -281,6 +318,7 @@
         <section id="hakkimda" class="py-20 bg-white border-y border-brand-border">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
                     <div class="lg:col-span-5 space-y-6">
                         <div class="inline-block px-3 py-1 bg-brand-softSage text-brand-dark rounded-md text-xs font-bold uppercase tracking-widest">
                             Hakkımda
@@ -296,7 +334,7 @@
                             Rehberlik ve Psikolojik Danışmanlık (PDR) lisans eğitimimin ardından, çalışmalarımı <strong>2020 yılından itibaren</strong> yoğun olarak üçüncü dalga bilişsel davranışçı yaklaşımlardan olan <strong>Kabul ve Adanmışlık Terapisi (ACT)</strong> ile <strong>Bilinçli Farkındalık (MBSR)</strong> temelli uygulamalar üzerine yapılandırdım.
                         </p>
                         <p>
-                            Ergen ve yetişkin danışanlarla yürüttüğüm süreçlerde amaç; zorlayıcı düşünce ve duygularla tükenmek bilmeyen bir savaşa girmek yerine, onlarla daha esnek bir ilişki kurarak kişinin <strong>kendi öz değerleri doğrultusunda canlı ve anlamlı bir yaşam inşa etmesine</strong> eşlik etmektir.
+                            Ergen ve yetişkin danışanlarla yürüttüğüm süreçlerde temel amacım; kaygı, stres veya duygusal tıkanıklık anlarında düşüncelerle savaşmak yerine, onlarla daha esnek bir ilişki kurarak kişinin <strong>kendi öz değerleri doğrultusunda canlı ve tatminkar bir yaşam inşa etmesine</strong> eşlik etmektir.
                         </p>
                         
                         <div class="grid sm:grid-cols-2 gap-4 pt-4">
@@ -311,18 +349,21 @@
                                 <i class="fa-solid fa-brain text-brand-sage text-lg mt-0.5"></i>
                                 <div>
                                     <h3 class="font-semibold text-brand-dark text-sm">Kanıta Dayalı Yaklaşım</h3>
-                                    <p class="text-xs text-brand-muted mt-1">Bilimsel araştırmalarla etkinliği desteklenen güncel ACT metodolojisi.</p>
+                                    <p class="text-xs text-brand-muted mt-1">Bilimsel araştırmalarla etkinliği desteklenen ACT ilkeleri.</p>
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Yaklaşım Section -->
+        <!-- Danışmanlık Yaklaşımı Section -->
         <section id="yaklasim" class="py-24 bg-brand-bg">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                
                 <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
                     <span class="text-xs font-bold uppercase tracking-widest text-brand-accent bg-brand-accentSoft px-4 py-1.5 rounded-full inline-block">
                         Danışmanlık Metodolojisi
@@ -335,6 +376,7 @@
                     </p>
                 </div>
 
+                <!-- Interactive Switcher -->
                 <div class="flex justify-center mb-12">
                     <div class="bg-white p-1.5 rounded-full border border-brand-border inline-flex gap-2 shadow-sm">
                         <button id="actTabBtn" onclick="switchMethodology('act')" class="px-6 py-2.5 rounded-full text-xs font-semibold transition-all bg-brand-dark text-white shadow-sm">
@@ -346,6 +388,7 @@
                     </div>
                 </div>
 
+                <!-- ACT Panel -->
                 <div id="actPanel" class="grid md:grid-cols-3 gap-8">
                     <div class="agency-card p-8 rounded-3xl">
                         <div class="w-12 h-12 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-xl mb-6">
@@ -363,7 +406,7 @@
                         </div>
                         <h3 class="font-serif-heading text-xl text-brand-dark font-semibold mb-3">2. Bilişsel Ayrışma</h3>
                         <p class="text-brand-muted text-sm leading-relaxed">
-                            Düşünceleri mutlak gerçekler değil, zihinden geçen kelimeler ve hikayeler olarak fark edip onlara mesafe alabilme.
+                            Düşünceleri mutlak gerçekler değil, zihinden geçen kelimeler ve geçici imgeler olarak fark edip onlara mesafe alabilme.
                         </p>
                     </div>
 
@@ -378,6 +421,7 @@
                     </div>
                 </div>
 
+                <!-- MBSR Panel (Hidden initially) -->
                 <div id="mbsrPanel" class="hidden grid md:grid-cols-3 gap-8">
                     <div class="agency-card p-8 rounded-3xl">
                         <div class="w-12 h-12 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-xl mb-6">
@@ -409,23 +453,27 @@
                         </p>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- Hizmetler Section -->
         <section id="hizmetler" class="py-24 bg-white border-y border-brand-border">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                     <div>
                         <span class="text-xs font-bold uppercase tracking-widest text-brand-sage">Çalışma Odaklarımız</span>
                         <h2 class="font-serif-heading text-3xl sm:text-4xl text-brand-dark mt-2">Danışmanlık Alanları</h2>
                     </div>
                     <p class="text-brand-muted text-sm max-w-md">
-                        Konya Selçuklu ofisinde yüz yüze veya Türkiye/yurt dışından online olarak yürütülen seanslar.
+                        Konya Meram İçkon Plaza ofisinde yüz yüze veya Türkiye/yurt dışından online olarak yürütülen seanslar.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Area 1 -->
                     <div class="agency-card p-6 rounded-3xl flex flex-col justify-between group">
                         <div>
                             <div class="w-12 h-12 rounded-2xl bg-brand-dark text-white flex items-center justify-center text-xl mb-6 group-hover:bg-brand-sage transition-colors">
@@ -442,6 +490,7 @@
                         </div>
                     </div>
 
+                    <!-- Area 2 -->
                     <div class="agency-card p-6 rounded-3xl flex flex-col justify-between group">
                         <div>
                             <div class="w-12 h-12 rounded-2xl bg-brand-dark text-white flex items-center justify-center text-xl mb-6 group-hover:bg-brand-sage transition-colors">
@@ -458,6 +507,7 @@
                         </div>
                     </div>
 
+                    <!-- Area 3 -->
                     <div class="agency-card p-6 rounded-3xl flex flex-col justify-between group">
                         <div>
                             <div class="w-12 h-12 rounded-2xl bg-brand-dark text-white flex items-center justify-center text-xl mb-6 group-hover:bg-brand-sage transition-colors">
@@ -474,6 +524,7 @@
                         </div>
                     </div>
 
+                    <!-- Area 4 -->
                     <div class="agency-card p-6 rounded-3xl flex flex-col justify-between group">
                         <div>
                             <div class="w-12 h-12 rounded-2xl bg-brand-dark text-white flex items-center justify-center text-xl mb-6 group-hover:bg-brand-sage transition-colors">
@@ -489,15 +540,18 @@
                             <button onclick="openBookingModal('Mindfulness Süreci')" class="text-xs text-brand-sage font-bold hover:underline">Bilgi Al &rarr;</button>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </section>
 
-        <!-- İnteraktif Öz-Farkındalık (Values Wheel) Section -->
+        <!-- İnteraktif Öz-Farkındalık Section -->
         <section id="oz-farkindalik" class="py-24 bg-brand-dark text-white relative overflow-hidden">
             <div class="absolute -right-20 -top-20 w-80 h-80 bg-brand-light rounded-full blur-3xl opacity-50"></div>
             
             <div class="max-w-5xl mx-auto px-6 lg:px-12 relative z-10">
+                
                 <div class="text-center max-w-2xl mx-auto mb-12">
                     <span class="text-xs font-bold uppercase tracking-widest text-brand-accent bg-brand-light px-4 py-1.5 rounded-full inline-block mb-3 border border-brand-accent/20">
                         İnteraktif Öz-Farkındalık
@@ -510,9 +564,13 @@
                     </p>
                 </div>
 
+                <!-- Interactive Card Container -->
                 <div class="bg-brand-light/70 border border-brand-sage/30 backdrop-blur-md rounded-3xl p-6 sm:p-10 shadow-2xl">
                     <div class="grid md:grid-cols-2 gap-8 items-center">
+                        
+                        <!-- Sliders Column -->
                         <div class="space-y-6">
+                            
                             <div>
                                 <div class="flex justify-between text-xs sm:text-sm mb-2">
                                     <span class="font-medium text-white flex items-center gap-2">
@@ -552,8 +610,10 @@
                                 </div>
                                 <input type="range" id="val4" min="1" max="10" value="5" oninput="updateValuesWheel()">
                             </div>
+
                         </div>
 
+                        <!-- Result Display Column -->
                         <div class="bg-brand-dark p-6 sm:p-8 rounded-2xl border border-brand-sage/20 text-center flex flex-col justify-center items-center min-h-[260px]">
                             <div class="text-brand-accent text-[11px] uppercase tracking-widest font-semibold mb-1">Değer Doyumu Skorunuz</div>
                             <div id="overallScore" class="font-serif-heading text-5xl text-white font-bold my-2">50%</div>
@@ -566,20 +626,24 @@
                                 Bu Sonucu Seans Esnasında Değerlendirin
                             </button>
                         </div>
+
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- SSS Section -->
         <section id="sss" class="py-24 bg-brand-bg border-b border-brand-border">
             <div class="max-w-4xl mx-auto px-6 lg:px-12">
+                
                 <div class="text-center mb-16">
                     <span class="text-xs font-bold uppercase tracking-widest text-brand-sage">Bilgi Rehberi</span>
                     <h2 class="font-serif-heading text-3xl sm:text-4xl text-brand-dark mt-2">Sıkça Sorulan Sorular</h2>
                 </div>
 
                 <div class="space-y-4">
+                    
                     <div class="bg-white rounded-2xl border border-brand-border overflow-hidden">
                         <button onclick="toggleAccordion('faq1')" class="w-full p-6 text-left flex justify-between items-center text-brand-dark font-semibold font-serif-heading text-base sm:text-lg focus:outline-none">
                             <span>Seanslar ne kadar sürer ve sıklığı nasıl belirlenir?</span>
@@ -596,7 +660,7 @@
                             <i id="faq2-icon" class="fa-solid fa-plus text-brand-sage transition-transform"></i>
                         </button>
                         <div id="faq2" class="accordion-content px-6 pb-6 text-brand-muted text-sm leading-relaxed">
-                            Yüz yüze seanslarımız Konya Selçuklu bölgesinde bulunan sakin ve merkezi ofis ortamımızda yürütülmektedir. Randevu onayının ardından konum bilgisi danışana iletilir.
+                            Yüz yüze seanslarımız Meram ilçesinde, Yaka Mahallesi Aziz Mahmut Hüdai Caddesi üzerinde yer alan <strong>İçkon Plaza</strong>'daki ofisimizde yürütülmektedir. Randevu onayınız sonrasında detaylı ulaşım bilgisi tarafınıza iletilir.
                         </div>
                     </div>
 
@@ -616,17 +680,21 @@
                             <i id="faq4-icon" class="fa-solid fa-plus text-brand-sage transition-transform"></i>
                         </button>
                         <div id="faq4" class="accordion-content px-6 pb-6 text-brand-muted text-sm leading-relaxed">
-                            İlk temasta başvuru sebebinizi ana hatlarıyla dinliyor, benimsediğimiz danışmanlık yaklaşımının beklentinize uygunluğunu değerlendiriyor ve ardından randevu planlamasını yapıyoruz.
+                            İlk temasta başvuru sebebinizi ana hatlarıyla dinliyor, benimsediğimiz danışmanlık yaklaşımının beklentinize uygunluğunu değerlendiriyor ve ardından seans takvimini planlıyoruz.
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </section>
 
-        <!-- İletişim Section -->
+        <!-- İletişim & Lokasyon Section -->
         <section id="iletisim" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 <div class="grid lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Left Column -->
                     <div class="lg:col-span-5 space-y-8">
                         <div>
                             <span class="text-xs font-bold uppercase tracking-widest text-brand-sage">İletişim & Lokasyon</span>
@@ -634,23 +702,40 @@
                                 Seans İçin İlk Adımı Atın
                             </h2>
                             <p class="text-brand-muted text-sm mt-3">
-                                Randevu talebinizi iletmek veya süreç hakkında bilgi almak için formu doldurabilirsiniz.
+                                Randevu talebiniz veya sorularınız için formu doldurabilir, telefon veya WhatsApp üzerinden doğrudan iletişime geçebilirsiniz.
                             </p>
                         </div>
 
                         <div class="space-y-6">
+                            
+                            <!-- Address Item -->
                             <div class="flex items-start gap-4">
                                 <div class="w-10 h-10 rounded-full bg-brand-softSage text-brand-dark flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-semibold text-brand-dark text-sm">Konya Ofis / Yüz Yüze</h3>
+                                    <h3 class="font-semibold text-brand-dark text-sm">Konya Meram Ofisi</h3>
                                     <p class="text-xs text-brand-muted leading-relaxed mt-1">
-                                        Selçuklu / KONYA (Randevu ile kabul edilmektedir)
+                                        Yaka Mah. Aziz Mahmut Hüdai Cd. İçkon Plaza No:185A/302, 42090 Meram / KONYA
+                                    </p>
+                                    <span class="inline-block text-[11px] text-brand-sage font-medium mt-0.5">Randevu ile danışan kabul edilmektedir</span>
+                                </div>
+                            </div>
+
+                            <!-- Phone Item -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-softSage text-brand-dark flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-brand-dark text-sm">Telefon & WhatsApp</h3>
+                                    <p class="text-xs text-brand-muted mt-1">
+                                        <a href="tel:05529389759" class="hover:text-brand-dark font-medium transition-colors">0552 938 97 59</a>
                                     </p>
                                 </div>
                             </div>
 
+                            <!-- Online / Scope Item -->
                             <div class="flex items-start gap-4">
                                 <div class="w-10 h-10 rounded-full bg-brand-softSage text-brand-dark flex items-center justify-center shrink-0">
                                     <i class="fa-solid fa-globe"></i>
@@ -661,28 +746,34 @@
                                 </div>
                             </div>
 
+                            <!-- Social Item -->
                             <div class="flex items-start gap-4">
                                 <div class="w-10 h-10 rounded-full bg-brand-softSage text-brand-dark flex items-center justify-center shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
+                                    <i class="fa-brands fa-instagram"></i>
                                 </div>
                                 <div>
-                                    <h3 class="font-semibold text-brand-dark text-sm">E-Posta İletişim</h3>
-                                    <p class="text-xs text-brand-muted mt-1">info@furkanyaylacik.com</p>
+                                    <h3 class="font-semibold text-brand-dark text-sm">Sosyal Medya</h3>
+                                    <p class="text-xs text-brand-muted mt-1">
+                                        <a href="https://www.instagram.com/pd.furkanyaylack/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-dark font-medium underline transition-colors">@pd.furkanyaylack</a>
+                                    </p>
                                 </div>
                             </div>
+
                         </div>
 
+                        <!-- WhatsApp Direct Button -->
                         <div class="pt-2">
-                            <a href="https://wa.me/905000000000" target="_blank" class="inline-flex items-center gap-3 bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3.5 rounded-full text-xs font-semibold transition-all shadow-md">
+                            <a href="https://wa.me/905529389759" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3.5 rounded-full text-xs font-semibold transition-all shadow-md">
                                 <i class="fa-brands fa-whatsapp text-lg"></i>
-                                <span>WhatsApp İle İletişime Geçin</span>
+                                <span>WhatsApp İle Hızlı İletişim</span>
                             </a>
                         </div>
                     </div>
 
+                    <!-- Contact Form Right Column -->
                     <div class="lg:col-span-7 bg-brand-bg p-8 sm:p-10 rounded-3xl border border-brand-border shadow-sm">
                         <h3 class="font-serif-heading text-2xl text-brand-dark font-semibold mb-2">Randevu Talep Formu</h3>
-                        <p class="text-xs text-brand-muted mb-6">Form iletildikten sonra en kısa süre içinde sizinle iletişime geçilecektir.</p>
+                        <p class="text-xs text-brand-muted mb-6">Form iletildikten sonra çalışma saatleri içerisinde tarafınıza dönüş sağlanacaktır.</p>
 
                         <form onsubmit="handleFormSubmit(event)" class="space-y-4">
                             <div class="grid sm:grid-cols-2 gap-4">
@@ -700,8 +791,8 @@
                                 <div>
                                     <label class="block text-xs font-semibold text-brand-dark mb-1">Seans Türü</label>
                                     <select class="w-full bg-white border border-brand-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-sage">
+                                        <option>Yüz Yüze (Konya Meram / İçkon Plaza)</option>
                                         <option>Online Danışmanlık (Zoom / Meet)</option>
-                                        <option>Konya Yüz Yüze Danışmanlık</option>
                                         <option>Ergen Danışmanlığı</option>
                                         <option>Mindfulness & Stres Odaklı Süreç</option>
                                     </select>
@@ -726,6 +817,7 @@
                             </button>
                         </form>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -735,6 +827,7 @@
     <footer class="bg-brand-dark text-white py-16 border-t border-brand-light">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid md:grid-cols-4 gap-10 pb-12 border-b border-brand-light/60">
+                
                 <div class="md:col-span-2 space-y-4">
                     <div class="flex items-center gap-3">
                         <div class="w-8 h-8 rounded-full bg-brand-accent text-brand-dark flex items-center justify-center font-serif-heading text-sm font-bold">
@@ -745,31 +838,44 @@
                     <p class="text-xs text-brand-softSage/80 max-w-sm leading-relaxed">
                         2020 yılından bu yana Kabul ve Adanmışlık (ACT) ile Bilinçli Farkındalık (MBSR) temelli yaklaşımlarla psikolojik danışmanlık hizmeti sunmaktadır.
                     </p>
+                    <p class="text-xs text-brand-softSage/70">
+                        <i class="fa-solid fa-location-dot mr-1.5 text-brand-accent"></i> Yaka Mah. Aziz Mahmut Hüdai Cd. İçkon Plaza No:185A/302, Meram/Konya
+                    </p>
                 </div>
 
                 <div>
                     <h3 class="font-serif-heading text-sm text-white font-semibold mb-3">Hızlı Linkler</h3>
                     <ul class="space-y-2 text-xs text-brand-softSage/80">
-                        <li><a href="#hakkimda" class="hover:text-brand-accent">Hakkımda</a></li>
-                        <li><a href="#yaklasim" class="hover:text-brand-accent">ACT & MBSR Yaklaşımı</a></li>
-                        <li><a href="#hizmetler" class="hover:text-brand-accent">Danışmanlık Alanları</a></li>
-                        <li><a href="#oz-farkindalik" class="hover:text-brand-accent">Yaşam Dengesi İbresi</a></li>
+                        <li><a href="#hakkimda" class="hover:text-brand-accent transition-colors">Hakkımda</a></li>
+                        <li><a href="#yaklasim" class="hover:text-brand-accent transition-colors">ACT & MBSR Yaklaşımı</a></li>
+                        <li><a href="#hizmetler" class="hover:text-brand-accent transition-colors">Danışmanlık Alanları</a></li>
+                        <li><a href="#oz-farkindalik" class="hover:text-brand-accent transition-colors">Yaşam Dengesi İbresi</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="font-serif-heading text-sm text-white font-semibold mb-3">Sosyal Medya</h3>
+                    <h3 class="font-serif-heading text-sm text-white font-semibold mb-3">Sosyal Medya & İletişim</h3>
                     <div class="flex gap-3 text-base mb-4">
-                        <a href="#" class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"><i class="fa-brands fa-spotify"></i></a>
+                        <a href="https://www.instagram.com/pd.furkanyaylack/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors" title="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://tr.linkedin.com/in/furkan-yaylacik-6933b1367" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/905529389759" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-light flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors" title="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
                     </div>
+                    <p class="text-xs text-brand-softSage/80">
+                        <a href="tel:05529389759" class="hover:text-white transition-colors">Tel: 0552 938 97 59</a>
+                    </p>
                 </div>
+
             </div>
 
             <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-brand-softSage/60 gap-4">
                 <p>
-                    <strong>Yasal Bilgilendirme:</strong> Bu sitede yer alan bilgiler tanı veya tedavi amacı taşımaz. Acil durumlarda lütfen en yakın sağlık kuruluşuna başvurunuz.
+                    <strong>Yasal Bilgilendirme:</strong> Bu web sitesinde yer alan bilgiler tanı ve tedavi niteliği taşımaz. Acil tıbbi veya psikiyatrik durumlarda lütfen en yakın sağlık kuruluşuna başvurunuz.
                 </p>
                 <p>&copy; 2026 Furkan Yaylacık. Tüm hakları saklıdır.</p>
             </div>
@@ -801,8 +907,8 @@
                 <div>
                     <label class="block text-xs font-semibold text-brand-dark mb-1">Seans Formatı</label>
                     <select id="modalServiceSelect" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-sage">
+                        <option value="Yüz Yüze (Konya Meram / İçkon Plaza)">Yüz Yüze (Konya Meram / İçkon Plaza)</option>
                         <option value="Online Danışmanlık (Zoom/Meet)">Online Danışmanlık (Zoom/Meet)</option>
-                        <option value="Yüz Yüze (Konya Selçuklu)">Yüz Yüze (Konya Selçuklu)</option>
                         <option value="Ergen Danışmanlığı">Ergen Danışmanlığı</option>
                         <option value="Yetişkin Danışmanlığı">Yetişkin Danışmanlığı</option>
                     </select>
@@ -821,11 +927,13 @@
     </div>
 
     <script>
+        // Mobile Navigation Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
 
+        // Tab Switcher (ACT vs MBSR)
         function switchMethodology(type) {
             const actBtn = document.getElementById('actTabBtn');
             const mbsrBtn = document.getElementById('mbsrTabBtn');
@@ -845,6 +953,7 @@
             }
         }
 
+        // Accordion Controls
         function toggleAccordion(id) {
             const content = document.getElementById(id);
             const icon = document.getElementById(id + '-icon');
@@ -863,6 +972,7 @@
             }
         }
 
+        // Values Wheel Calculator
         function updateValuesWheel() {
             const v1 = parseInt(document.getElementById('val1').value);
             const v2 = parseInt(document.getElementById('val2').value);
@@ -887,11 +997,12 @@
             }
         }
 
+        // Modal Handlers
         function openBookingModal(serviceName) {
             const modal = document.getElementById('bookingModal');
             const select = document.getElementById('modalServiceSelect');
             if (serviceName && select) {
-                if (serviceName.includes('Konya')) select.value = 'Yüz Yüze (Konya Selçuklu)';
+                if (serviceName.includes('Konya') || serviceName.includes('Yüz Yüze')) select.value = 'Yüz Yüze (Konya Meram / İçkon Plaza)';
                 else if (serviceName.includes('Ergen')) select.value = 'Ergen Danışmanlığı';
                 else if (serviceName.includes('Yetişkin')) select.value = 'Yetişkin Danışmanlığı';
                 else select.value = 'Online Danışmanlık (Zoom/Meet)';
@@ -911,6 +1022,7 @@
             if (e.key === 'Escape') closeBookingModal();
         });
 
+        // Toast Feedback
         function showToast(msg) {
             const toast = document.getElementById('toast');
             document.getElementById('toastMessage').innerText = msg;
