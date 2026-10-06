@@ -3,329 +3,773 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konya Psikolojik Danışmanlık & Online Danışmanlık</title>
+  <title>Konya Yüz Yüze & Online Psikolojik Danışmanlık</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f6f4',
+              100: '#dbe8e3',
+              200: '#b9d3c8',
+              300: '#8eb8a8',
+              400: '#649987',
+              500: '#437c6b',
+              600: '#326254',
+              700: '#233f38', // Dominant Sage Green
+              800: '#1c332e',
+              900: '#162b27',
+            },
+            sand: {
+              50: '#fcfbf9',
+              100: '#f7f4ef',
+              200: '#ece5da',
+              300: '#ded1bf',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    /* Temel Sıfırlama ve Genel Stil Tanımlamaları */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    html {
+      scroll-behavior: smooth;
     }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #2d3748;
-      background-color: #ffffff;
-      line-height: 1.6;
+    .card-hover {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    a {
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    /* Kart Geçişleri ve Efektler */
-    .service-card:hover, .country-card:hover, .blog-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.06) !important;
-    }
-
-    /* Form Stilleri */
-    .form-group {
-      margin-bottom: 1.25rem;
-      text-align: left;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #233f38;
-      margin-bottom: 0.4rem;
-    }
-    .form-group input, 
-    .form-group select, 
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #cbd5e0;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      color: #2d3748;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .form-group input:focus, 
-    .form-group select:focus, 
-    .form-group textarea:focus {
-      border-color: #233f38;
-      box-shadow: 0 0 0 3px rgba(35, 63, 56, 0.1);
-    }
-    .submit-btn {
-      width: 100%;
-      background-color: #233f38;
-      color: #ffffff;
-      padding: 0.85rem;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    .submit-btn:hover {
-      background-color: #1a302a;
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -10px rgba(35, 63, 56, 0.12);
     }
   </style>
 </head>
-<body>
+<body class="bg-sand-50 text-slate-800 font-sans antialiased selection:bg-brand-100 selection:text-brand-800">
 
-  <!-- 1. BÖLÜM: Hakkımda / Detaylı Tanıtım Metni -->
-  <article class="about-section" style="max-width: 1200px; margin: 3rem auto; padding: 0 1rem;">
-    <header style="margin-bottom: 2rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1.5rem;">
-      <h1 style="font-size: 2.2rem; color: #233f38; margin-bottom: 0.75rem;">Konya Yüz Yüze & Online Psikolojik Danışmanlık</h1>
-      <p style="font-size: 1.1rem; color: #4a5568; line-height: 1.7;">
-        Konya Meram’daki merkezimizde yüz yüze; Türkiye genelinde ve yurt dışında ise güvenli online platformlar aracılığıyla ergen, yetişkin ve çift danışanlarıma profesyonel psikolojik danışmanlık hizmeti sunmaktayım. 2020 yılından bu yana sürdürdüğüm danışmanlık pratiklerimde, kişilerin zorlayıcı düşünce ve duygularıyla mücadele edip yıpranmak yerine; kendi değerleri doğrultusunda esnek, anlamlı ve sürdürülebilir bir yaşam inşa etmelerine eşlik ediyorum.
-      </p>
-    </header>
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo / Branding -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white font-bold text-xl shadow-md">
+            P
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-lg leading-tight text-brand-700 tracking-tight">Psikolojik Danışmanlık</span>
+            <span class="text-xs text-slate-500 font-medium">Konya Yüz Yüze & Online Seanslar</span>
+          </div>
+        </a>
 
-    <section style="margin-bottom: 2.5rem;">
-      <h2 style="font-size: 1.6rem; color: #233f38; margin-bottom: 0.75rem;">Danışmanlık Yaklaşımım ve Odak Noktalarım</h2>
-      <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
-        Seanslarımın teorik zeminini kanıta dayalı modeller olan <strong>Kabul ve Adanmışlık (ACT)</strong> ile <strong>Mindfulness (Bilinçli Farkındalık / MBSR)</strong> odaklı yaklaşımlar oluşturmaktadır. Bu yöntem, zihnin ürettiği olumsuz düşünceleri zorla değiştirmeye çalışmak yerine, onların yaşamınız üzerindeki baskısını fark edip kabul ederek kişisel değerleriniz yönünde somut adımlar atmanızı hedefler. Sadece semptoma değil, kişiye ve yaşam bağlamına odaklanan bu süreçte; panik atak, yaygın anksiyete, depresyon, travmatik deneyimler, tükenmişlik sendromu, bağımlılık süreçleri ve ilişki-iletişim sorunlarında bireysel psikolojik destek sağlıyorum. Ayrıca sınav kaygısı ve akademik performans takibinin yanı sıra çocuk, ergen ve yetişkinlerde dikkat, zamanlama, dürtüsellik ve hiperaktivite düzeyini objektif olarak ölçen bilgisayar tabanlı <strong>MOXO Dikkat Testi</strong> uygulayıcısı olarak MOXO Türkiye tarafından akredite edildim.
-      </p>
-    </section>
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+          <a href="#hakkimda" class="hover:text-brand-700 transition-colors">Hakkımda</a>
+          <a href="#calisma-alanlari" class="hover:text-brand-700 transition-colors">Çalışma Alanları</a>
+          <a href="#hizmetler" class="hover:text-brand-700 transition-colors">Hizmetler</a>
+          <a href="#diaspora" class="hover:text-brand-700 transition-colors">Yurt Dışı Seanslar</a>
+          <a href="#blog" class="hover:text-brand-700 transition-colors">Blog</a>
+        </nav>
 
-    <section style="margin-bottom: 2.5rem;">
-      <h2 style="font-size: 1.6rem; color: #233f38; margin-bottom: 0.75rem;">Eğitim Mirası, Saha Deneyimi ve Mesleki Yolculuk</h2>
-      <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
-        Mesleki yaklaşımım, akademik eğitimlerimin yanında kriz anlarında edindiğim yoğun saha tecrübeleriyle şekillendi. Kökleri 1896 yılına dayanan Konya’nın en tarihi eğitim kurumlarından Meram Endüstri Meslek Lisesi’nden (Mekteb-i Sanayi) mezun olduktan sonra, lisans eğitimimi Bayburt Üniversitesi Psikolojik Danışmanlık ve Rehberlik (PDR) bölümünde başarıyla tamamladım. Vatani görevim sırasında Suriye Barış Pınarı Harekat bölgesinde TSK Rehberlik ve Danışma Merkezi (RDM) bünyesinde Sağlık Asteğmen olarak görev alarak travma, kaygı, panik atak, yoğun stres ve bağımlılık alanlarında saha çalışmaları yürüttüm. Devamında iki yıl boyunca Konya Şehir Koleji’nde okul psikolojik danışmanı olarak çocuk ve ergenlerin gelişimsel süreçlerine ve ebeveyn danışmanlığına eşlik ettim. Meslek hayatım boyunca Türk Kızılay, AFAD ve İHH gibi sivil toplum kuruluşlarında aktif roller alarak insani yardım ve kentsel psikososyal destek projelerine katkı sundum.
-      </p>
-    </section>
-
-    <section style="margin-bottom: 2rem;">
-      <h2 style="font-size: 1.6rem; color: #233f38; margin-bottom: 0.75rem;">Yetkinlikler ve Sürekli Gelişim</h2>
-      <p style="font-size: 1rem; color: #4a5568; margin-bottom: 1rem;">
-        Sunduğum danışmanlık hizmetinin niteliğini artırmak adına alanın öncü isimlerinden kapsamlı uzmanlık eğitimleri aldım. ACT Türkiye bünyesinde Dr. İbrahim Bilgen’den Kabul ve Kararlılık (ACT) Temel, Orta, İleri Seviye ve Süpervizyon eğitimlerimi; Mindfulness Institute bünyesinde Prof. Dr. Zümra Atalay’dan Mindfulness Temelli Stres Azaltma (MBSR) sertifikasyonumu tamamladım. Uluslararası alanda ise ACT Türkiye aracılığıyla Prof. Dr. Robyn Walser’dan <em>Travmada Süreç Odaklı ACT</em> ve Jim Lucas’tan <em>Depresyonda ACT</em> uzmanlıklarını alarak mesleki pratiğimi güncel bilimsel literatürle beslemeye devam ediyorum. Gizlilik, güven ve koşulsuz kabul ilkelerini esas aldığım seanslarımı Konya Meram’daki merkezimizde de yüz yüze ve dünyanın her yerinden danışanlarım için online randevu sistemiyle sürdürüyorum.
-      </p>
-    </section>
-  </article>
-
-  <!-- 2. BÖLÜM: Çalışma Alanları (Hızlı Erişim Kartları) -->
-  <section class="services-section" style="width: 100%; max-width: 1200px; margin: 4rem auto; padding: 0 1rem;">
-    <header class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
-      <span style="background-color: #e8f0eb; color: #233f38; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Uzmanlık Alanları</span>
-      <h2 style="font-size: 2rem; color: #233f38; margin-top: 0.5rem; margin-bottom: 0.5rem;">Çalışma Alanları</h2>
-      <p style="font-size: 1.05rem; color: #555555; max-width: 600px; margin: 0 auto;">
-        Aşağıdaki konularda kanıta dayalı ve etik ilkelere bağlı psikolojik destek alabilirsiniz.
-      </p>
-    </header>
-
-    <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem;">
-      <a href="#bookingForm" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div>
-          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🌿</div>
-          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Anksiyete & Kaygı</h3>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Sürekli endişe, yaygın kaygı ve zihinsel yoğunlukla baş etme pratikleri.</p>
+        <!-- CTA Button -->
+        <div class="hidden sm:block">
+          <a href="#randevu" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-brand-700 hover:bg-brand-800 rounded-xl shadow-sm transition-all hover:shadow-md">
+            Randevu Al
+          </a>
         </div>
-        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
-      </a>
 
-      <a href="#bookingForm" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div>
-          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">⚡</div>
-          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Panik Atak</h3>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Bedensel duyumların yönetimi ve panik nöbetleri döngüsünü kırma.</p>
-        </div>
-        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
-      </a>
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" type="button" class="md:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
 
-      <a href="#bookingForm" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div>
-          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🌧</div>
-          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Depresyon</h3>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">İsteksizlik, tükenmişlik ve yaşam enerjisini yeniden yapılandırma.</p>
-        </div>
-        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
-      </a>
-
-      <a href="#bookingForm" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div>
-          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🛡️</div>
-          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Travma & TSSB</h3>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Zorlayıcı geçmiş deneyimlerin güvenli ortamda ve şefkatle işlenmesi.</p>
-        </div>
-        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
-      </a>
-
-      <a href="#bookingForm" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div>
-          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🔄</div>
-          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">Bağımlılık</h3>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">Davranışsal ve maddesel bağımlılık kalıplarında öz denetim ve farkındalık.</p>
-        </div>
-        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
-      </a>
-
-      <a href="#bookingForm" class="service-card" style="text-decoration: none; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-        <div>
-          <div style="font-size: 1.8rem; margin-bottom: 0.75rem;">🤝</div>
-          <h3 style="font-size: 1.15rem; color: #1a202c; margin-bottom: 0.4rem; font-weight: 600;">İlişki Sorunları</h3>
-          <p style="font-size: 0.88rem; color: #64748b; margin: 0; line-height: 1.5;">İletişim tıkanıklıkları, sınırlar ve güven ilişkilerini güçlendirme.</p>
-        </div>
-        <span style="color: #233f38; font-weight: 600; font-size: 0.85rem; margin-top: 1rem; display: inline-block;">Detaylı Bilgi →</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- 3. BÖLÜM: Hizmet Detayları -->
-  <section class="services-detail-section" style="background-color: #fcfdfc; padding: 4rem 1rem; border-top: 1px solid #edf2f7; border-bottom: 1px solid #edf2f7;">
-    <div class="container">
-      <header class="section-header" style="text-align: center; margin-bottom: 3rem;">
-        <h2 style="font-size: 2rem; color: #233f38; margin-bottom: 0.5rem;">Danışmanlık Hizmetlerimiz</h2>
-        <p style="font-size: 1.05rem; color: #4a5568; max-width: 700px; margin: 0 auto;">Yüz yüze veya online; bireysel, eğitim ve çift danışmanlığı süreçlerinde Kabul ve Adanmışlık (ACT) ile Mindfulness (MBSR) odaklı kanıta dayalı yaklaşımlarla yanınızdayım.</p>
-      </header>
-
-      <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-        <!-- 1. Bireysel Danışmanlık -->
-        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">1. Bireysel Psikolojik Danışmanlık</h3>
-          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Yetişkin bireylerle birebir yürütülen bu süreçte, yaşam kalitenizi ve esnekliğinizi artıran somut adımlar atılması hedeflenir.</p>
-          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
-            <li style="margin-bottom: 0.4rem;"><strong>Kaygı ve Anksiyete:</strong> Panik atak, yaygın kaygı, sosyal anksiyete ve korkularla baş etme</li>
-            <li style="margin-bottom: 0.4rem;"><strong>Depresyon ve Tükenmişlik:</strong> İsteksizlik, kronik stres, özsaygı ve tükenmişlik duygusu</li>
-            <li style="margin-bottom: 0.4rem;"><strong>Travma ve Yaşam Geçişleri:</strong> Zorlayıcı yaşam deneyimleri, karar alma, uyum ve yas süreçleri</li>
-          </ul>
-        </article>
-
-        <!-- 2. Eğitim Danışmanlığı -->
-        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">2. Eğitim Danışmanlığı</h3>
-          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Öğrencilerin akademik, zihinsel ve duygusal gelişim süreçlerini destekleyen yapılandırılmış rehberlik çalışmasıdır.</p>
-          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
-            <li style="margin-bottom: 0.4rem;"><strong>Sınav ve Okul Kaygısı:</strong> Sınav stresi, performans kaygısı ve özgüven geliştirme</li>
-            <li style="margin-bottom: 0.4rem;"><strong>Akademik Performans & Hedefler:</strong> Verimli çalışma yöntemleri, zaman yönetimi ve motivasyon</li>
-            <li style="margin-bottom: 0.4rem;"><strong>Akran İlişkileri & Duygu Düzenleme:</strong> Sosyal uyum, iletişim becerileri ve duygu yönetimi</li>
-          </ul>
-        </article>
-
-        <!-- 3. MOXO Dikkat Testi -->
-        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">3. MOXO Dikkat Testi</h3>
-          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Çocuk, ergen ve yetişkinlerde dikkat ve performans düzeyini ölçen, MOXO Türkiye akreditasyonlu bilgisayar tabanlı objektif değerlendirme aracıdır.</p>
-          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
-            <li style="margin-bottom: 0.4rem;"><strong>Dikkat & Odaklanma:</strong> Çeldiriciler altında odağı sürdürme kapasitesi</li>
-            <li style="margin-bottom: 0.4rem;"><strong>Zamanlama & Dürtüsellik:</strong> Tepki süresi, zaman yönetimi ve dürtü kontrolü</li>
-            <li style="margin-bottom: 0.4rem;"><strong>Hiperaktivite Değerlendirmesi:</strong> Davranışsal hareketliliğin objektif ölçümü ve raporlanması</li>
-          </ul>
-        </article>
-
-        <!-- 4. Çift Danışmanlığı -->
-        <article class="service-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <h3 style="font-size: 1.25rem; color: #233f38; margin-bottom: 0.75rem;">4. Çift Danışmanlığı</h3>
-          <p style="font-size: 0.95rem; color: #4a5568; margin-bottom: 1rem;">Çiftlerin ilişki dinamiklerini güçlendirmeye ve tıkanıklıkları aşmaya yönelik yapılandırılmış görüşmelerdir.</p>
-          <ul style="padding-left: 1.2rem; color: #4a5568; font-size: 0.9rem; line-height: 1.6;">
-            <li style="margin-bottom: 0.4rem;"><strong>İletişim ve Çatışma Yönetimi:</strong> Yapıcı diyalog kurma, dinleme ve çözüm odaklı yaklaşım</li>
-            <li style="margin-bottom: 0.4rem;"><strong>Bağ Kurma ve Güven:</strong> Duygusal yakınlığı artırma, sınır yönetimi ve güven tazeleme</li>
-            <li style="margin-bottom: 0.4rem;"><strong>Ortak Değerler:</strong> Yaşam hedeflerinde ve ilişkide ortak paydaya ulaşma</li>
-          </ul>
-        </article>
+      <!-- Mobile Dropdown Navigation -->
+      <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-slate-100 flex flex-col space-y-3 font-medium text-slate-600">
+        <a href="#hakkimda" class="px-2 py-1 hover:text-brand-700">Hakkımda</a>
+        <a href="#calisma-alanlari" class="px-2 py-1 hover:text-brand-700">Çalışma Alanları</a>
+        <a href="#hizmetler" class="px-2 py-1 hover:text-brand-700">Hizmetler</a>
+        <a href="#diaspora" class="px-2 py-1 hover:text-brand-700">Yurt Dışı Seanslar</a>
+        <a href="#blog" class="px-2 py-1 hover:text-brand-700">Blog</a>
+        <a href="#randevu" class="inline-block text-center px-4 py-2 text-white bg-brand-700 rounded-lg">Randevu Al</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- 4. BÖLÜM: Yurt Dışı Diaspora Online Danışmanlık -->
-  <section class="diaspora-section" style="padding: 4rem 1rem; background-color: #f9fbf9;">
-    <div class="container" style="text-align: center;">
-      <header class="section-header" style="margin-bottom: 3rem;">
-        <span class="badge" style="background: #e8f0eb; color: #233f38; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Sınırları Aşan Destek</span>
-        <h2 style="font-size: 2.2rem; color: #233f38; margin-top: 0.75rem;">Yurt Dışındaki Türkler İçin Online Danışmanlık</h2>
-        <p style="font-size: 1.1rem; color: #4a5568; max-width: 750px; margin: 0.75rem auto 0; line-height: 1.6;">
-          Ana dilinizde, kültürünüzü ve göç deneyiminizi anlayan bir uzmanla çalışın. Yurt dışında yaşamanın getirdiği uyum zorlukları, yalnızlık ve dil bariyerini aşmak için saat diliminize uygun online seanslarla yanınızdayım.
-        </p>
-      </header>
+  <section class="relative bg-gradient-to-b from-brand-50/60 via-white to-sand-50 pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/70 border border-brand-200/80 text-brand-800 text-xs sm:text-sm font-semibold">
+            <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+            Konya Meram Offis & Tüm Dünyaya Online
+          </div>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Zihnin Geçmiş Ve Geleceğinden <span class="text-brand-700 underline decoration-brand-300 underline-offset-4">Şimdiki Anın Esnekliğine</span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            Kanıta dayalı yöntemler olan <strong>Kabul ve Adanmışlık Terapisi (ACT)</strong> ve <strong>Mindfulness (MBSR)</strong> odaklı yaklaşımlarla zorlayıcı duygu ve düşüncelerle savaşmak yerine, kendi değerleriniz doğrultusunda anlamlı ve esnek bir yaşam inşa etmenize rehberlik ediyorum.
+          </p>
+          
+          <div class="pt-2 flex flex-col sm:flex-row gap-4">
+            <a href="#randevu" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold text-white bg-brand-700 hover:bg-brand-800 rounded-xl shadow-md hover:shadow-lg transition-all">
+              Online veya Yüz Yüze Randevu Al
+            </a>
+            <a href="#hakkimda" class="inline-flex justify-center items-center px-6 py-3.5 text-base font-semibold text-brand-800 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl transition-all shadow-sm">
+              Uzmanlık & Yaklaşım
+            </a>
+          </div>
 
-      <div class="country-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
-        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇩🇪</div>
-          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">Almanya</h3>
-          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">Almanya genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
-          <a href="#bookingForm" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+          <!-- Trust Badges -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 border-t border-slate-200/80 text-xs sm:text-sm text-slate-600 font-medium">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-600 text-lg">✓</span> ACT & MBSR Odaklı
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-600 text-lg">✓</span> MOXO Akredite Uygulayıcı
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-600 text-lg">✓</span> Gizlilik & Etik Standart
+            </div>
+          </div>
         </div>
 
-        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇳🇱</div>
-          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">Hollanda</h3>
-          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">Hollanda genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
-          <a href="#bookingForm" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
-        </div>
+        <!-- Hero Card Graphic -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none bg-white p-8 rounded-3xl border border-slate-100 shadow-xl shadow-brand-900/5">
+            <div class="absolute -top-4 -right-4 w-20 h-20 bg-brand-100 rounded-full blur-2xl -z-10"></div>
+            
+            <div class="space-y-6">
+              <div class="p-4 rounded-2xl bg-brand-50 border border-brand-100 flex items-start gap-4">
+                <div class="p-3 bg-brand-700 text-white rounded-xl text-xl">🧘‍♂️</div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Psikolojik Esneklik</h4>
+                  <p class="text-xs text-slate-600 mt-0.5">Düşüncelerle çatışmak yerine değer odaklı eylemlere adım atın.</p>
+                </div>
+              </div>
 
-        <div class="country-card" style="background: #ffffff; padding: 1.75rem; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-          <div style="font-size: 2rem; margin-bottom: 0.5rem;">🇬🇧</div>
-          <h3 style="font-size: 1.25rem; color: #1a202c; margin-bottom: 0.5rem;">İngiltere</h3>
-          <p style="font-size: 0.9rem; color: #718096; line-height: 1.5; margin-bottom: 1.25rem;">İngiltere genelinde yaşayan Türk danışanlar için Türkçe online psikolojik danışmanlık.</p>
-          <a href="#bookingForm" style="color: #233f38; font-weight: 600; font-size: 0.95rem;">Detaylı Bilgi & Randevu →</a>
+              <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-100 flex items-start gap-4">
+                <div class="p-3 bg-amber-700 text-white rounded-xl text-xl">🎯</div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">MOXO Dikkat Testi</h4>
+                  <p class="text-xs text-slate-600 mt-0.5">Dikkat, zamanlama, dürtüsellik ve hiperaktivite objektif ölçümü.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 flex items-start gap-4">
+                <div class="p-3 bg-sky-700 text-white rounded-xl text-xl">🌍</div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">Yurt Dışı Seanslar</h4>
+                  <p class="text-xs text-slate-600 mt-0.5">Avrupa ve dünyadaki Türk vatandaşlarımız için Türkçe online terapi.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-slate-100 text-center">
+              <p class="text-xs text-slate-500 font-medium">Konya Meram Ofisi • Güvenli Online Görüşme Platformu</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. BÖLÜM: İletişim & Randevu Formu -->
-  <section class="contact-booking-section" id="bookingForm" style="padding: 4rem 1rem; background-color: #f7faf7; border-top: 1px solid #e2e8f0;">
-    <div class="container" style="max-width: 800px; margin: 0 auto;">
-      <header class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
-        <h2 style="font-size: 2rem; color: #233f38; margin-bottom: 0.5rem;">İletişim & Randevu</h2>
-        <p class="subtitle" style="font-size: 1.1rem; font-weight: 600; color: #4a5568; margin-bottom: 0.5rem;">Bir Görüşme Planlayalım</p>
-        <p class="description" style="font-size: 0.95rem; color: #718096; line-height: 1.6;">
-          Aşağıdaki formu doldurun; randevu talebiniz değerlendirilip tarafınıza en kısa sürede dönüş sağlanacaktır.
+  <section id="hakkimda" class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <span class="px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold uppercase tracking-wider">Hakkımda & Biyografi</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Konya Yüz Yüze & Online Psikolojik Danışmanlık</h2>
+        <p class="text-slate-600 mt-3 text-base sm:text-lg">Saha tecrübeleri ve kanıta dayalı terapötik modellerle şekillenen profesyonel yolculuk.</p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7 space-y-6 text-slate-600 leading-relaxed">
+          <p>
+            Konya Meram’daki merkezimizde yüz yüze; Türkiye genelinde ve yurt dışında ise güvenli online platformlar aracılığıyla ergen, yetişkin ve çift danışanlarıma profesyonel psikolojik danışmanlık hizmeti sunmaktayım. 2020 yılından bu yana sürdürdüğüm danışmanlık pratiklerimde, kişilerin zorlayıcı düşünce ve duygularıyla mücadele edip yıpranmak yerine; kendi değerleri doğrultusunda esnek, anlamlı ve sürdürülebilir bir yaşam inşa etmelerine eşlik ediyorum.
+          </p>
+
+          <div class="p-6 bg-sand-100/60 rounded-2xl border border-sand-200">
+            <h3 class="text-lg font-bold text-brand-800 mb-2">Danışmanlık Yaklaşımım ve Odak Noktalarım</h3>
+            <p class="text-sm text-slate-700">
+              Seanslarımın teorik zeminini kanıta dayalı modeller olan <strong>Kabul ve Adanmışlık (ACT)</strong> ile <strong>Mindfulness (Bilinçli Farkındalık / MBSR)</strong> odaklı yaklaşımlar oluşturmaktadır. Bu yöntem, zihnin ürettiği olumsuz düşünceleri zorla değiştirmeye çalışmak yerine, onların yaşamınız üzerindeki baskısını fark edip kabul ederek kişisel değerleriniz yönünde somut adımlar atmanızı hedefler. Sadece semptoma değil, kişiye ve yaşam bağlamına odaklanan bu süreçte; panik atak, yaygın anksiyete, depresyon, travmatik deneyimler, tükenmişlik sendromu, bağımlılık süreçleri ve ilişki-iletişim sorunlarında bireysel psikolojik destek sağlıyorum.
+            </p>
+          </div>
+
+          <p>
+            Ayrıca sınav kaygısı ve akademik performans takibinin yanı sıra çocuk, ergen ve yetişkinlerde dikkat, zamanlama, dürtüsellik ve hiperaktivite düzeyini objektif olarak ölçen bilgisayar tabanlı <strong>MOXO Dikkat Testi</strong> uygulayıcısı olarak MOXO Türkiye tarafından akredite edildim.
+          </p>
+
+          <p>
+            Mesleki yaklaşımım, akademik eğitimlerimin yanında kriz anlarında edindiğim yoğun saha tecrübeleriyle şekillendi. Kökleri 1896 yılına dayanan Konya’nın en tarihi eğitim kurumlarından Meram Endüstri Meslek Lisesi’nden (Mekteb-i Sanayi) mezun olduktan sonra, lisans eğitimimi Bayburt Üniversitesi Psikolojik Danışmanlık ve Rehberlik (PDR) bölümünde başarıyla tamamladım.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-4">
+            <h3 class="text-lg font-bold text-slate-900 border-b pb-3 border-slate-100">Saha Deneyimi & Eğitim Geçmişi</h3>
+            
+            <div class="space-y-4 text-sm">
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold shrink-0">1</div>
+                <div>
+                  <h4 class="font-semibold text-slate-900">TSK RDM Asteğmenlik Görevi</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Suriye Barış Pınarı Harekat bölgesinde TSK Rehberlik ve Danışma Merkezi (RDM) bünyesinde Sağlık Asteğmen olarak travma, kaygı, panik atak ve stres sahası çalışmaları.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold shrink-0">2</div>
+                <div>
+                  <h4 class="font-semibold text-slate-900">Okul Psikolojik Danışmanlığı</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Konya Şehir Koleji’nde iki yıl boyunca çocuk/ergen gelişimsel süreçleri ve ebeveyn danışmanlığı yürütüldü.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold shrink-0">3</div>
+                <div>
+                  <h4 class="font-semibold text-slate-900">STK & Psikososyal Destek</h4>
+                  <p class="text-xs text-slate-500 mt-0.5">Türk Kızılay, AFAD ve İHH bünyesinde insani yardım ve kentsel psikososyal destek projelerinde aktif görevler.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-brand-700 text-white rounded-2xl space-y-3">
+            <h4 class="font-bold text-base">Mesleki Eğitimler & Sertifikalar</h4>
+            <ul class="text-xs space-y-2 text-brand-100 leading-relaxed">
+              <li>• <strong>Dr. İbrahim Bilgen (ACT Türkiye):</strong> Kabul ve Kararlılık (ACT) Temel, Orta, İleri Seviye ve Süpervizyon</li>
+              <li>• <strong>Prof. Dr. Zümra Atalay (Mindfulness Institute):</strong> MBSR Sertifikasyonu</li>
+              <li>• <strong>Prof. Dr. Robyn Walser:</strong> Travmada Süreç Odaklı ACT</li>
+              <li>• <strong>Jim Lucas:</strong> Depresyonda ACT Uzmanlığı</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calisma-alanlari" class="py-20 bg-sand-50 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold uppercase tracking-wider">Uzmanlık Alanları</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Çalışma Alanları</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">Aşağıdaki konularda kanıta dayalı ve etik ilkelere bağlı psikolojik destek alabilirsiniz.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🌿</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Anksiyete & Kaygı</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Sürekli endişe, yaygın kaygı ve zihinsel yoğunlukla baş etme pratikleri.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">⚡</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Panik Atak</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Bedensel duyumların yönetimi ve panik nöbetleri döngüsünü kırma.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🌧</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Depresyon</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">İsteksizlik, tükenmişlik ve yaşam enerjisini yeniden yapılandırma.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🛡️️</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Travma & TSSB</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Zorlayıcı geçmiş deneyimlerin güvenli ortamda ve şefkatle işlenmesi.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+
+        <!-- Card 5 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🔄</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Bağımlılık</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Davranışsal ve maddesel bağımlılık kalıplarında öz denetim ve farkındalık.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+
+        <!-- Card 6 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🤝</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">İlişki Sorunları</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">İletişim tıkanıklıkları, sınırlar ve güven ilişkilerini güçlendirme.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+
+        <!-- Card 7 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🔋</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Stres & Tükenmişlik</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">İş/yaşam dengesi, kronik stres ve tükenmişlik sendromu ile baş etme.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+
+        <!-- Card 8 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🌊</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Öfke & Duygu Düzenleme</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Yoğun duygusal dalgalanmaları tanıma ve sağlıklı ifade yöntemleri.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+
+        <!-- Card 9 -->
+        <a href="#randevu" class="card-hover bg-white p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-3">🧭</div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Yaşam Geçişleri</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">Göç, kariyer değişimi, evlilik/boşanma gibi kırılma noktalarına uyum.</p>
+          </div>
+          <span class="mt-4 text-xs font-semibold text-brand-700 flex items-center gap-1">Detaylı Bilgi & Randevu →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="hizmetler" class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold uppercase tracking-wider">Danışmanlık Süreçleri</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Hizmet Detayları</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">Yüz yüze ve online formatta yapılandırılmış bilimsel danışmanlık hizmetleri.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">01</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Bireysel Psikolojik Danışmanlık</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Yetişkin bireylerle birebir yürütülen bu süreçte, yaşam kalitenizi ve esnekliğinizi artıran somut adımlar atılması hedeflenir.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 border-t border-slate-200/60 pt-3">
+              <li>• <strong>Kaygı & Anksiyete:</strong> Panik nöbetleri, sosyal fobi ve korkular</li>
+              <li>• <strong>Depresyon:</strong> Tükenmişlik, özsaygı eksikliği ve isteksizlik</li>
+              <li>• <strong>Travma:</strong> Zorlayıcı yaşantılar ve uyum güçlükleri</li>
+            </ul>
+          </div>
+          <a href="#randevu" class="mt-6 inline-block text-center py-2.5 px-4 bg-white border border-slate-200 text-brand-800 font-semibold text-xs rounded-xl hover:bg-brand-700 hover:text-white transition-all">Detay ve Randevu</a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">02</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Eğitim Danışmanlığı</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Öğrencilerin akademik, zihinsel ve duygusal gelişim süreçlerini destekleyen yapılandırılmış rehberlik çalışmasıdır.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 border-t border-slate-200/60 pt-3">
+              <li>• <strong>Sınav Kaygısı:</strong> Performans stresi ve özgüven desteği</li>
+              <li>• <strong>Akademik Performans:</strong> Verimli çalışma ve hedef planlama</li>
+              <li>• <strong>Duygu Düzenleme:</strong> Ergenlik dönemi uyumu ve sosyal iletişim</li>
+            </ul>
+          </div>
+          <a href="#randevu" class="mt-6 inline-block text-center py-2.5 px-4 bg-white border border-slate-200 text-brand-800 font-semibold text-xs rounded-xl hover:bg-brand-700 hover:text-white transition-all">Detay ve Randevu</a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">03</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">MOXO Dikkat Testi (Akredite)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Çocuk, ergen ve yetişkinlerde dikkat düzeyini objektif ölçen bilgisayar tabanlı değerlendirme sistemidir.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 border-t border-slate-200/60 pt-3">
+              <li>• <strong>Dikkat & Odaklanma:</strong> Çeldiriciler altında performans ölçümü</li>
+              <li>• <strong>Zamanlama & Dürtüsellik:</strong> Tepki süreleri ve kontrol düzeyi</li>
+              <li>• <strong>Hiperaktivite:</strong> Hareketlilik katsayısının sayısal analizi</li>
+            </ul>
+          </div>
+          <a href="#randevu" class="mt-6 inline-block text-center py-2.5 px-4 bg-white border border-slate-200 text-brand-800 font-semibold text-xs rounded-xl hover:bg-brand-700 hover:text-white transition-all">Detay ve Randevu</a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">04</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Çift Danışmanlığı</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Çiftlerin ilişki dinamiklerini güçlendirmeye ve tıkanıklıkları aşmaya yönelik yapılandırılmış görüşmelerdir.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 border-t border-slate-200/60 pt-3">
+              <li>• <strong>İletişim & Çatışma:</strong> Yapıcı diyalog ve çözüm odaklılık</li>
+              <li>• <strong>Güven & Bağ Kurma:</strong> Duygusal yakınlığı yeniden inşa etme</li>
+              <li>• <strong>Sınır Yönetimi:</strong> Sağlıklı bireysel alanlar tanımlama</li>
+            </ul>
+          </div>
+          <a href="#randevu" class="mt-6 inline-block text-center py-2.5 px-4 bg-white border border-slate-200 text-brand-800 font-semibold text-xs rounded-xl hover:bg-brand-700 hover:text-white transition-all">Detay ve Randevu</a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+          <div>
+            <span class="text-xs font-bold text-brand-600 uppercase tracking-widest">05</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Online Psikolojik Danışmanlık</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Şifreli ve güvenli platformlar üzerinden Türkiye'nin her iline ve dünyanın her bölgesine mekan bağımsız görüntülü seans olanağı.
+            </p>
+            <div class="grid sm:grid-cols-2 gap-4 border-t border-slate-200/60 pt-3 text-xs text-slate-700">
+              <div>
+                <h4 class="font-bold text-slate-900 mb-1">TR Geneli & Yurt Dışı</h4>
+                <p>81 ilimizden ve Avrupa/dünya genelinden kendi evinizin konforunda katılım imkanı.</p>
+              </div>
+              <div>
+                <h4 class="font-bold text-slate-900 mb-1">Esnek Saat Dilimleri</h4>
+                <p>Bulunduğunuz ülkenin yerel saatine göre randevu takvimi oluşturma kolaylığı.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#randevu" class="mt-6 inline-block text-center py-2.5 px-4 bg-brand-700 text-white font-semibold text-xs rounded-xl hover:bg-brand-800 transition-all">Online Randevu Oluştur</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diaspora" class="py-20 bg-brand-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="px-3.5 py-1.5 rounded-full bg-brand-800 text-brand-200 text-xs font-semibold uppercase tracking-wider">Sınırları Aşan Destek</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 tracking-tight">Yurt Dışındaki Türkler İçin Online Danışmanlık</h2>
+        <p class="text-brand-200 mt-3 text-sm sm:text-base leading-relaxed">
+          Ana dilinizde, kültürünüzü ve göç deneyiminizi anlayan bir uzmanla çalışın. Yurt dışında yaşamanın getirdiği uyum zorlukları, yalnızlık ve dil bariyerini aşmak için saat diliminize uygun online seanslar.
         </p>
-      </header>
+      </div>
 
-      <div class="booking-form-container" style="background: #ffffff; padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
-        <form class="appointment-form" onsubmit="event.preventDefault(); alert('Randevu talebiniz başarıyla alındı!');">
-          <div class="form-group">
-            <label for="fullname">Ad Soyad *</label>
-            <input type="text" id="fullname" name="fullname" required placeholder="Adınız ve Soyadınız">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Germany -->
+        <div class="bg-brand-800/80 border border-brand-700/60 p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-2">🇩🇪</div>
+            <h3 class="font-bold text-lg text-white">Almanya</h3>
+            <p class="text-xs text-brand-200 mt-1 leading-relaxed">Almanya genelindeki Türk danışanlarımız için Türkçe online terapi desteği.</p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-semibold text-brand-300 hover:text-white flex items-center gap-1">Randevu Planla →</a>
+        </div>
+
+        <!-- Netherlands -->
+        <div class="bg-brand-800/80 border border-brand-700/60 p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-2">🇳🇱</div>
+            <h3 class="font-bold text-lg text-white">Hollanda</h3>
+            <p class="text-xs text-brand-200 mt-1 leading-relaxed">Hollanda’da yaşayan danışanlarımız için saat dilimine uygun online seanslar.</p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-semibold text-brand-300 hover:text-white flex items-center gap-1">Randevu Planla →</a>
+        </div>
+
+        <!-- Belgium -->
+        <div class="bg-brand-800/80 border border-brand-700/60 p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-2">🇧🇪</div>
+            <h3 class="font-bold text-lg text-white">Belçika</h3>
+            <p class="text-xs text-brand-200 mt-1 leading-relaxed">Göç ve adaptasyon süreçlerinde ana dilde güvenli psikolojik destek.</p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-semibold text-brand-300 hover:text-white flex items-center gap-1">Randevu Planla →</a>
+        </div>
+
+        <!-- Austria -->
+        <div class="bg-brand-800/80 border border-brand-700/60 p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-2">🇦🇹</div>
+            <h3 class="font-bold text-lg text-white">Avusturya</h3>
+            <p class="text-xs text-brand-200 mt-1 leading-relaxed">Avusturya genelinden hızlı ve güvenli görüntülü seans imkanı.</p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-semibold text-brand-300 hover:text-white flex items-center gap-1">Randevu Planla →</a>
+        </div>
+
+        <!-- Switzerland -->
+        <div class="bg-brand-800/80 border border-brand-700/60 p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-2">🇨🇭</div>
+            <h3 class="font-bold text-lg text-white">İsviçre</h3>
+            <p class="text-xs text-brand-200 mt-1 leading-relaxed">Esnek seans saatleriyle İsviçre'de yaşayan vatandaşlarımıza özel.</p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-semibold text-brand-300 hover:text-white flex items-center gap-1">Randevu Planla →</a>
+        </div>
+
+        <!-- France -->
+        <div class="bg-brand-800/80 border border-brand-700/60 p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-2">🇫🇷</div>
+            <h3 class="font-bold text-lg text-white">Fransa</h3>
+            <p class="text-xs text-brand-200 mt-1 leading-relaxed">Kültürel dokuyu anlayan yapıyla Türkçe bireysel ve çift seansları.</p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-semibold text-brand-300 hover:text-white flex items-center gap-1">Randevu Planla →</a>
+        </div>
+
+        <!-- UK -->
+        <div class="bg-brand-800/80 border border-brand-700/60 p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-2">🇬🇧</div>
+            <h3 class="font-bold text-lg text-white">İngiltere</h3>
+            <p class="text-xs text-brand-200 mt-1 leading-relaxed">Birleşik Krallık saatine uyarlanmış bireysel psikolojik danışmanlık.</p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-semibold text-brand-300 hover:text-white flex items-center gap-1">Randevu Planla →</a>
+        </div>
+
+        <!-- Sweden -->
+        <div class="bg-brand-800/80 border border-brand-700/60 p-5 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="text-3xl mb-2">🇸🇪</div>
+            <h3 class="font-bold text-lg text-white">İsveç</h3>
+            <p class="text-xs text-brand-200 mt-1 leading-relaxed">İskandinavya bölgesinde yaşayan danışanlarımız için kesintisiz erişim.</p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-semibold text-brand-300 hover:text-white flex items-center gap-1">Randevu Planla →</a>
+        </div>
+      </div>
+
+      <div class="mt-12 text-center p-6 bg-brand-800/50 rounded-2xl border border-brand-700 max-w-2xl mx-auto">
+        <p class="text-sm text-brand-200">
+          ℹ️ <strong>Farklı bir ülkede misiniz?</strong> Dünyanın tüm bölgelerinden randevu almak ve saat dilimi uygunluğunu öğrenmek için iletişime geçebilirsiniz.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold uppercase tracking-wider">Farkındalık & Bilgi</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Psikoloji Blogu</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">ACT, Mindfulness ve ruh sağlığı üzerine güncel yazılar.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Post 1 -->
+        <article class="card-hover bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">ACT Terapi</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Kaygiyla Savasmayi Birakinca Ne Oluyor?</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Kabul etmek, teslim olmak ya da pes etmek değildir. Kaygıyla mücadeleyi bırakmanın zihinsel alandaki karşılığını günlük örneklerle ele alıyoruz.
+            </p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">Yazıyı Oku →</a>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="card-hover bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">MBSR</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Nefes: En Yakinimizdaki Demir Atma Noktasi</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Bilinçli farkındalıkla alınan bir nefesin sinir sistemini nasıl yatıştırdığına ve anın içinde kalmamızı sağladığına dair kısa bir rehber.
+            </p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">Yazıyı Oku →</a>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="card-hover bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">Değerler</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Degerlerinizi Nasil Kesfedersiniz?</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Ulaşılacak hedefler ile pusula görevi gören değerleri ayırt etmek, yaşamınızdaki yön duygusunu ve tatmini güçlendirir.
+            </p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">Yazıyı Oku →</a>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="card-hover bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">Travma</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Bedende Kalan Izler ve Sefkatle Temas</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Zorlayıcı yaşantıların ardından iyileşme sürecinde güven hissinin, bedensel farkındalığın ve öz-şefkatin kritik rolü.
+            </p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">Yazıyı Oku →</a>
+        </article>
+
+        <!-- Post 5 -->
+        <article class="card-hover bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">İlişkiler</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Çatismada "Hakli Olmak" Yerine Yakin Olmak</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              İlişki gerilimlerinde ve anlaşmazlık anlarında haklı çıkma çabası yerine duygusal bağı korumanın küçük, etkili pratikleri.
+            </p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">Yazıyı Oku →</a>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="card-hover bg-sand-50 p-6 rounded-2xl border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold mb-3">Ergenlik</span>
+            <h3 class="text-lg font-bold text-slate-900 mb-2 leading-snug">Ergenle Konusmak: Dinlemenin Gucu</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Ebeveynler için iletişimde tavsiye vermek yerine yargısız ve etkin dinleme alanları açma üzerine rehber notlar.
+            </p>
+          </div>
+          <a href="#randevu" class="mt-4 text-xs font-bold text-brand-700 hover:text-brand-900 flex items-center gap-1">Yazıyı Oku →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="randevu" class="py-20 bg-sand-100/70 border-t border-slate-200/60">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="px-3.5 py-1.5 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold uppercase tracking-wider">İletişim & Randevu</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Bir Görüşme Planlayalım</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Aşağıdaki formu doldurarak talebinizi iletebilirsiniz. En kısa sürede tarafınıza dönüş sağlanacaktır.
+        </p>
+      </div>
+
+      <div class="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200/80 shadow-lg shadow-brand-900/5">
+        <form id="contactForm" class="space-y-6">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label for="fullname" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Ad Soyad *</label>
+              <input type="text" id="fullname" required placeholder="Adınız ve Soyadınız" 
+                     class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-brand-700 focus:border-brand-700 outline-none transition-all">
+            </div>
+
+            <div>
+              <label for="contact" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Telefon / E-posta *</label>
+              <input type="text" id="contact" required placeholder="05XX XXX XX XX veya e-posta" 
+                     class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-brand-700 focus:border-brand-700 outline-none transition-all">
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="contact">Telefon veya E-posta *</label>
-            <input type="text" id="contact" name="contact" required placeholder="05XX XXX XX XX veya ornek@mail.com">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label for="service" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Hizmet Türü *</label>
+              <select id="service" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-brand-700 focus:border-brand-700 outline-none transition-all bg-white">
+                <option value="" disabled selected>Almak istediğiniz hizmeti seçiniz</option>
+                <option value="Bireysel Danışmanlık">Bireysel Psikolojik Danışmanlık</option>
+                <option value="Eğitim Danışmanlığı">Eğitim Danışmanlığı</option>
+                <option value="MOXO Dikkat Testi">MOXO Dikkat Testi</option>
+                <option value="Çift Danışmanlığı">Çift Danışmanlığı</option>
+                <option value="Online Danışmanlık">Online Psikolojik Danışmanlık (Yurt İçi / Yurt Dışı)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="preference" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Görüşme Tercihi *</label>
+              <select id="preference" required class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-brand-700 focus:border-brand-700 outline-none transition-all bg-white">
+                <option value="Yüz Yüze (Konya Meram)">Yüz Yüze (Konya Meram Ofis)</option>
+                <option value="Online Görüşme">Online Görüşme</option>
+              </select>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="service">Hizmet Türü *</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Almak istediğiniz hizmeti seçiniz</option>
-              <option value="Bireysel Danışmanlık">Bireysel Psikolojik Danışmanlık</option>
-              <option value="Eğitim Danışmanlığı">Eğitim Danışmanlığı</option>
-              <option value="MOXO Dikkat Testi">MOXO Dikkat Testi</option>
-              <option value="Çift Danışmanlığı">Çift Danışmanlığı</option>
-              <option value="Online Danışmanlık">Online Psikolojik Danışmanlık (Yurt İçi / Yurt Dışı)</option>
-            </select>
+          <div>
+            <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Mesajınız / Notlar (Opsiyonel)</label>
+            <textarea id="message" rows="4" placeholder="Ulaşmak istediğiniz zaman dilimleri veya iletmek istediğiniz detaylar..." 
+                      class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:ring-2 focus:ring-brand-700 focus:border-brand-700 outline-none transition-all"></textarea>
           </div>
 
-          <div class="form-group">
-            <label for="preference">Görüşme Tercihi *</label>
-            <select id="preference" name="preference" required>
-              <option value="Yüz Yüze (Konya Meram)">Yüz Yüze (Konya Meram Ofis)</option>
-              <option value="Online Görüşme">Online Görüşme</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Kısa Not / Mesajınız (Opsiyonel)</label>
-            <textarea id="message" name="message" rows="4" placeholder="Ulaşmak istediğiniz uygun zaman dilimleri veya iletmek istediğiniz detaylar..."></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Randevu Talebini Gönder</button>
+          <button type="submit" class="w-full py-4 px-6 bg-brand-700 hover:bg-brand-800 text-white font-bold text-sm sm:text-base rounded-xl shadow-md transition-all">
+            Randevu Talebini Gönder
+          </button>
         </form>
       </div>
     </div>
   </section>
 
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <div class="flex items-center justify-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-brand-700 text-white font-bold flex items-center justify-center text-sm">P</div>
+        <span class="text-white font-bold tracking-tight">Konya Psikolojik Danışmanlık</span>
+      </div>
+      <p class="text-xs text-slate-500 max-w-xl mx-auto">
+        Konya Meram Yüz Yüze Seanslar & Global Online Danışmanlık. Gizlilik, etik ve kanıta dayalı terapötik standartlar esas alınmaktadır.
+      </p>
+      <div class="text-xs text-slate-600 pt-4 border-t border-slate-800">
+        © 2026 Tüm Hakları Saklıdır.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Notification Box (Replaces alert) -->
+  <div id="modalBox" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-2xl">
+      <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto text-2xl font-bold">
+        ✓
+      </div>
+      <h3 class="text-xl font-bold text-slate-900">Talebiniz Alındı</h3>
+      <p id="modalMsg" class="text-xs sm:text-sm text-slate-600 leading-relaxed"></p>
+      <button onclick="closeModal()" class="w-full py-3 bg-brand-700 text-white text-xs font-bold rounded-xl hover:bg-brand-800 transition-all">
+        Tamam
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Form submission handling without alert()
+    const form = document.getElementById('contactForm');
+    const modalBox = document.getElementById('modalBox');
+    const modalMsg = document.getElementById('modalMsg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('fullname').value;
+      const service = document.getElementById('service').value;
+
+      modalMsg.textContent = `Sayın ${name}, ${service} ile ilgili randevu talebiniz tarafımıza ulaşmıştır. En kısa sürede sizinle iletişime geçilecektir.`;
+      modalBox.classList.remove('hidden');
+      modalBox.classList.add('flex');
+      form.reset();
+    });
+
+    function closeModal() {
+      modalBox.classList.add('hidden');
+      modalBox.classList.remove('flex');
+    }
+  </script>
 </body>
 </html>
