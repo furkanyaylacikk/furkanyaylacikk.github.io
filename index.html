@@ -848,7 +848,7 @@
                         </h2>
                     </div>
                     <p class="text-brand-muted text-sm max-w-md leading-relaxed">
-                        Kabul ve Kararlılık (ACT), bilinçli farkındalık pratikleri ve zihinsel esneklik üzerine kısa ve pratik okumalar.
+                        Kabul ve Adanmışlık Yaklaşımı (ACT), bilinçli farkındalık pratikleri ve zihinsel esneklik üzerine rehber yazılar.
                     </p>
                 </div>
 
@@ -858,14 +858,14 @@
                     <article class="agency-card rounded-3xl overflow-hidden flex flex-col justify-between group">
                         <div class="p-8">
                             <div class="flex items-center justify-between text-xs text-brand-muted mb-4">
-                                <span class="font-semibold text-brand-sage bg-brand-softSage px-3 py-1 rounded-full">Kabul ve Kararlılık</span>
+                                <span class="font-semibold text-brand-sage bg-brand-softSage px-3 py-1 rounded-full">Kabul ve Adanmışlık (ACT)</span>
                                 <span>4 dk okuma</span>
                             </div>
                             <h3 class="font-serif-heading text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-sage transition-colors">
                                 Zihnimizle Savaşmayı Bırakmak: Bilişsel Ayrışma
                             </h3>
                             <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
-                                Düşünceler birer mutlak gerçek midir yoksa zihnin ürettiği geçici hikayeler mi? Zihinsel kancalardan kurtulmanın yolları.
+                                Zihnimiz gün boyunca düşünceler ve senaryolar üretir. Düşünceler birer mutlak gerçek midir yoksa zihinsel olaylar mı?
                             </p>
                         </div>
                         <div class="p-8 pt-0">
@@ -887,7 +887,7 @@
                                 Hedefler mi, Değerler mi? Hayatın Pusulasını Ayarlamak
                             </h3>
                             <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
-                                Hedefler varılacak duraklar, değerler ise yoldaki yönümüzdür. Belirsizlik anlarında değerlerle hareket etmenin önemi.
+                                Hedefler varılacak sonuçlar, değerler ise yaşam pusulamızdır. Zorlayıcı duygular varken de değerlerle yaşamak mümkün mü?
                             </p>
                         </div>
                         <div class="p-8 pt-0">
@@ -902,14 +902,14 @@
                     <article class="agency-card rounded-3xl overflow-hidden flex flex-col justify-between group">
                         <div class="p-8">
                             <div class="flex items-center justify-between text-xs text-brand-muted mb-4">
-                                <span class="font-semibold text-brand-sage bg-brand-softSage px-3 py-1 rounded-full">Bilinçli Farkındalık</span>
+                                <span class="font-semibold text-brand-sage bg-brand-softSage px-3 py-1 rounded-full">Bilinçli Farkındalık (MBSR)</span>
                                 <span>3 dk okuma</span>
                             </div>
                             <h3 class="font-serif-heading text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-sage transition-colors">
-                                Stres Anında Otomatik Pilottan Bilinçli Yanıta Geçiş
+                                Stres Anında Otomatik Pilottan Farkındalıklı Yanıta Geçiş
                             </h3>
                             <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
-                                Bedenimiz strese girdiğinde nefesi ve duyumları bir çapa gibi kullanarak otomatik tepkileri nasıl dönüştürebiliriz?
+                                Stres anında durabilmek, üç nefeslik farkındalık ve bedensel duyumları yargısızca fark ederek bilinçli yanıtlar oluşturma.
                             </p>
                         </div>
                         <div class="p-8 pt-0">
@@ -1326,13 +1326,13 @@
 
     <!-- Blog Okuma Modal -->
     <div id="blogModal" class="fixed inset-0 z-50 hidden bg-brand-dark/70 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeBlogModal()">
-        <div class="bg-white max-w-2xl w-full rounded-3xl p-6 sm:p-10 shadow-2xl relative border border-brand-border max-h-[85vh] overflow-y-auto" onclick="event.stopPropagation()">
-            <button onclick="closeBlogModal()" class="absolute top-5 right-5 text-brand-muted hover:text-brand-dark text-lg" aria-label="Kapat">
+        <div class="bg-white max-w-2xl w-full rounded-3xl p-6 sm:p-10 shadow-2xl relative border border-brand-border max-h-[88vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <button onclick="closeBlogModal()" class="absolute top-5 right-5 text-brand-muted hover:text-brand-dark text-lg p-2" aria-label="Kapat">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div id="blogModalCategory" class="text-xs font-bold text-brand-sage uppercase tracking-wider mb-2"></div>
-            <h3 id="blogModalTitle" class="font-serif-heading text-2xl sm:text-3xl font-bold text-brand-dark mb-6"></h3>
-            <div id="blogModalContent" class="text-brand-muted text-sm leading-relaxed space-y-4 border-t border-brand-border pt-6"></div>
+            <h3 id="blogModalTitle" class="font-serif-heading text-2xl sm:text-3xl font-bold text-brand-dark mb-6 leading-tight"></h3>
+            <div id="blogModalContent" class="text-brand-muted text-sm sm:text-base leading-relaxed space-y-4 border-t border-brand-border pt-6"></div>
         </div>
     </div>
 
@@ -1463,33 +1463,95 @@
             document.getElementById('bookingModal').classList.add('hidden');
         }
 
-        // Blog Modal Data & Control
+        // Orijinal Metinlerle Blog Verisi
         const blogPosts = {
             post1: {
-                category: "Kabul ve Kararlılık (ACT)",
+                category: "Kabul ve Adanmışlık Yaklaşımı (ACT)",
                 title: "Zihnimizle Savaşmayı Bırakmak: Bilişsel Ayrışma",
                 content: `
-                    <p>İnsan zihni sürekli problem çözmek, tehlikeleri öngörmek ve geçmişi analiz etmek üzere evrimleşmiştir. Ancak çoğu zaman zihnimizin ürettiği senaryolar, kaygılar ve kendini eleştiren seslerle o kadar özdeşleşiriz ki, onları sorgulanamaz birer 'mutlak gerçek' sanırız.</p>
-                    <p>ACT (Kabul ve Adanmışlık Terapisi) yaklaşımında bilişsel ayrışma, düşüncelerimizi yok etmeye ya da olumluya çevirmeye çalışmak demek değildir. Düşünceyi olduğu gibi, zihinden geçen kelimeler ve görüntüler olarak fark edebilme sanatıdır.</p>
-                    <p><strong>Pratik bir adım:</strong> Bir dahaki sefere zihniniz 'Bunu asla başaramayacaksın' dediğinde, kendinize nazikçe şunu hatırlatmayı deneyin: <em>'Şu an zihnimin bana başaramayacağıma dair bir hikaye anlattığını fark ediyorum.'</em> Bu küçük dilsel ayrışma, düşünce ile eylemleriniz arasına sağlıklı bir özgürlük alanı açar.</p>
+                    <p>Zihnimiz gün boyunca düşünceler, yorumlar, anılar, tahminler ve senaryolar üretir. Özellikle kaygı veya stres yaşadığımız dönemlerde bu düşünceler oldukça ikna edici hale gelebilir. Bazen zihnimizden geçen bir düşünceyi yalnızca bir düşünce olarak değil, değiştirilemez bir gerçek olarak değerlendirmeye başlayabiliriz.</p>
+                    <p>Bilişsel ayrışma, düşünceleri ortadan kaldırmaya, bastırmaya veya onları zorla olumlu düşüncelerle değiştirmeye çalışmak değildir. Amaç, düşüncelerin zihinsel birer olay olduğunu fark edebilmek ve onlarla aramıza daha esnek bir mesafe koyabilmektir.</p>
+                    <div class="bg-brand-bg p-4 rounded-2xl border border-brand-border my-4 space-y-2">
+                        <p class="text-xs text-brand-muted">Örneğin:</p>
+                        <p class="font-semibold text-brand-dark italic">“Bunu asla başaramayacağım.”</p>
+                        <p class="text-xs text-brand-muted">düşüncesi ortaya çıktığında, bunu doğrudan bir gerçek olarak kabul etmek yerine:</p>
+                        <p class="font-semibold text-brand-sage italic">“Şu an zihnimin bunu başaramayacağıma dair bir düşünce ürettiğini fark ediyorum.”</p>
+                        <p class="text-xs text-brand-muted">şeklinde ifade etmek farklı bir ilişki kurmamıza yardımcı olabilir.</p>
+                    </div>
+                    <p>Buradaki amaç düşüncenin içeriğini değiştirmek değildir. “Başaracağım” diyerek kendimizi ikna etmek de zorunlu değildir. Daha çok, düşünceyi düşünce olarak görebilmek ve onun davranışlarımız üzerindeki otomatik etkisini fark edebilmektir.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Düşünce Gerçekle Aynı Şey Değildir</h4>
+                    <p>Zihnimizden geçen her düşünce doğru olmak zorunda değildir. Aynı şekilde bir düşüncenin yoğun, tekrarlayıcı veya ikna edici olması da onun mutlaka gerçeği yansıttığı anlamına gelmez.</p>
+                    <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-2">
+                        <li>“Yeterince iyi değilim.”</li>
+                        <li>“Kesinlikle başarısız olacağım.”</li>
+                        <li>“Herkes beni yargılıyor.”</li>
+                        <li>“Bununla baş edemem.”</li>
+                    </ul>
+                    <p>gibi düşünceler ortaya çıkabilir. Bilişsel ayrışma bu düşüncelerle tartışmaya girmekten çok, onların farkında olmayı ve davranışlarımızı yalnızca bu düşüncelerin yönlendirmesine bırakmamayı destekler.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Bilişsel Ayrışmayı Günlük Yaşamda Denemek</h4>
+                    <p>Bir sonraki zorlayıcı düşüncenizde, düşüncenin içeriğiyle hemen mücadele etmek yerine onu fark etmeyi deneyebilirsiniz. Örneğin:</p>
+                    <div class="bg-brand-accentSoft/60 p-4 rounded-2xl border border-brand-accent/20 text-xs sm:text-sm space-y-1">
+                        <p><strong>“Başaramayacağım”</strong> yerine;</p>
+                        <p class="text-brand-dark"><em>“Başaramayacağıma dair bir düşünce yaşıyorum.”</em> veya <em>“Zihnimin şu anda ‘başaramayacaksın’ hikâyesini anlattığını fark ediyorum.”</em> diyebilirsiniz.</p>
+                    </div>
+                    <p>Bu küçük dilsel değişiklik düşünceyi ortadan kaldırmaz. Ancak düşünceyle aranızdaki ilişkiyi değiştirebilir ve düşünceye rağmen nasıl davranmak istediğinize ilişkin bir seçim alanı oluşturabilir.</p>
+                    <p>Kabul ve Adanmışlık Yaklaşımı (ACT) açısından amaç, zihinden geçen her düşünceyi kontrol etmek değil; düşünceler, duygular ve diğer içsel deneyimlerle daha esnek bir ilişki kurarak kişinin yaşamında önem verdiği değerlere doğru hareket edebilmesini desteklemektir.</p>
+                    <p class="italic text-brand-dark font-medium border-l-2 border-brand-accent pl-3 mt-2">Bazen zihnimizin söylediklerini susturamayabiliriz. Ancak onları duyduğumuz halde hangi yönde hareket edeceğimize dair seçim yapabilmek, psikolojik esnekliğin önemli bir parçasıdır.</p>
                 `
             },
             post2: {
                 category: "Değerler Odaklı Yaşam",
                 title: "Hedefler mi, Değerler mi? Hayatın Pusulasını Ayarlamak",
                 content: `
-                    <p>Çoğu zaman hayatı hedefler üzerinden tanımlarız: Bir sınavı kazanmak, bir işe girmek, bir ilişki başlatmak... Ancak bir hedefe ulaştığımızda ya da beklenmedik bir engelle karşılaştığımızda içsel bir boşluk hissetmek çok yaygındır.</p>
-                    <p>Değerler ise hedeflerden farklıdır; onlar varılacak bir durak değil, yol boyunca hangi yöne doğru yürüyeceğinizi belirleyen bir pusuladır. Örneğin 'çocuğuma iyi bir anne/baba olmak' tamamlanıp kenara bırakılacak bir hedef değil, her gün yeniden yaşanabilecek bir değerdir.</p>
-                    <p>Hayat fırtınalı olduğunda hedefleriniz sekteye uğrayabilir; ancak değerleriniz her zaman oradadır. Zorlayıcı duyguların ortasında bile değerlerinize uygun küçük bir adım atmak mümkündür.</p>
+                    <p>Hayatı çoğu zaman hedefler üzerinden tanımlarız: Bir sınavı kazanmak, bir işe girmek, bir ilişki kurmak, belirli bir yaşam düzenine ulaşmak... Hedefler yaşamımıza yön verebilir. Ancak her hedefin tamamlanabilir olması, yaşamın yalnızca ulaşılan sonuçlardan ibaret olduğu anlamına gelmez.</p>
+                    <p>Değerler, hedeflerden farklıdır. Bir hedef ulaşılabilecek bir sonuçken, değer kişinin yaşamında nasıl bir insan olmak ve nasıl bir yaşam sürmek istediğine ilişkin yönelimlerini ifade eder.</p>
+                    <p>Örneğin “bir sınavı kazanmak” bir hedeftir. “Öğrenmeye ve gelişmeye önem vermek” ise bir değeri yansıtabilir. Sınav sonucu ne olursa olsun kişi öğrenmeye, gelişmeye ve çaba göstermeye değerleri doğrultusunda devam edebilir.</p>
+                    <p>Benzer şekilde “çocuğuma iyi bir anne veya baba olmak” tek seferde tamamlanabilecek bir hedef değildir. İlgili, şefkatli, sorumluluk sahibi ve destekleyici bir ebeveyn olma yönündeki davranışlar, kişinin yaşamı boyunca yeniden ortaya çıkabilecek değer odaklı seçimlerdir. Bu nedenle değerler, ulaşılması gereken bir son noktadan çok yaşam boyunca yön veren bir pusula olarak düşünülebilir.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Hedefler Değişebilir, Değerler Yön Göstermeye Devam Edebilir</h4>
+                    <p>Hayat her zaman planladığımız şekilde ilerlemez. Bir hedef ertelenebilir, değişebilir veya beklediğimiz sonucu vermeyebilir. Böyle durumlarda yalnızca sonuca odaklanmak, kişinin kendisini başarısız veya yetersiz hissetmesine neden olabilir.</p>
+                    <p>Değer odaklı yaklaşım ise dikkati yalnızca sonuca değil, kişinin süreç içerisinde nasıl hareket ettiğine de yöneltir. Örneğin bir kişinin hedefi yeni bir iş bulmak olabilir. İş bulmak önemli bir sonuçtur; ancak bu süreçte dürüstlük, gelişim, sorumluluk, üretkenlik veya bağımsızlık gibi değerler doğrultusunda hareket etmek de mümkündür. Sonuç henüz gerçekleşmemiş olsa bile kişi bugün değerleriyle uyumlu bir adım atabilir.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Zorlayıcı Duygular Varken de Değerler Doğrultusunda Yaşamak Mümkün mü?</h4>
+                    <p>Değer odaklı yaşam, kişinin sürekli iyi hissetmesi veya olumsuz duygulardan kurtulması anlamına gelmez. Kaygı, üzüntü, korku veya belirsizlik yaşamın doğal parçaları olabilir. Önemli olan, bu deneyimlerin kişinin davranışlarını tamamen belirlemesine izin vermeden, kendisi için anlamlı olan yönde hareket edebilmesidir.</p>
+                    <p>Örneğin sosyal ilişkilerine önem veren bir kişi yoğun kaygı yaşadığı bir dönemde tamamen geri çekilmek yerine, kendi sınırlarını gözeterek güvendiği biriyle iletişim kurmayı seçebilir. Buradaki amaç kaygıyı ortadan kaldırmak değil; kaygı varken de kişinin değerleri doğrultusunda hareket edebilme esnekliğini geliştirmektir.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Değerlerinizi Belirlemek Neden Önemlidir?</h4>
+                    <p>Değerleri fark etmek, “Hayatta neyi başarmalıyım?” sorusunun yanında “Nasıl bir insan olmak istiyorum?” ve “Yaşamımı hangi yönde şekillendirmek istiyorum?” sorularına da alan açar. Günlük yaşamda küçük ama anlamlı adımlar belirlemek mümkün hale gelebilir:</p>
+                    <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-2">
+                        <li>İlişkilerime önem veriyorsam, bugün bir yakınımla gerçekten ilgilenmek.</li>
+                        <li>Öğrenmeye değer veriyorsam, kısa da olsa yeni bir şey öğrenmeye zaman ayırmak.</li>
+                        <li>Sağlığıma önem veriyorsam, bedenimin ihtiyaçlarını fark etmek.</li>
+                        <li>Sorumluluğa önem veriyorsam, ertelediğim bir işi tamamlamak.</li>
+                        <li>Kendime saygıyı önemsiyorsam, ihtiyaçlarımı ve sınırlarımı daha açık ifade etmek.</li>
+                    </ul>
+                    <p>Bu adımların büyük veya kusursuz olması gerekmez. Değer odaklı yaşam çoğu zaman küçük ve sürdürülebilir seçimlerle şekillenir.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Değerler Bir Pusuladır</h4>
+                    <p>Hedefler yaşamımızda önemli bir yere sahip olabilir. Ancak hedeflerin gerçekleşip gerçekleşmemesi her zaman bizim kontrolümüzde değildir. Değerler ise kişinin kontrol alanındaki davranışlarına ilişkin bir yön gösterebilir.</p>
+                    <p>Bu nedenle değer odaklı yaşam, “Her istediğime ulaşmalıyım” düşüncesinden çok, <strong>“Benim için önemli olan yönde bugün hangi küçük adımı atabilirim?”</strong> sorusuna alan açar. Bazen hayatın bütün yolunu görmek mümkün olmayabilir; böyle zamanlarda ihtiyaç duyulan şey, bütün yolu bilmekten çok hangi yöne yürümek istediğimizi fark etmektir.</p>
                 `
             },
             post3: {
                 category: "Bilinçli Farkındalık (MBSR)",
-                title: "Stres Anında Otomatik Pilottan Bilinçli Yanıta Geçiş",
+                title: "Stres Anında Otomatik Pilottan Farkındalıklı Yanıta Geçiş",
                 content: `
-                    <p>Günlük yaşamın telaşı içinde çoğunlukla 'otomatik pilot' modunda hareket ederiz. Beklenmedik bir stres faktörüyle karşılaştığımızda omuzlarımız kasılır, nefesimiz sığlaşır ve zihnimiz otomatik savunma reaksiyonları verir.</p>
-                    <p>MBSR temelli farkındalık pratikleri, bu reaksiyon zincirini fark etmemizi sağlar. Stres anında durmak, dikkati bedendeki gerilime ve nefese getirmek, otomatik bir tepki vermek yerine bilinçli ve şefkatli bir yanıt seçme alanı tanır.</p>
-                    <p>Nefesinizi değiştirmeye çalışmadan sadece 3 nefes boyunca havanın burun deliklerinizden girişini ve çıkışını izlemek bile sinir sisteminize güvenli bir alanda olduğu sinyalini verir.</p>
+                    <p>Günlük yaşamın yoğunluğu içinde birçok davranışımızı farkında olmadan, alışılmış düşünce ve tepkilerimizin yönlendirmesiyle gerçekleştirebiliriz. Bu durum bazen “otomatik pilot” olarak ifade edilir.</p>
+                    <p>Stresli bir durumla karşılaştığımızda bedenimizde ve zihnimizde çeşitli değişiklikler ortaya çıkabilir. Omuzlarda gerilme, nefes alışverişindeki değişimler, huzursuzluk, zihinsel yoğunluk veya aynı düşüncenin tekrar tekrar akla gelmesi bunlardan bazıları olabilir.</p>
+                    <p>Bilinçli Farkındalık Temelli Stres Azaltma (MBSR) yaklaşımında amaç, bu deneyimleri ortadan kaldırmak veya her durumda sakinleşmek değildir. Daha çok, o anda bedenimizde, düşüncelerimizde ve duygularımızda neler olup bittiğini fark edebilmek ve deneyimimize daha bilinçli bir şekilde yaklaşabilmek önemlidir.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Stres Anında Durabilmek</h4>
+                    <p>Stres yaşadığımızda çoğu zaman düşünmeden tepki vermek kolaylaşır. Farkındalık pratikleri ise bu otomatik tepki ile davranış arasında küçük bir duraklama alanı oluşturmayı destekleyebilir. Örneğin zorlayıcı bir konuşma sırasında hemen yanıt vermek yerine kısa bir süre durup:</p>
+                    <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm pl-2">
+                        <li>Bedenimde şu anda ne oluyor?</li>
+                        <li>Nefesimi nasıl fark ediyorum?</li>
+                        <li>Aklımdan hangi düşünceler geçiyor?</li>
+                        <li>Şu anda hangi duyguyu deneyimliyorum?</li>
+                    </ul>
+                    <p>sorularına dikkat yöneltmek, yaşanan deneyimin daha açık biçimde fark edilmesine yardımcı olabilir.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Üç Nefeslik Farkındalık</h4>
+                    <p>Bunu günlük yaşamda denemek için dakikalarca zamana ihtiyacınız olmayabilir. Kısa bir süre durun ve nefesinizi değiştirmeye çalışmadan, dikkatinizi nefesin doğal akışına yöneltin. Havanın burundan girişini ve çıkışını fark etmeye çalışın.</p>
+                    <p>Zihniniz başka bir düşünceye kayarsa bunu fark edin ve dikkatinizi yeniden nefese yöneltin. Buradaki amaç zihni tamamen boşaltmak veya nefesi belirli bir biçimde düzenlemek değildir. Dikkatin nereye yöneldiğini fark etmek ve onu nazikçe yeniden şimdiki ana getirebilmek, farkındalık pratiğinin temel unsurlarından biridir.</p>
+                    <h4 class="font-serif-heading text-lg font-bold text-brand-dark pt-3">Farkındalık Sadece Sakinleşmek Demek Değildir</h4>
+                    <p>Bilinçli farkındalık bazen rahatlama veya sakinleşme hissiyle birlikte yaşanabilir. Ancak mindfulness pratiğinin amacı her zaman böyle bir duygu yaratmak değildir.</p>
+                    <p>Bazen farkındalık pratiği sırasında huzursuzluk, üzüntü, düşünce yoğunluğu veya bedensel rahatsızlık daha belirgin şekilde fark edilebilir. Burada önemli olan bu deneyimleri hemen değiştirmeye çalışmadan, onları fark edebilme ve deneyimle kurulan ilişkiyi gözlemleyebilme becerisidir.</p>
+                    <p>MBSR yaklaşımı; beden taraması, oturarak farkındalık çalışmaları, bilinçli hareket ve günlük yaşamda farkındalık gibi çeşitli uygulamalar aracılığıyla kişinin dikkatini ve farkındalığını geliştirmeyi amaçlar.</p>
+                    <p class="italic text-brand-dark font-medium border-l-2 border-brand-sage pl-3 mt-2">Gün içinde her şeyi kontrol etmek mümkün olmayabilir. Ancak yaşadığımız deneyimi fark etmek, otomatik tepkilerimizi gözlemlemek ve içinde bulunduğumuz ana yeniden yönelmek için küçük alanlar oluşturabiliriz.</p>
                 `
             }
         };
