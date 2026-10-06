@@ -493,7 +493,7 @@
 
                 <!-- 2. Aşama: Detay Izgaraları (Bu Yaklaşımlar Ne Anlama Geliyor?) -->
 
-                <!-- ACT 6 Süreç Paneli -->
+                <!-- ACT 6 Süreç Paneli (Başlangıçta açık) -->
                 <div id="actPanel" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
@@ -570,8 +570,8 @@
 
                 </div>
 
-                <!-- MBSR 6 Farkındalık Boyutu Paneli (Varsayılan olarak gizli) -->
-                <div id="mbsrPanel" class="hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- MBSR 6 Farkındalık Boyutu Paneli (Başlangıçta kapalı) -->
+                <div id="mbsrPanel" class="hidden sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     
                     <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
                         <div>
@@ -1222,9 +1222,12 @@
                 actBtn.className = "px-5 py-2 rounded-full text-xs font-semibold transition-all bg-brand-dark text-white shadow-xs";
                 mbsrBtn.className = "px-5 py-2 rounded-full text-xs font-semibold transition-all text-brand-dark hover:text-brand-sage";
                 
-                // Paneller
+                // Paneller: display özelliğini doğrudan ve kesin yönet
                 actPanel.classList.remove('hidden');
+                actPanel.classList.add('grid');
                 mbsrPanel.classList.add('hidden');
+                mbsrPanel.classList.remove('grid');
+
                 detailTitle.innerText = "ACT — Psikolojik Esneklik Modelinde Altı Temel Süreç";
 
                 // Üst özet kart vurguları
@@ -1237,4 +1240,119 @@
                 mbsrBadge.className = "text-xs font-semibold text-brand-muted flex items-center gap-1.5";
             } else {
                 // Tab butonları
-                mbsrBtn.
+                mbsrBtn.className = "px-5 py-2 rounded-full text-xs font-semibold transition-all bg-brand-dark text-white shadow-xs";
+                actBtn.className = "px-5 py-2 rounded-full text-xs font-semibold transition-all text-brand-dark hover:text-brand-sage";
+                
+                // Paneller: display özelliğini doğrudan ve kesin yönet
+                mbsrPanel.classList.remove('hidden');
+                mbsrPanel.classList.add('grid');
+                actPanel.classList.add('hidden');
+                actPanel.classList.remove('grid');
+
+                detailTitle.innerText = "MBSR — Bilinçli Farkındalık Temelli Temel Boyutlar ve Uygulamalar";
+
+                // Üst özet kart vurguları
+                mbsrSummary.className = "cursor-pointer bg-white p-8 sm:p-10 rounded-3xl border-2 transition-all shadow-sm hover:shadow-md border-brand-dark ring-2 ring-brand-dark/10";
+                actSummary.className = "cursor-pointer bg-white p-8 sm:p-10 rounded-3xl border-2 transition-all shadow-sm hover:shadow-md border-brand-border hover:border-brand-sage";
+                
+                mbsrBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-accent"></span> İncele &rarr;';
+                mbsrBadge.className = "text-xs font-semibold text-brand-dark flex items-center gap-1.5";
+                actBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-border"></span> Tıkla & İncele';
+                actBadge.className = "text-xs font-semibold text-brand-muted flex items-center gap-1.5";
+            }
+        }
+
+        // Accordion Controls
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById(id + '-icon');
+            const isOpen = content.classList.contains('open');
+
+            document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+            document.querySelectorAll('[id$="-icon"]').forEach(el => {
+                el.classList.remove('fa-minus');
+                el.classList.add('fa-plus');
+            });
+
+            if (!isOpen) {
+                content.classList.add('open');
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
+        }
+
+        // Values Wheel Calculator
+        function updateValuesWheel() {
+            const v1 = parseInt(document.getElementById('val1').value);
+            const v2 = parseInt(document.getElementById('val2').value);
+            const v3 = parseInt(document.getElementById('val3').value);
+            const v4 = parseInt(document.getElementById('val4').value);
+
+            document.getElementById('val1Text').innerText = v1 + ' / 10';
+            document.getElementById('val2Text').innerText = v2 + ' / 10';
+            document.getElementById('val3Text').innerText = v3 + ' / 10';
+            document.getElementById('val4Text').innerText = v4 + ' / 10';
+
+            const averagePercent = Math.round(((v1 + v2 + v3 + v4) / 40) * 100);
+            document.getElementById('overallScore').innerText = averagePercent + '%';
+
+            const quoteEl = document.getElementById('actGuidanceQuote');
+            if (averagePercent < 45) {
+                quoteEl.innerText = '"Şu an bazı yaşam alanlarında tıkanıklık hissetmeniz çok doğal. Küçük ama kararlı bir adım, pusulanızı yeniden ayarlayabilir."';
+            } else if (averagePercent < 75) {
+                quoteEl.innerText = '"Denge anlık değil, sürekli bir farkındalık sürecidir. Hangi alana biraz daha şefkat göstermek istersiniz?"';
+            } else {
+                quoteEl.innerText = '"Değerlerinizle hizalı bir yaşam sürdürüyorsunuz. Bu farkındalığı koruyarak yolunuza devam edin."';
+            }
+        }
+
+        // Modal Handlers
+        function openBookingModal(serviceName) {
+            const modal = document.getElementById('bookingModal');
+            const select = document.getElementById('modalServiceSelect');
+            if (serviceName && select) {
+                if (serviceName.includes('Konya') || serviceName.includes('Yüz Yüze')) select.value = 'Yüz Yüze (Konya Meram / İçkon Plaza)';
+                else if (serviceName.includes('Ergen')) select.value = 'Ergen Danışmanlığı';
+                else if (serviceName.includes('Yetişkin')) select.value = 'Yetişkin Danışmanlığı';
+                else select.value = 'Online Danışmanlık (Zoom/Meet)';
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function handleBackdropClick(e) {
+            closeBookingModal();
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeBookingModal();
+        });
+
+        // Toast Feedback
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3500);
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            showToast("Talebiniz iletildi. En kısa sürede iletişime geçilecektir.");
+            e.target.reset();
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            closeBookingModal();
+            showToast("Randevu talebiniz başarıyla alındı.");
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
