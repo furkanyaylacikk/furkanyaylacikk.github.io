@@ -319,6 +319,7 @@
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 <div class="grid lg:grid-cols-12 gap-12 items-start">
                     
+                    <!-- Hakkımda Sol Başlık & Vurgu Alanı -->
                     <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
                         <div class="inline-block px-3 py-1 bg-brand-softSage text-brand-dark rounded-md text-xs font-bold uppercase tracking-widest">
                             Hakkımda
@@ -352,6 +353,7 @@
                         </div>
                     </div>
 
+                    <!-- Hakkımda Sağ Metin Alanı -->
                     <div class="lg:col-span-7 space-y-5 text-brand-muted leading-relaxed text-sm sm:text-base">
                         <p>
                             Danışmanlık sürecinde kişiyi yalnızca yaşadığı belirtiler üzerinden değil, yaşamının bütünü ve içinde bulunduğu koşullar çerçevesinde ele almayı önemsiyorum.
@@ -373,6 +375,7 @@
                             Günümüzde <strong>Konya’da yüz yüze</strong>, Türkiye genelinde ve yurt dışında ise <strong>online psikolojik danışmanlık</strong> hizmeti sunuyorum. Ağırlıklı olarak ergen ve yetişkinlerle çalışıyor; kaygı, stres, depresif yaşantılar, panik, travmatik yaşam deneyimleri, bağımlılık, tükenmişlik, ilişki ve iletişim sorunları, sınav kaygısı ve benzeri yaşam güçlükleri üzerine danışmanlık süreçleri yürütüyorum.
                         </p>
                         
+                        <!-- Mini Güvence Kartları -->
                         <div class="grid sm:grid-cols-2 gap-4 pt-4">
                             <div class="flex items-start gap-3 bg-brand-bg p-4 rounded-2xl border border-brand-border">
                                 <i class="fa-solid fa-shield-halved text-brand-sage text-lg mt-0.5"></i>
@@ -400,6 +403,7 @@
         <section id="yaklasim" class="py-24 bg-brand-bg">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 
+                <!-- Başlık ve Giriş -->
                 <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
                     <span class="text-xs font-bold uppercase tracking-widest text-brand-accent bg-brand-accentSoft px-4 py-1.5 rounded-full inline-block">
                         Danışmanlık Metodolojisi
@@ -407,107 +411,260 @@
                     <h2 class="font-serif-heading text-3xl sm:text-4xl text-brand-dark">
                         Psikolojik Esneklik ve Bilinçli Farkındalık
                     </h2>
-                    <p class="text-brand-muted text-sm sm:text-base">
-                        Zihninizin ürettiği senaryolara kapılmak yerine, "şu an"da kalmayı ve değerlerinizle hareket etmeyi amaçlayan yaklaşımlar.
+                    <p class="text-brand-muted text-sm sm:text-base leading-relaxed">
+                        Psikolojik danışmanlık çalışmalarımda; kişinin düşünce, duygu ve yaşantılarıyla daha esnek bir ilişki kurmasını, içinde bulunduğu anı fark edebilmesini ve yaşamını kişisel değerleri doğrultusunda şekillendirebilmesini destekleyen yaklaşımlardan yararlanıyorum.
+                    </p>
+                    <p class="text-xs sm:text-sm font-medium text-brand-sage">
+                        Bu doğrultuda Kabul ve Adanmışlık Yaklaşımı (ACT) ve Bilinçli Farkındalık Temelli Stres Azaltma (MBSR) yaklaşımının temel ilkelerinden yararlanıyorum.
                     </p>
                 </div>
 
-                <!-- Interactive Switcher -->
-                <div class="flex justify-center mb-12">
-                    <div class="bg-white p-1.5 rounded-full border border-brand-border inline-flex gap-2 shadow-sm">
-                        <button id="actTabBtn" onclick="switchMethodology('act')" class="px-6 py-2.5 rounded-full text-xs font-semibold transition-all bg-brand-dark text-white shadow-sm">
-                            ACT (Kabul ve Adanmışlık)
+                <!-- 1. Aşama: İki Ana Yaklaşım Kartı (Hangi Yaklaşımlardan Yararlanıyor?) -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    
+                    <!-- ACT Ana Kartı -->
+                    <div id="actCardSummary" onclick="switchMethodology('act')" class="cursor-pointer bg-white p-8 sm:p-10 rounded-3xl border-2 transition-all shadow-sm hover:shadow-md border-brand-dark ring-2 ring-brand-dark/10">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-sage bg-brand-softSage px-3 py-1 rounded-full">
+                                6 Temel Süreç
+                            </span>
+                            <span id="actBadgeState" class="text-xs font-semibold text-brand-dark flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-brand-sage"></span> İncele &rarr;
+                            </span>
+                        </div>
+                        <h3 class="font-serif-heading text-2xl sm:text-3xl font-bold text-brand-dark mb-1">ACT</h3>
+                        <p class="text-sm font-semibold text-brand-sage mb-4">Kabul ve Adanmışlık Yaklaşımı</p>
+                        <p class="text-brand-muted text-xs sm:text-sm leading-relaxed mb-6">
+                            ACT, psikolojik esnekliği geliştirmeyi; kişinin zorlayıcı içsel deneyimleriyle daha esnek bir ilişki kurmasını ve yaşamını kendi değerleri doğrultusunda yönlendirebilmesini desteklemeyi amaçlayan bir yaklaşımdır.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border">
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">1. Kabul</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">2. Bilişsel Ayrışma</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">3. Şimdiki Anla Temas</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">4. Bağlamsal Benlik</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">5. Değerler</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">6. Adanmış Eylem</span>
+                        </div>
+                    </div>
+
+                    <!-- MBSR Ana Kartı -->
+                    <div id="mbsrCardSummary" onclick="switchMethodology('mbsr')" class="cursor-pointer bg-white p-8 sm:p-10 rounded-3xl border-2 transition-all shadow-sm hover:shadow-md border-brand-border hover:border-brand-sage">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-brand-accent bg-brand-accentSoft px-3 py-1 rounded-full">
+                                6 Temel Boyut & Uygulama
+                            </span>
+                            <span id="mbsrBadgeState" class="text-xs font-semibold text-brand-muted flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-brand-border"></span> Tıkla & İncele
+                            </span>
+                        </div>
+                        <h3 class="font-serif-heading text-2xl sm:text-3xl font-bold text-brand-dark mb-1">MBSR</h3>
+                        <p class="text-sm font-semibold text-brand-accent mb-4">Bilinçli Farkındalık Temelli Stres Azaltma</p>
+                        <p class="text-brand-muted text-xs sm:text-sm leading-relaxed mb-6">
+                            MBSR, kişinin dikkatini ve farkındalığını geliştirmesine; düşünce, duygu ve bedensel deneyimlerini daha bilinçli biçimde gözlemleyebilmesine ve stresle kurduğu ilişkiyi fark ederek daha işlevsel başa çıkma yolları geliştirmesine yönelik yapılandırılmış bir bilinçli farkındalık yaklaşımıdır.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 border-t border-brand-border">
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">1. Şimdiki Ana Yönelme</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">2. Yargısız Farkındalık</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">3. Beden Farkındalığı</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">4. Nefes Farkındalığı</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">5. Gözlem Becerisi</span>
+                            <span class="text-[11px] font-medium bg-brand-bg px-2.5 py-1 rounded-lg text-brand-dark">6. Temelli Uygulamalar</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Geçiş Düğmeleri (Tabs) -->
+                <div class="flex items-center justify-between flex-wrap gap-4 mb-8 pt-4 border-t border-brand-border">
+                    <div class="text-xs font-bold uppercase tracking-wider text-brand-muted flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-brand-sage"></i>
+                        <span id="detailSectionTitle">ACT — Psikolojik Esneklik Modelinde Altı Temel Süreç</span>
+                    </div>
+
+                    <div class="bg-white p-1 rounded-full border border-brand-border inline-flex gap-1.5 shadow-xs">
+                        <button id="actTabBtn" onclick="switchMethodology('act')" class="px-5 py-2 rounded-full text-xs font-semibold transition-all bg-brand-dark text-white shadow-xs">
+                            ACT Süreçleri
                         </button>
-                        <button id="mbsrTabBtn" onclick="switchMethodology('mbsr')" class="px-6 py-2.5 rounded-full text-xs font-semibold transition-all text-brand-dark hover:text-brand-sage">
-                            MBSR (Bilinçli Farkındalık)
+                        <button id="mbsrTabBtn" onclick="switchMethodology('mbsr')" class="px-5 py-2 rounded-full text-xs font-semibold transition-all text-brand-dark hover:text-brand-sage">
+                            MBSR Boyutları
                         </button>
                     </div>
                 </div>
 
-                <!-- ACT Panel -->
-                <div id="actPanel" class="grid md:grid-cols-3 gap-8">
-                    <div class="agency-card p-8 rounded-3xl">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-hands-holding text-brand-sage"></i>
+                <!-- 2. Aşama: Detay Izgaraları (Bu Yaklaşımlar Ne Anlama Geliyor?) -->
+
+                <!-- ACT 6 Süreç Paneli -->
+                <div id="actPanel" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-hands-holding text-brand-sage"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">1. Kabul</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Zorlayıcı düşünce, duygu ve bedensel duyumları ortadan kaldırmak veya bastırmak için sürekli mücadele etmek yerine, bunlarla açık ve esnek bir biçimde temas edebilme.
+                            </p>
                         </div>
-                        <h3 class="font-serif-heading text-xl text-brand-dark font-semibold mb-3">1. Kabul (Acceptance)</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed">
-                            Ağrılı veya rahatsız edici duygu ve düşünceleri yok saymaya çalışmak yerine, onlara güvenli bir içsel alan açabilme becerisi.
-                        </p>
                     </div>
 
-                    <div class="agency-card p-8 rounded-3xl">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-link-slash"></i>
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-link-slash"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">2. Bilişsel Ayrışma</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Düşünceleri mutlak gerçekler olarak değerlendirmek yerine, onları zihinsel olaylar olarak fark edebilme ve düşüncelerin davranışlar üzerindeki otomatik etkisini azaltarak daha esnek tepkiler geliştirebilme.
+                            </p>
                         </div>
-                        <h3 class="font-serif-heading text-xl text-brand-dark font-semibold mb-3">2. Bilişsel Ayrışma</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed">
-                            Düşünceleri mutlak gerçekler değil, zihinden geçen kelimeler ve geçici imgeler olarak fark edip onlara mesafe alabilme.
-                        </p>
                     </div>
 
-                    <div class="agency-card p-8 rounded-3xl">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-compass"></i>
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-clock text-brand-sage"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">3. Şimdiki Anla Temas</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Dikkati geçmişe yönelik ruminasyonlar veya geleceğe ilişkin kaygılar tarafından bütünüyle sürüklenmek yerine, içinde bulunulan deneyime bilinçli ve esnek biçimde yöneltebilme.
+                            </p>
                         </div>
-                        <h3 class="font-serif-heading text-xl text-brand-dark font-semibold mb-3">3. Değerler Odaklı Eylem</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed">
-                            Sizin için neyin gerçekten kıymetli olduğunu netleştirerek, içsel engellere rağmen o yönde adımlar atma cesareti.
-                        </p>
                     </div>
+
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">4. Bağlamsal Benlik</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Kişinin kendisini yalnızca düşünceleri, duyguları ve yaşantıları üzerinden tanımlamak yerine, bu deneyimleri fark eden ve gözlemleyebilen yönünü geliştirebilmesi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-compass text-brand-sage"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">5. Değerler</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Kişinin yaşamında kendisi için anlamlı olan yönleri belirginleştirmesi ve nasıl bir yaşam sürmek istediğine ilişkin kişisel değerlerini netleştirebilmesi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-person-walking-arrow-right"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">6. Adanmış Eylem</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Belirlenen değerler doğrultusunda, karşılaşılan içsel veya dışsal güçlükleri dikkate alarak anlamlı, sürdürülebilir ve esnek davranışlar geliştirebilme.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- MBSR Panel (Hidden initially) -->
-                <div id="mbsrPanel" class="hidden grid md:grid-cols-3 gap-8">
-                    <div class="agency-card p-8 rounded-3xl">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-spa"></i>
+                <!-- MBSR 6 Farkındalık Boyutu Paneli (Varsayılan olarak gizli) -->
+                <div id="mbsrPanel" class="hidden grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">Şimdiki Ana Yönelme</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Dikkati geçmiş ve geleceğe ilişkin zihinsel uğraşlardan, içinde bulunulan anın doğrudan deneyimine yeniden yöneltebilme.
+                            </p>
                         </div>
-                        <h3 class="font-serif-heading text-xl text-brand-dark font-semibold mb-3">An'da Yargısız Varlık</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed">
-                            Dikkati kasıtlı olarak ve yargılamadan "şu an"daki duyum, duygu ve deneyime getirebilme disiplini.
-                        </p>
                     </div>
 
-                    <div class="agency-card p-8 rounded-3xl">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-heart-pulse"></i>
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-scale-balanced text-brand-sage"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">Yargısız Farkındalık</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Düşünce, duygu ve bedensel duyumları hemen değerlendirmeden veya değiştirmeye çalışmadan, ortaya çıktıkları biçimiyle fark edebilme.
+                            </p>
                         </div>
-                        <h3 class="font-serif-heading text-xl text-brand-dark font-semibold mb-3">Beden Farkındalığı & Stres</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed">
-                            Stresin bedendeki somatik karşılıklarını fark ederek reaktif tepkiler yerine bilinçli ve sakin yanıtlar üretme.
-                        </p>
                     </div>
 
-                    <div class="agency-card p-8 rounded-3xl">
-                        <div class="w-12 h-12 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-xl mb-6">
-                            <i class="fa-solid fa-face-smile text-brand-accent"></i>
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">Beden Farkındalığı</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Bedensel duyumları ve stresin bedensel yansımalarını fark ederek bedenle daha bilinçli bir ilişki geliştirebilme.
+                            </p>
                         </div>
-                        <h3 class="font-serif-heading text-xl text-brand-dark font-semibold mb-3">Öz-Şefkat Pratiği</h3>
-                        <p class="text-brand-muted text-sm leading-relaxed">
-                            Zorlu hayat deneyimlerinde kendini hırpalamak yerine, bir dost şefkatiyle iç dünyaya yaklaşabilme olgunluğu.
-                        </p>
                     </div>
+
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-wind text-brand-sage"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">Nefes Farkındalığı</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Nefesi değiştirmeye veya kontrol etmeye çalışmadan, dikkatin doğal bir odağı olarak nefesin ritmini ve bedensel duyumlarını fark edebilme.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-accentSoft text-brand-accent flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">Düşünce ve Duyguların Fark Edilmesi</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Düşünce ve duyguları otomatik olarak takip etmek veya onlara tepki vermek yerine, ortaya çıkan içsel deneyimleri fark edebilme ve bunlarla daha bilinçli bir ilişki kurabilme.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="agency-card p-6 sm:p-7 rounded-3xl flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-2xl bg-brand-softSage text-brand-dark flex items-center justify-center text-base mb-5">
+                                <i class="fa-solid fa-person-walking text-brand-sage"></i>
+                            </div>
+                            <h4 class="font-serif-heading text-lg font-semibold text-brand-dark mb-2">Farkındalık Temelli Uygulamalar</h4>
+                            <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+                                Beden taraması, oturarak farkındalık çalışmaları, bilinçli hareket ve günlük yaşamda farkındalık uygulamalarıyla stresle kurulan ilişkiyi yakından gözlemleme.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
         </section>
 
-        <!-- Çalışma Alanlarım Section (Updated with 11 core focus areas) -->
+        <!-- Çalışma Alanlarım Section (Hizmetler + Başlıca Alanlar) -->
         <section id="hizmetler" class="py-24 bg-white border-y border-brand-border">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 
-                <!-- Section Header -->
-                <div class="max-w-3xl mb-16 space-y-3">
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-sage">Klinik & Danışmanlık Pratiği</span>
-                    <h2 class="font-serif-heading text-3xl sm:text-4xl text-brand-dark">Çalışma Alanlarım</h2>
-                    <p class="text-brand-muted text-sm sm:text-base leading-relaxed">
+                <!-- Bölüm Başlığı & Açıklama -->
+                <div class="max-w-3xl mb-14">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-sage">Hizmet & Uzmanlık</span>
+                    <h2 class="font-serif-heading text-3xl sm:text-4xl text-brand-dark mt-2">Çalışma Alanlarım</h2>
+                    <p class="text-brand-muted text-sm sm:text-base mt-3 leading-relaxed">
                         Ergen ve yetişkinlerle yürüttüğüm psikolojik danışmanlık çalışmalarında; bireylerin yaşamlarında karşılaştıkları çeşitli psikolojik ve duygusal güçlükler üzerinde çalışıyorum.
                     </p>
                 </div>
 
-                <!-- 4 Main Format Cards -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- 1. Danışmanlık Formatları Kartları -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                     
                     <!-- Format 1 -->
                     <div class="agency-card p-6 rounded-3xl flex flex-col justify-between group">
@@ -517,7 +674,7 @@
                             </div>
                             <h3 class="font-serif-heading text-xl font-semibold text-brand-dark mb-3">Yetişkin Danışmanlığı</h3>
                             <p class="text-brand-muted text-xs leading-relaxed mb-4">
-                                Kaygı, panik, depresif duygu durum, tükenmişlik, ilişki-iletişim güçlükleri ve travmatik yaşam deneyimleri.
+                                Kaygı, depresif yaşantılar, tükenmişlik, ilişki sorunları ve değer odaklı psikolojik esneklik süreçleri.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border flex items-center justify-between">
@@ -534,7 +691,7 @@
                             </div>
                             <h3 class="font-serif-heading text-xl font-semibold text-brand-dark mb-3">Ergen Danışmanlığı</h3>
                             <p class="text-brand-muted text-xs leading-relaxed mb-4">
-                                Ergenlik dönemi güçlükleri, sınav kaygısı, akademik süreçler, özgüven ve öz-düzenleme becerileri.
+                                Sınav kaygısı, akademik süreçler, ergenlik dönemi güçlükleri, duygu düzenleme ve özgüven.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border flex items-center justify-between">
@@ -551,7 +708,7 @@
                             </div>
                             <h3 class="font-serif-heading text-xl font-semibold text-brand-dark mb-3">Online Danışmanlık</h3>
                             <p class="text-brand-muted text-xs leading-relaxed mb-4">
-                                Türkiye geneli ve yurt dışından bağlanan danışanlara güvenli, gizlilik esaslı video seansları.
+                                Türkiye geneli ve yurt dışındaki danışanlara güvenli, gizlilik esaslı ve esnek video görüşme seansları.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border flex items-center justify-between">
@@ -566,84 +723,75 @@
                             <div class="w-12 h-12 rounded-2xl bg-brand-dark text-white flex items-center justify-center text-xl mb-6 group-hover:bg-brand-sage transition-colors">
                                 <i class="fa-solid fa-spa text-sm"></i>
                             </div>
-                            <h3 class="font-serif-heading text-xl font-semibold text-brand-dark mb-3">Psikolojik Dayanıklılık</h3>
+                            <h3 class="font-serif-heading text-xl font-semibold text-brand-dark mb-3">Mindfulness & Dayanıklılık</h3>
                             <p class="text-brand-muted text-xs leading-relaxed mb-4">
-                                ACT ve farkındalık temelli yöntemlerle dikkat, dürtüsellik kontrolü, bağımlılık ve stres yönetimi.
+                                MBSR temelli pratikler ile stres yönetimi, psikolojik dayanıklılık ve öz-düzenleme çalışmaları.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-brand-border flex items-center justify-between">
-                            <span class="text-xs font-semibold text-brand-dark">Bireysel Süreç</span>
-                            <button onclick="openBookingModal('Psikolojik Dayanıklılık')" class="text-xs text-brand-sage font-bold hover:underline">Bilgi Al &rarr;</button>
+                            <span class="text-xs font-semibold text-brand-dark">Bireysel / Grup</span>
+                            <button onclick="openBookingModal('Mindfulness Süreci')" class="text-xs text-brand-sage font-bold hover:underline">Bilgi Al &rarr;</button>
                         </div>
                     </div>
 
                 </div>
 
-                <!-- 11 Specific Focus Tags Grid -->
+                <!-- 2. Başlıca Çalışma Alanları (Detaylı Konu Izgarası) -->
                 <div class="bg-brand-bg rounded-3xl p-8 sm:p-10 border border-brand-border">
-                    <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <div>
-                            <h3 class="font-serif-heading text-xl sm:text-2xl text-brand-dark font-semibold">
-                                Başlıca Çalışma Alanları & Yaşam Güçlükleri
-                            </h3>
-                            <p class="text-xs text-brand-muted mt-1">Seans süreçlerinde sıklıkla ele aldığımız odak temalar:</p>
-                        </div>
-                        <span class="text-xs font-bold text-brand-dark bg-brand-softSage px-3.5 py-1.5 rounded-full inline-flex items-center gap-1.5 self-start sm:self-auto">
-                            <i class="fa-solid fa-check text-brand-sage"></i> 11 Temel Çalışma Başlığı
-                        </span>
+                    <div class="mb-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Süreçte Ele Alınan Temalar</span>
+                        <h3 class="font-serif-heading text-2xl text-brand-dark font-semibold mt-1">Başlıca Çalışma Konuları</h3>
                     </div>
 
-                    <!-- Badges Grid -->
                     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Kaygı ve stres</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-cloud-bolt text-brand-sage text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Kaygı ve stres</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Yoğun kaygı ve panik yaşantıları</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-heart-pulse text-brand-accent text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Yoğun kaygı ve panik yaşantıları</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Depresif duygu durum ve ilişkili güçlükler</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-cloud-rain text-brand-sage text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Depresif duygu durum ve ilişkili güçlükler</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Travmatik yaşam deneyimleri</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-seedling text-brand-accent text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Travmatik yaşam deneyimleri</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Tükenmişlik ve psikolojik dayanıklılık</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-shield-halved text-brand-sage text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Tükenmişlik ve psikolojik dayanıklılık</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Bağımlılıkla ilişkili psikolojik güçlükler</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-link-slash text-brand-accent text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Bağımlılıkla ilişkili psikolojik güçlükler</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>İlişki ve iletişim sorunları</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-people-arrows text-brand-sage text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">İlişki ve iletişim sorunları</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Sınav kaygısı ve akademik süreçler</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-book-open text-brand-accent text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Sınav kaygısı ve akademik süreçler</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Ergenlik dönemine ilişkin güçlükler</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-compass text-brand-sage text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Ergenlik dönemine ilişkin güçlükler</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Özgüven ve özdeğer ile ilgili güçlükler</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors">
+                            <i class="fa-solid fa-certificate text-brand-accent text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Özgüven ve özdeğer ile ilgili güçlükler</span>
                         </div>
-                        <div class="bg-white px-4 py-3 rounded-2xl border border-brand-border flex items-center gap-3 text-xs sm:text-sm font-medium text-brand-dark sm:col-span-2 lg:col-span-2">
-                            <i class="fa-solid fa-circle-dot text-brand-sage text-[10px]"></i>
-                            <span>Dikkat, dürtüsellik ve öz-düzenleme alanları</span>
+                        <div class="flex items-center gap-3 bg-white px-4 py-3.5 rounded-2xl border border-brand-border shadow-xs hover:border-brand-sage transition-colors sm:col-span-2 lg:col-span-1">
+                            <i class="fa-solid fa-bullseye text-brand-sage text-sm w-4"></i>
+                            <span class="text-xs font-medium text-brand-dark">Dikkat, dürtüsellik ve öz-düzenleme</span>
                         </div>
                     </div>
 
-                    <!-- Closing Note -->
-                    <p class="text-xs text-brand-muted italic mt-6 pt-5 border-t border-brand-border leading-relaxed">
-                        * Bu alanların yanı sıra, danışanın ihtiyaçları ve yaşam koşulları doğrultusunda farklı psikolojik ve duygusal güçlükler üzerine de psikolojik danışmanlık çalışmaları yürütülmektedir.
+                    <p class="text-xs sm:text-sm text-brand-muted mt-6 pt-5 border-t border-brand-border italic">
+                        * Bu alanların yanı sıra, danışanın ihtiyaçları ve yaşam koşulları doğrultusunda farklı psikolojik ve duygusal güçlükler üzerine de psikolojik danışmanlık çalışmaları yürütüyorum.
                     </p>
                 </div>
 
@@ -918,7 +1066,6 @@
                                         <option>Yüz Yüze (Konya Meram / İçkon Plaza)</option>
                                         <option>Online Danışmanlık (Zoom / Meet)</option>
                                         <option>Ergen Danışmanlığı</option>
-                                        <option>Yetişkin Danışmanlığı</option>
                                         <option>Mindfulness & Stres Odaklı Süreç</option>
                                     </select>
                                 </div>
@@ -1036,7 +1183,6 @@
                         <option value="Online Danışmanlık (Zoom/Meet)">Online Danışmanlık (Zoom/Meet)</option>
                         <option value="Ergen Danışmanlığı">Ergen Danışmanlığı</option>
                         <option value="Yetişkin Danışmanlığı">Yetişkin Danışmanlığı</option>
-                        <option value="Psikolojik Dayanıklılık">Psikolojik Dayanıklılık</option>
                     </select>
                 </div>
                 <button type="submit" class="w-full bg-brand-dark hover:bg-brand-light text-white py-3.5 rounded-xl font-semibold text-sm transition-all shadow-md">
@@ -1059,118 +1205,36 @@
             menu.classList.toggle('hidden');
         }
 
-        // Tab Switcher (ACT vs MBSR)
+        // Tab & Summary Card Switcher (ACT vs MBSR)
         function switchMethodology(type) {
             const actBtn = document.getElementById('actTabBtn');
             const mbsrBtn = document.getElementById('mbsrTabBtn');
             const actPanel = document.getElementById('actPanel');
             const mbsrPanel = document.getElementById('mbsrPanel');
+            const detailTitle = document.getElementById('detailSectionTitle');
+            const actSummary = document.getElementById('actCardSummary');
+            const mbsrSummary = document.getElementById('mbsrCardSummary');
+            const actBadge = document.getElementById('actBadgeState');
+            const mbsrBadge = document.getElementById('mbsrBadgeState');
 
             if (type === 'act') {
-                actBtn.className = "px-6 py-2.5 rounded-full text-xs font-semibold transition-all bg-brand-dark text-white shadow-sm";
-                mbsrBtn.className = "px-6 py-2.5 rounded-full text-xs font-semibold transition-all text-brand-dark hover:text-brand-sage";
+                // Tab butonları
+                actBtn.className = "px-5 py-2 rounded-full text-xs font-semibold transition-all bg-brand-dark text-white shadow-xs";
+                mbsrBtn.className = "px-5 py-2 rounded-full text-xs font-semibold transition-all text-brand-dark hover:text-brand-sage";
+                
+                // Paneller
                 actPanel.classList.remove('hidden');
                 mbsrPanel.classList.add('hidden');
+                detailTitle.innerText = "ACT — Psikolojik Esneklik Modelinde Altı Temel Süreç";
+
+                // Üst özet kart vurguları
+                actSummary.className = "cursor-pointer bg-white p-8 sm:p-10 rounded-3xl border-2 transition-all shadow-sm hover:shadow-md border-brand-dark ring-2 ring-brand-dark/10";
+                mbsrSummary.className = "cursor-pointer bg-white p-8 sm:p-10 rounded-3xl border-2 transition-all shadow-sm hover:shadow-md border-brand-border hover:border-brand-sage";
+                
+                actBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-sage"></span> İncele &rarr;';
+                actBadge.className = "text-xs font-semibold text-brand-dark flex items-center gap-1.5";
+                mbsrBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-border"></span> Tıkla & İncele';
+                mbsrBadge.className = "text-xs font-semibold text-brand-muted flex items-center gap-1.5";
             } else {
-                mbsrBtn.className = "px-6 py-2.5 rounded-full text-xs font-semibold transition-all bg-brand-dark text-white shadow-sm";
-                actBtn.className = "px-6 py-2.5 rounded-full text-xs font-semibold transition-all text-brand-dark hover:text-brand-sage";
-                mbsrPanel.classList.remove('hidden');
-                actPanel.classList.add('hidden');
-            }
-        }
-
-        // Accordion Controls
-        function toggleAccordion(id) {
-            const content = document.getElementById(id);
-            const icon = document.getElementById(id + '-icon');
-            const isOpen = content.classList.contains('open');
-
-            document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
-            document.querySelectorAll('[id$="-icon"]').forEach(el => {
-                el.classList.remove('fa-minus');
-                el.classList.add('fa-plus');
-            });
-
-            if (!isOpen) {
-                content.classList.add('open');
-                icon.classList.remove('fa-plus');
-                icon.classList.add('fa-minus');
-            }
-        }
-
-        // Values Wheel Calculator
-        function updateValuesWheel() {
-            const v1 = parseInt(document.getElementById('val1').value);
-            const v2 = parseInt(document.getElementById('val2').value);
-            const v3 = parseInt(document.getElementById('val3').value);
-            const v4 = parseInt(document.getElementById('val4').value);
-
-            document.getElementById('val1Text').innerText = v1 + ' / 10';
-            document.getElementById('val2Text').innerText = v2 + ' / 10';
-            document.getElementById('val3Text').innerText = v3 + ' / 10';
-            document.getElementById('val4Text').innerText = v4 + ' / 10';
-
-            const averagePercent = Math.round(((v1 + v2 + v3 + v4) / 40) * 100);
-            document.getElementById('overallScore').innerText = averagePercent + '%';
-
-            const quoteEl = document.getElementById('actGuidanceQuote');
-            if (averagePercent < 45) {
-                quoteEl.innerText = '"Şu an bazı yaşam alanlarında tıkanıklık hissetmeniz çok doğal. Küçük ama kararlı bir adım, pusulanızı yeniden ayarlayabilir."';
-            } else if (averagePercent < 75) {
-                quoteEl.innerText = '"Denge anlık değil, sürekli bir farkındalık sürecidir. Hangi alana biraz daha şefkat göstermek istersiniz?"';
-            } else {
-                quoteEl.innerText = '"Değerlerinizle hizalı bir yaşam sürdürüyorsunuz. Bu farkındalığı koruyarak yolunuza devam edin."';
-            }
-        }
-
-        // Modal Handlers
-        function openBookingModal(serviceName) {
-            const modal = document.getElementById('bookingModal');
-            const select = document.getElementById('modalServiceSelect');
-            if (serviceName && select) {
-                if (serviceName.includes('Konya') || serviceName.includes('Yüz Yüze')) select.value = 'Yüz Yüze (Konya Meram / İçkon Plaza)';
-                else if (serviceName.includes('Ergen')) select.value = 'Ergen Danışmanlığı';
-                else if (serviceName.includes('Yetişkin')) select.value = 'Yetişkin Danışmanlığı';
-                else if (serviceName.includes('Dayanıklılık')) select.value = 'Psikolojik Dayanıklılık';
-                else select.value = 'Online Danışmanlık (Zoom/Meet)';
-            }
-            modal.classList.remove('hidden');
-        }
-
-        function closeBookingModal() {
-            document.getElementById('bookingModal').classList.add('hidden');
-        }
-
-        function handleBackdropClick(e) {
-            closeBookingModal();
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeBookingModal();
-        });
-
-        // Toast Feedback
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toastMessage').innerText = msg;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            setTimeout(() => {
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3500);
-        }
-
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            showToast("Talebiniz iletildi. En kısa sürede iletişime geçilecektir.");
-            e.target.reset();
-        }
-
-        function handleModalSubmit(e) {
-            e.preventDefault();
-            closeBookingModal();
-            showToast("Randevu talebiniz başarıyla alındı.");
-            e.target.reset();
-        }
-    </script>
-</body>
-</html>
+                // Tab butonları
+                mbsrBtn.
