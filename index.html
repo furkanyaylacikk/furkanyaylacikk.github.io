@@ -1244,7 +1244,7 @@
         </div>
     </footer>
 
-    <!-- Randevu Modal (Garanti Görünürlük İçin inline style="display:none;" ile başlatıldı) -->
+    <!-- Randevu Modal -->
     <div id="bookingModal" style="display: none;" class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm items-center justify-center p-4">
         <div id="bookingModalCard" class="bg-white max-w-md w-full rounded-3xl p-6 sm:p-8 shadow-2xl relative border border-stone-200">
             <button type="button" onclick="closeBookingModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-lg p-1" aria-label="Kapat">
@@ -1284,7 +1284,7 @@
         </div>
     </div>
 
-    <!-- Blog Okuma Modal (Garanti Görünürlük İçin inline style="display:none;" ile başlatıldı) -->
+    <!-- Blog Okuma Modal -->
     <div id="blogModal" style="display: none;" class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm items-center justify-center p-4">
         <div id="blogModalCard" class="bg-white max-w-2xl w-full rounded-3xl p-6 sm:p-9 shadow-2xl relative border border-stone-200 max-h-[85vh] overflow-y-auto">
             <button type="button" onclick="closeBlogModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-lg p-2" aria-label="Kapat">
@@ -1417,10 +1417,7 @@
             }
         }
 
-        // ==========================================
-        // GARANTİLİ VE DAYANIKLI MODAL YÖNETİMİ
-        // ==========================================
-
+        // Modal Yönetimi
         function openBookingModal(serviceName) {
             var modal = document.getElementById('bookingModal');
             var select = document.getElementById('modalServiceSelect');
@@ -1467,7 +1464,6 @@
             document.body.style.overflow = '';
         }
 
-        // Modal Dışına Tıklama Kontrolü (İçeriğin kapanmasını önleyen güvenli mantık)
         document.addEventListener('DOMContentLoaded', function() {
             var bModal = document.getElementById('bookingModal');
             if (bModal) {
@@ -1602,4 +1598,82 @@
             post9: {
                 category: "MBSR",
                 title: "Stres Anında Otomatik Pilottan Farkındalıklı Yanıta Geçiş",
-                content: '<p>Bazen günün nasıl geçtiğini anlamadan akşam olur. Bir
+                content: '<p>Bazen günün nasıl geçtiğini anlamadan akşam olur. Bir yerden başka bir yere nasıl yürüdüğümüzü, yediğimiz yemeğin tadını ya da gün içindeki anları neredeyse hiç fark etmeden otomatik bir akış içinde yaşarız.</p>' +
+                         '<p>Otomatik pilot zihnimizin enerji tasarrufu yapma biçimlerinden biridir; ancak stresli zamanlarda bu durum, sürekli aynı otomatik tepkileri vermemize neden olabilir: Ani parlamalar, içe kapanmalar, gerginlik veya sürekli meşguliyet arayışı...</p>' +
+                         '<h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Tepki Vermek mi, Yanıt Üretmek mi?</h4>' +
+                         '<p>Otomatik tepki anında düşünce, duygu ve davranış arasında neredeyse hiç boşluk kalmaz. Bir olay olur ve anında tepki veririz. MBSR (Bilinçli Farkındalık Temelli Stres Azaltma) yaklaşımının sunduğu en temel becerilerden biri ise uyaran ile tepki arasına küçük bir "duraklama alanı" koyabilmektir.</p>' +
+                         '<h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Üç Nefeslik Duraklama Pratiği</h4>' +
+                         '<p>Gün içinde stresin yükseldiğini hissettiğiniz anlarda her şeyi durdurup bir odaya çekilmeniz gerekmeyebilir. Yalnızca 30 saniyelik bir duraklama bile sinir sistemine farklı bir mesaj iletir:</p>' +
+                         '<ul class="list-disc pl-5 space-y-1.5 text-xs text-brand-textMuted my-2">' +
+                         '<li><strong>1. Fark Et:</strong> Bedenimde şu an neresi gergin? Zihnimden hangi düşünceler geçiyor? Yargılamadan sadece fark etmek.</li>' +
+                         '<li><strong>2. Odaklan:</strong> Dikkati sadece nefesin akışına, göğsün ya da karnın yükselip alçalışına getirmek.</li>' +
+                         '<li><strong>3. Genişle:</strong> Bu farkındalığı yeniden tüm bedene ve bulunulan odaya yayarak bir sonraki adımı bilinçli bir niyetle seçmek.</li>' +
+                         '</ul>' +
+                         '<h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Bilinçli Farkındalık Bir Sonuç Değil, Pratik Meselesidir</h4>' +
+                         '<p>Mindfulness zihni tamamen boşaltmak veya her an mükemmel bir huzur içinde kalmak anlamına gelmez. Zihnin dağıldığını fark edip onu şefkatle yeniden ana davet edebilmektir. Danışmanlık sürecinde bu pratikler, kişinin stres anlarında kendine güvenli bir alan açabilmesi için basamak basamak deneyimlenir.</p>'
+            }
+        };
+
+        // Blog Modal Açma / Kapama
+        function openBlogModal(postId) {
+            var post = blogPosts[postId];
+            var modal = document.getElementById('blogModal');
+            if (!post || !modal) return;
+
+            document.getElementById('blogModalCategory').innerText = post.category;
+            document.getElementById('blogModalTitle').innerText = post.title;
+            document.getElementById('blogModalContent').innerHTML = post.content;
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBlogModal() {
+            var modal = document.getElementById('blogModal');
+            if (modal) modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        // Toast Bildirim Fonksiyonu
+        function showToast(message) {
+            var toast = document.getElementById('toast');
+            var msgEl = document.getElementById('toastMessage');
+            if (!toast) return;
+
+            if (msgEl && message) msgEl.innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(function() {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        }
+
+        // Sayfa İçi Form Gönderimi
+        function handlePageFormSubmit(e) {
+            e.preventDefault();
+            var form = e.target;
+            showToast('Randevu talebiniz alındı, en kısa sürede dönüş sağlanacaktır.');
+            form.reset();
+        }
+
+        // Modal İçi Form Gönderimi
+        function handleModalFormSubmit(e) {
+            e.preventDefault();
+            var form = e.target;
+            closeBookingModal();
+            showToast('Talebiniz başarıyla iletildi!');
+            form.reset();
+        }
+
+        // ESC Tuşu İle Modalları Kapatma Desteği
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeBookingModal();
+                closeBlogModal();
+            }
+        });
+    </script>
+</body>
+</html>
