@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furkan Yaylacık | Psikolojik Danışman | ACT & MBSR</title>
-    <meta name="description" content="Ergen, yetişkin ve çiftlerle Kabul ve Adanmışlık (ACT) ile Bilinçli Farkındalık (MBSR) temelli psikolojik danışmanlık. Konya Meram yüz yüze ve online seanslar.">
+    <meta name="description" content="Ergen, yetişkin ve çiftlerle Kabul ve Adanmışlık (ACT) ile Bilinçli Farkındalık (MBSR) temelli psikolojik danışmanlık. Yüz yüze (Konya / Meram) ve online seanslar.">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -78,7 +78,6 @@
             border-color: #1e382b;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -93,7 +92,6 @@
             background: #1e382b;
         }
 
-        /* Range Slider */
         input[type=range] {
             -webkit-appearance: none;
             width: 100%;
@@ -125,7 +123,6 @@
             background: #b56d4b;
         }
 
-        /* Accordion Smooth Transition */
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -142,7 +139,6 @@
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 rounded-full bg-brand-accent text-white font-serif font-semibold text-lg flex items-center justify-center tracking-wider group-hover:bg-brand-accentHover transition-colors">
                     FY
@@ -153,7 +149,6 @@
                 </div>
             </a>
 
-            <!-- Desktop Links -->
             <nav class="hidden lg:flex items-center gap-7 text-xs font-medium text-brand-textDark/80">
                 <a href="#hakkimda" class="hover:text-brand-accent transition-colors">Hakkımda</a>
                 <a href="#yaklasim" class="hover:text-brand-accent transition-colors">Danışmanlık Yaklaşımı</a>
@@ -166,7 +161,6 @@
                 <a href="#sss" class="hover:text-brand-accent transition-colors">SSS</a>
             </nav>
 
-            <!-- Desktop Button -->
             <div class="hidden sm:flex items-center gap-3">
                 <button onclick="openBookingModal()" class="bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-medium px-5 py-2.5 rounded-lg transition-all duration-200 flex items-center gap-2 shadow-sm">
                     <i class="fa-regular fa-calendar-check text-xs"></i>
@@ -174,13 +168,11 @@
                 </button>
             </div>
 
-            <!-- Mobile Hamburger -->
             <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden text-brand-textDark text-xl p-2 focus:outline-none" aria-label="Menüyü Aç">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
 
-        <!-- Mobile Drawer -->
         <div id="mobileMenu" class="hidden lg:hidden bg-brand-cardBg border-b border-stone-200 px-6 py-6 transition-all duration-300">
             <nav class="flex flex-col gap-4 text-sm font-medium text-brand-textDark">
                 <a href="#hakkimda" onclick="toggleMobileMenu()" class="py-1 hover:text-brand-accent">Hakkımda</a>
@@ -210,14 +202,14 @@
         <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                 
-                <!-- Left Column -->
                 <div class="lg:col-span-7 flex flex-col items-start gap-6">
+                    <!-- Düzenleme: Yüz Yüze (Konya / Meram) & Online Psikolojik Danışmanlık -->
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-badgeBg border border-emerald-900/10 text-brand-badgeText text-xs font-medium">
                         <span class="relative flex h-2 w-2">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                         </span>
-                        Konya Meram Yüz Yüze & Online Danışmanlık
+                        Yüz Yüze (Konya / Meram) & Online Psikolojik Danışmanlık
                     </div>
 
                     <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl text-brand-textDark font-normal leading-[1.12] tracking-tight">
@@ -225,7 +217,7 @@
                     </h1>
 
                     <p class="text-brand-textMuted text-sm sm:text-base font-normal leading-relaxed max-w-2xl">
-                        Kabul ve Adanmışlık Yaklaşımı (ACT) ile Bilinçli Farkındalık (MBSR) temelli yöntemlerle; ergen, yetişkin ve çiftlere kaygı, stres ve yaşam krizlerinde rehberlik ediyorum.
+                        Kabul ve Adanmışlık Terapisi (ACT) ile Bilinçli Farkındalık (MBSR) temelli yöntemlerle; ergen, yetişkin ve çiftlere kaygı, stres ve yaşam krizlerinde rehberlik ediyorum.
                     </p>
 
                     <div class="flex flex-wrap items-center gap-4 pt-2">
@@ -260,7 +252,6 @@
                     </div>
                 </div>
 
-                <!-- Right Column: Visual Card -->
                 <div class="lg:col-span-5 relative mt-6 lg:mt-0">
                     <div class="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-stone-200 border border-stone-200/60 group">
                         <img 
@@ -271,7 +262,6 @@
                         />
                         <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
 
-                        <!-- Top Floating Quote -->
                         <div class="absolute top-5 left-5 right-5 sm:right-auto sm:max-w-xs bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-md border border-white/60">
                             <i class="fa-solid fa-quote-left text-brand-terracotta text-sm mb-1 block"></i>
                             <p class="font-serif italic text-xs text-stone-800 leading-snug">
@@ -279,7 +269,6 @@
                             </p>
                         </div>
 
-                        <!-- Bottom Info -->
                         <div class="absolute bottom-5 left-5 right-5 flex flex-col gap-2">
                             <div class="bg-brand-accent/90 backdrop-blur-md text-white p-4 rounded-2xl border border-white/10 flex items-center justify-between shadow-lg">
                                 <div>
@@ -289,11 +278,12 @@
                                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
                             </div>
 
+                            <!-- Düzenleme: Seans Ortamı & Yüz Yüze (Konya / Meram) & Online -->
                             <div class="bg-stone-900/85 backdrop-blur-md text-white px-3.5 py-2 rounded-xl text-xs flex items-center gap-2 border border-white/10 self-end">
                                 <i class="fa-solid fa-location-dot text-emerald-400 text-xs"></i>
                                 <span class="text-[11px] font-medium tracking-wide">
-                                    <span class="text-stone-400 uppercase text-[9px] block">SEANS ORTAMI</span>
-                                    İçkon Plaza Meram & Online
+                                    <span class="text-stone-400 font-medium text-[10px] block">Seans Ortamı</span>
+                                    Yüz Yüze (Konya / Meram) & Online
                                 </span>
                             </div>
                         </div>
@@ -332,11 +322,11 @@
                             </div>
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-school text-brand-accent text-sm w-4"></i>
-                                <span>Konya Şehir Koleji Okul Psikolojik Danışmanı</span>
+                                <span>Özel Okul Psikolojik Danışmanı</span>
                             </div>
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-location-dot text-brand-accent text-sm w-4"></i>
-                                <span>Konya Meram Yüz Yüze & Online Danışmanlık</span>
+                                <span>Yüz Yüze (Konya / Meram) & Online Danışmanlık</span>
                             </div>
                         </div>
                     </div>
@@ -351,11 +341,13 @@
                         <p>
                             Mezuniyetimin ardından farklı çalışma alanlarında edindiğim deneyimlerle mesleki gelişimimi sürdürdüm. Vatani görevimi <strong>Sağlık Asteğmen</strong> olarak <strong>Rehberlik ve Danışma Merkezi (RDM)</strong> biriminde, <strong>Suriye Barış Pınarı Harekât bölgesinde</strong> yerine getirdim. Bu süreçte travma, depresyon, bağımlılık ve psikolojik dayanıklılık alanlarında kapsamlı bir saha deneyimi edindim.
                         </p>
+                        <!-- Düzenleme: Konya'da özel bir okulda iki yıl boyunca... -->
                         <p>
-                            Sonrasında <strong>Konya Şehir Koleji’nde iki yıl boyunca okul psikolojik danışmanı</strong> olarak görev yaptım. Çocuk ve ergenlerin gelişimsel, akademik ve psikososyal süreçlerine eşlik ederken; ebeveynler ve eğitimcilerle okul temelli psikolojik danışmanlık alanında önemli bir birikim sağladım.
+                            Sonrasında <strong>Konya'da özel bir okulda iki yıl boyunca okul psikolojik danışmanı olarak görev yaptım.</strong> Çocuk ve ergenlerin gelişimsel, akademik ve psikososyal süreçlerine eşlik ederken; öğrenciler, ebeveynler ve eğitimcilerle yürütülen çalışmalar aracılığıyla okul temelli psikolojik danışmanlık alanında önemli bir tecrübe kazandım.
                         </p>
+                        <!-- Düzenleme: Çalışmalarımı Konya’da yüz yüze... sürdürüyorum. -->
                         <p>
-                            Günümüzde <strong>Konya’da yüz yüze</strong>, Türkiye genelinde ve yurt dışında ise <strong>online psikolojik danışmanlık</strong> hizmeti sunuyorum. Ağırlıklı olarak ergen, yetişkin ve çiftlerle çalışıyor; kaygı, stres, depresif yaşantılar, panik, travmatik yaşam deneyimleri, bağımlılık, tükenmişlik ve ilişki sorunları üzerine danışmanlık yürütüyorum.
+                            Çalışmalarımı <strong>Konya’da yüz yüze</strong>, Türkiye genelinde ve yurt dışında ise <strong>online psikolojik danışmanlık</strong> şeklinde sürdürüyorum. Ağırlıklı olarak ergen, yetişkin ve çiftlerle çalışıyor; kaygı, stres, depresif yaşantılar, panik, travmatik yaşam deneyimleri, bağımlılık, tükenmişlik, ilişki ve iletişim sorunları, sınav kaygısı ve benzeri yaşam güçlükleri üzerine danışmanlık süreçleri yürütüyorum.
                         </p>
 
                         <div class="grid sm:grid-cols-2 gap-4 pt-4">
@@ -370,7 +362,7 @@
                                 <i class="fa-solid fa-brain text-brand-accent text-base mt-0.5"></i>
                                 <div>
                                     <h4 class="font-semibold text-brand-textDark text-sm">Zengin Saha Deneyimi</h4>
-                                    <p class="text-xs text-brand-textMuted mt-1">RDM saha uygulamaları, okul danışmanlığı ve bireysel klinik seans birikimi.</p>
+                                    <p class="text-xs text-brand-textMuted mt-1">RDM saha uygulamaları, okul danışmanlığı ve bireysel seans birikimi.</p>
                                 </div>
                             </div>
                         </div>
@@ -392,7 +384,7 @@
                         Psikolojik Esneklik ve Bilinçli Farkındalık
                     </h2>
                     <p class="text-brand-textMuted text-sm sm:text-base leading-relaxed">
-                        Kişinin düşünce ve duygularıyla daha esnek bir ilişki kurmasını, şimdiki anı fark edebilmesini ve yaşamını kişisel değerleri doğrultusunda şekillendirebilmesini destekleyen Kabul ve Adanmışlık (ACT) ile Bilinçli Farkındalık (MBSR) yaklaşımlarını benimsiyorum.
+                        Kişinin düşünce ve duygularıyla daha esnek bir ilişki kurmasını, şimdiki anı fark edebilmesini ve yaşamını kişisel değerleri doğrultusunda şekillendirebilmesini destekleyen Kabul ve Adanmışlık Terapisi (ACT) ile Bilinçli Farkındalık (MBSR) yaklaşımlarını benimsiyorum.
                     </p>
                 </div>
 
@@ -408,7 +400,8 @@
                             </span>
                         </div>
                         <h3 class="font-serif-heading text-2xl font-bold text-brand-textDark mb-1">ACT</h3>
-                        <p class="text-xs font-semibold text-brand-accent mb-3">Kabul ve Adanmışlık Yaklaşımı</p>
+                        <!-- Düzenleme: Kabul ve Adanmışlık Terapisi -->
+                        <p class="text-xs font-semibold text-brand-accent mb-3">Kabul ve Adanmışlık Terapisi</p>
                         <p class="text-brand-textMuted text-xs sm:text-sm leading-relaxed mb-4">
                             Kişinin zorlayıcı içsel deneyimleriyle sürekli savaşmak yerine onlarla esnek bir temas kurmasını ve hayatını kendi değerleri doğrultusunda yönlendirmesini hedefler.
                         </p>
@@ -599,28 +592,30 @@
         <section id="hizmetler" class="py-24 bg-white border-y border-stone-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
+                <!-- Düzenleme: Psikolojik Danışmanlık Hizmetleri & Çalışma Şekli -->
                 <div class="max-w-3xl mb-14">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent">Hizmet Alanlarımız</span>
-                    <h2 class="font-serif-heading text-3xl sm:text-4xl text-brand-textDark mt-1.5">Çalışma Formatları</h2>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-brand-accent">Psikolojik Danışmanlık Hizmetleri</span>
+                    <h2 class="font-serif-heading text-3xl sm:text-4xl text-brand-textDark mt-1.5">Çalışma Şekli</h2>
                     <p class="text-brand-textMuted text-sm sm:text-base mt-2 leading-relaxed">
-                        Ergen, yetişkin ve çiftlere yönelik yüz yüze ve çevrim içi danışmanlık süreçleri ile objektif değerlendirme uygulamaları.
+                        Ergen, yetişkin ve çiftlerle psikolojik danışmanlık süreçleri ile objektif değerlendirme ve kariyer danışmanlığı uygulamaları.
                     </p>
                 </div>
 
+                <!-- Düzenleme: Hizmet Başlıkları "Ergenlerle / Yetişkinlerle / Çiftlerle" Olarak Yenilendi -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
                     <div class="soft-card p-7 rounded-3xl flex flex-col justify-between">
                         <div>
                             <div class="w-11 h-11 rounded-2xl bg-brand-accent text-white flex items-center justify-center text-base mb-5">
                                 <i class="fa-solid fa-user"></i>
                             </div>
-                            <h3 class="font-serif-heading text-xl font-bold text-brand-textDark mb-2">Yetişkin Danışmanlığı</h3>
+                            <h3 class="font-serif-heading text-xl font-bold text-brand-textDark mb-2">Yetişkinlerle Psikolojik Danışmanlık</h3>
                             <p class="text-brand-textMuted text-xs sm:text-sm leading-relaxed mb-6">
                                 Yetişkinlerin kaygı, stres, depresif duygular ve ilişki güçlükleri üzerine bireysel psikolojik danışmanlık.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">Yetişkin</span>
-                            <button onclick="openBookingModal('Yetişkin Danışmanlığı')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
+                            <button onclick="openBookingModal('Yetişkinlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
                         </div>
                     </div>
 
@@ -629,14 +624,14 @@
                             <div class="w-11 h-11 rounded-2xl bg-brand-accent text-white flex items-center justify-center text-base mb-5">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
-                            <h3 class="font-serif-heading text-xl font-bold text-brand-textDark mb-2">Ergen Danışmanlığı</h3>
+                            <h3 class="font-serif-heading text-xl font-bold text-brand-textDark mb-2">Ergenlerle Psikolojik Danışmanlık</h3>
                             <p class="text-brand-textMuted text-xs sm:text-sm leading-relaxed mb-6">
                                 Ergenlik döneminde ortaya çıkan sınav kaygısı, duygusal dalgalanmalar ve gelişimsel konular üzerine rehberlik.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">Ergen</span>
-                            <button onclick="openBookingModal('Ergen Danışmanlığı')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
+                            <button onclick="openBookingModal('Ergenlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
                         </div>
                     </div>
 
@@ -645,14 +640,14 @@
                             <div class="w-11 h-11 rounded-2xl bg-brand-accent text-white flex items-center justify-center text-base mb-5">
                                 <i class="fa-solid fa-people-arrows"></i>
                             </div>
-                            <h3 class="font-serif-heading text-xl font-bold text-brand-textDark mb-2">Çift Danışmanlığı</h3>
+                            <h3 class="font-serif-heading text-xl font-bold text-brand-textDark mb-2">Çiftlerle Psikolojik Danışmanlık</h3>
                             <p class="text-brand-textMuted text-xs sm:text-sm leading-relaxed mb-6">
                                 İlişkilerde iletişim tıkanıklıkları, çatışma çözümü ve birlikte yaşam güçlükleri üzerine çift seansları.
                             </p>
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">Çift</span>
-                            <button onclick="openBookingModal('Çift Danışmanlığı')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
+                            <button onclick="openBookingModal('Çiftlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
                         </div>
                     </div>
 
@@ -688,12 +683,13 @@
                         </div>
                     </div>
 
+                    <!-- Düzenleme: Eğitim ve Kariyer Danışmanlığı -->
                     <div class="soft-card p-7 rounded-3xl flex flex-col justify-between">
                         <div>
                             <div class="w-11 h-11 rounded-2xl bg-brand-accent text-white flex items-center justify-center text-base mb-5">
                                 <i class="fa-solid fa-compass"></i>
                             </div>
-                            <h3 class="font-serif-heading text-xl font-bold text-brand-textDark mb-2">Kariyer & Eğitim</h3>
+                            <h3 class="font-serif-heading text-xl font-bold text-brand-textDark mb-2">Eğitim ve Kariyer Danışmanlığı</h3>
                             <p class="text-brand-textMuted text-xs sm:text-sm leading-relaxed mb-6">
                                 Akademik süreçler, karar verme aşamaları ve kariyer planlamasına ilişkin değer odaklı yönelim danışmanlığı.
                             </p>
@@ -739,7 +735,7 @@
                         </h2>
                     </div>
                     <p class="text-brand-textMuted text-xs sm:text-sm max-w-md leading-relaxed">
-                        Kabul ve Adanmışlık Yaklaşımı (ACT) ve bilinçli farkındalık pratikleri üzerine rehber yazılar.
+                        Kabul ve Adanmışlık Terapisi (ACT) ve bilinçli farkındalık pratikleri üzerine rehber yazılar.
                     </p>
                 </div>
 
@@ -1031,9 +1027,9 @@
                                 <div>
                                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Hizmet Formatı</label>
                                     <select class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
-                                        <option>Yetişkin Danışmanlığı</option>
-                                        <option>Ergen Danışmanlığı</option>
-                                        <option>Çift Danışmanlığı</option>
+                                        <option>Yetişkinlerle Psikolojik Danışmanlık</option>
+                                        <option>Ergenlerle Psikolojik Danışmanlık</option>
+                                        <option>Çiftlerle Psikolojik Danışmanlık</option>
                                         <option>Online Danışmanlık</option>
                                         <option>MOXO Dikkat Testi</option>
                                         <option>Eğitim ve Kariyer Danışmanlığı</option>
@@ -1077,7 +1073,7 @@
                         <span class="font-semibold text-base">Furkan Yaylacık</span>
                     </div>
                     <p class="text-xs text-stone-300 max-w-sm leading-relaxed">
-                        2020 yılından bu yana Kabul ve Adanmışlık (ACT) ile Bilinçli Farkındalık (MBSR) temelli yaklaşımlarla psikolojik danışmanlık hizmeti sunmaktadır.
+                        2020 yılından bu yana Kabul ve Adanmışlık Terapisi (ACT) ile Bilinçli Farkındalık (MBSR) temelli yaklaşımlarla psikolojik danışmanlık hizmeti sunmaktadır.
                     </p>
                     <p class="text-xs text-stone-400">
                         <i class="fa-solid fa-location-dot mr-1 text-amber-400"></i> Yaka Mah. Aziz Mahmut Hüdai Cad. İçkon Plaza No:185A/302, Meram / Konya
@@ -1146,9 +1142,9 @@
                 <div>
                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Hizmet Türü</label>
                     <select id="modalServiceSelect" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
-                        <option value="Yetişkin Danışmanlığı">Yetişkin Danışmanlığı</option>
-                        <option value="Ergen Danışmanlığı">Ergen Danışmanlığı</option>
-                        <option value="Çift Danışmanlığı">Çift Danışmanlığı</option>
+                        <option value="Yetişkinlerle Psikolojik Danışmanlık">Yetişkinlerle Psikolojik Danışmanlık</option>
+                        <option value="Ergenlerle Psikolojik Danışmanlık">Ergenlerle Psikolojik Danışmanlık</option>
+                        <option value="Çiftlerle Psikolojik Danışmanlık">Çiftlerle Psikolojik Danışmanlık</option>
                         <option value="Online Danışmanlık">Online Danışmanlık</option>
                         <option value="MOXO Dikkat Testi">MOXO Dikkat Testi</option>
                         <option value="Eğitim ve Kariyer Danışmanlığı">Eğitim ve Kariyer Danışmanlığı</option>
@@ -1292,7 +1288,7 @@
 
         const blogPosts = {
             post1: {
-                category: "Kabul ve Adanmışlık Yaklaşımı (ACT)",
+                category: "Kabul ve Adanmışlık Terapisi (ACT)",
                 title: "Zihnimizle Savaşmayı Bırakmak: Bilişsel Ayrışma",
                 content: `
                     <p>Zihnimiz gün boyunca düşünceler, yorumlar, anılar ve senaryolar üretir. Özellikle kaygı ve stres dönemlerinde bu düşünceler mutlak gerçekler gibi algılanabilir.</p>
@@ -1301,7 +1297,7 @@
                         <p class="text-xs text-stone-500">Örneğin: <em>“Bunu asla başaramayacağım.”</em> demek yerine;</p>
                         <p class="font-semibold text-brand-textDark text-xs mt-1"><em>“Şu an zihnimin başaramayacağıma dair bir düşünce ürettiğini fark ediyorum.”</em> demek, düşüncenin üzerimizdeki otomatik baskısını gevşetir.</p>
                     </div>
-                    <p>Kabul ve Adanmışlık Yaklaşımı (ACT), zihinden geçen her şeyi kontrol etmeye çalışmak yerine, düşüncelere rağmen değer verdiğimiz yönde hareket etme esnekliğini destekler.</p>
+                    <p>Kabul ve Adanmışlık Terapisi (ACT), zihinden geçen her şeyi kontrol etmeye çalışmak yerine, düşüncelere rağmen değer verdiğimiz yönde hareket etme esnekliğini destekler.</p>
                 `
             },
             post2: {
