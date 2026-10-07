@@ -168,7 +168,7 @@
                 </button>
             </div>
 
-            <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden text-brand-textDark text-xl p-2 focus:outline-none" aria-label="Menüyü Aç">
+            <button id="mobileMenuBtn" type="button" onclick="toggleMobileMenu()" class="lg:hidden text-brand-textDark text-xl p-2 focus:outline-none" aria-label="Menüyü Aç">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
@@ -1133,27 +1133,27 @@
                         </div>
                     </div>
 
-                    <!-- Randevu Formu -->
+                    <!-- Randevu Formu (Sayfa İçi) -->
                     <div class="lg:col-span-7 bg-brand-cardBg p-7 sm:p-9 rounded-3xl border border-stone-200 shadow-sm">
                         <h3 class="font-serif-heading text-2xl text-brand-textDark font-bold mb-1">Randevu Talep Formu</h3>
                         <p class="text-xs text-brand-textMuted mb-6">Bilgilerinizi ilettiğinizde çalışma saatleri içerisinde tarafınıza dönüş sağlanacaktır.</p>
 
-                        <form id="pageContactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <form id="pageContactForm" onsubmit="handlePageFormSubmit(event)" class="space-y-4">
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Adınız Soyadınız *</label>
-                                    <input type="text" required placeholder="Ad Soyad" class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
+                                    <input type="text" name="fullName" required placeholder="Ad Soyad" class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Telefon Numarası *</label>
-                                    <input type="tel" required placeholder="05XX XXX XX XX" class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
+                                    <input type="tel" name="phone" required placeholder="05XX XXX XX XX" class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
                                 </div>
                             </div>
 
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Hizmet Formatı</label>
-                                    <select class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
+                                    <select name="service" class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
                                         <option value="Yetişkinlerle Psikolojik Danışmanlık">Yetişkinlerle Psikolojik Danışmanlık</option>
                                         <option value="Ergenlerle Psikolojik Danışmanlık">Ergenlerle Psikolojik Danışmanlık</option>
                                         <option value="Çiftlerle Psikolojik Danışmanlık">Çiftlerle Psikolojik Danışmanlık</option>
@@ -1164,7 +1164,7 @@
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Uygun Zaman Dilimi</label>
-                                    <select class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
+                                    <select name="timeSlot" class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
                                         <option value="Hafta İçi Gündüz">Hafta İçi Gündüz</option>
                                         <option value="Hafta İçi Akşam (17:00 Sonrası)">Hafta İçi Akşam (17:00 Sonrası)</option>
                                         <option value="Hafta Sonu">Hafta Sonu</option>
@@ -1174,7 +1174,7 @@
 
                             <div>
                                 <label class="block text-xs font-semibold text-brand-textDark mb-1">Kısaca Başvuru Nedeni (Opsiyonel)</label>
-                                <textarea rows="3" placeholder="Görüşmek istediğiniz konu veya sormak istedikleriniz..." class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent"></textarea>
+                                <textarea name="note" rows="3" placeholder="Görüşmek istediğiniz konu veya sormak istedikleriniz..." class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent"></textarea>
                             </div>
 
                             <button type="submit" class="w-full bg-brand-accent hover:bg-brand-accentHover text-white py-3.5 rounded-xl font-medium text-xs sm:text-sm transition-all shadow-md">
@@ -1245,7 +1245,7 @@
     </footer>
 
     <!-- Randevu Modal (Tüm Butonların Tetiklediği Pencere) -->
-    <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4" onclick="handleBackdropClick(event)">
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm items-center justify-center p-4" onclick="handleBackdropClick(event)">
         <div class="bg-white max-w-md w-full rounded-3xl p-6 sm:p-8 shadow-2xl relative border border-stone-200" onclick="event.stopPropagation()">
             <button type="button" onclick="closeBookingModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-lg p-1" aria-label="Kapat">
                 <i class="fa-solid fa-xmark"></i>
@@ -1257,18 +1257,18 @@
                 <p class="text-xs text-brand-textMuted mt-0.5">İhtiyaçlarınızı değerlendirmek üzere bilgilerinizi bırakabilirsiniz.</p>
             </div>
 
-            <form id="modalBookingForm" onsubmit="handleModalSubmit(event)" class="space-y-3.5">
+            <form id="modalBookingForm" onsubmit="handleModalFormSubmit(event)" class="space-y-3.5">
                 <div>
                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Adınız Soyadınız *</label>
-                    <input type="text" required placeholder="Ad Soyad" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
+                    <input type="text" name="modalFullName" required placeholder="Ad Soyad" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Telefon / WhatsApp *</label>
-                    <input type="tel" required placeholder="05XX XXX XX XX" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
+                    <input type="tel" name="modalPhone" required placeholder="05XX XXX XX XX" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Hizmet Formatı</label>
-                    <select id="modalServiceSelect" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
+                    <select id="modalServiceSelect" name="modalService" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
                         <option value="Yetişkinlerle Psikolojik Danışmanlık">Yetişkinlerle Psikolojik Danışmanlık</option>
                         <option value="Ergenlerle Psikolojik Danışmanlık">Ergenlerle Psikolojik Danışmanlık</option>
                         <option value="Çiftlerle Psikolojik Danışmanlık">Çiftlerle Psikolojik Danışmanlık</option>
@@ -1285,7 +1285,7 @@
     </div>
 
     <!-- Blog Okuma Modal -->
-    <div id="blogModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeBlogModal()">
+    <div id="blogModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm items-center justify-center p-4" onclick="closeBlogModal()">
         <div class="bg-white max-w-2xl w-full rounded-3xl p-6 sm:p-9 shadow-2xl relative border border-stone-200 max-h-[85vh] overflow-y-auto" onclick="event.stopPropagation()">
             <button type="button" onclick="closeBlogModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-lg p-2" aria-label="Kapat">
                 <i class="fa-solid fa-xmark"></i>
@@ -1341,154 +1341,3 @@
                 if (mbsrBtn) mbsrBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-brand-accent text-white shadow-xs";
                 if (actBtn) actBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all text-brand-textDark hover:text-brand-accent";
                 if (mbsrPanel) { mbsrPanel.classList.remove('hidden'); mbsrPanel.classList.add('grid'); }
-                if (actPanel) { actPanel.classList.add('hidden'); actPanel.classList.remove('grid'); }
-
-                if (detailTitle) detailTitle.innerText = "MBSR — Bilinçli Farkındalık Temelli Temel Boyutlar ve Uygulamalar";
-                if (mbsrSummary) mbsrSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-brand-accent ring-2 ring-brand-accent/10";
-                if (actSummary) actSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-stone-200 hover:border-brand-accent";
-
-                if (mbsrBadge) {
-                    mbsrBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-accent"></span> Aktif';
-                    mbsrBadge.className = "text-xs font-semibold text-brand-textDark flex items-center gap-1.5";
-                }
-                if (actBadge) {
-                    actBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-stone-300"></span> İncele &rarr;';
-                    actBadge.className = "text-xs font-semibold text-brand-textMuted flex items-center gap-1.5";
-                }
-            }
-        }
-
-        function toggleAccordion(id) {
-            const content = document.getElementById(id);
-            const icon = document.getElementById(id + '-icon');
-            if (!content) return;
-            const isOpen = content.classList.contains('open');
-
-            document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
-            document.querySelectorAll('[id$="-icon"]').forEach(el => {
-                el.classList.remove('fa-minus');
-                el.classList.add('fa-plus');
-            });
-
-            if (!isOpen) {
-                content.classList.add('open');
-                if (icon) {
-                    icon.classList.remove('fa-plus');
-                    icon.classList.add('fa-minus');
-                }
-            }
-        }
-
-        function updateValuesWheel() {
-            const v1El = document.getElementById('val1');
-            const v2El = document.getElementById('val2');
-            const v3El = document.getElementById('val3');
-            const v4El = document.getElementById('val4');
-            if (!v1El || !v2El || !v3El || !v4El) return;
-
-            const v1 = parseInt(v1El.value);
-            const v2 = parseInt(v2El.value);
-            const v3 = parseInt(v3El.value);
-            const v4 = parseInt(v4El.value);
-
-            document.getElementById('val1Text').innerText = v1 + ' / 10';
-            document.getElementById('val2Text').innerText = v2 + ' / 10';
-            document.getElementById('val3Text').innerText = v3 + ' / 10';
-            document.getElementById('val4Text').innerText = v4 + ' / 10';
-
-            const averagePercent = Math.round(((v1 + v2 + v3 + v4) / 40) * 100);
-            document.getElementById('overallScore').innerText = averagePercent + '%';
-
-            const quoteEl = document.getElementById('actGuidanceQuote');
-            if (quoteEl) {
-                if (averagePercent < 45) {
-                    quoteEl.innerText = '"Şu an bazı yaşam alanlarında tıkanıklık hissetmeniz çok doğal. Küçük ama kararlı bir adım, pusulanızı yeniden ayarlayabilir."';
-                } else if (averagePercent < 75) {
-                    quoteEl.innerText = '"Denge anlık değil, sürekli bir farkındalık sürecidir. Hangi alana biraz daha şefkat göstermek istersiniz?"';
-                } else {
-                    quoteEl.innerText = '"Değerlerinizle hizalı bir yaşam sürdürüyorsunuz. Bu farkındalığı koruyarak yolunuza devam edin."';
-                }
-            }
-        }
-
-        // Akıllı Eşleştirme Yapan Randevu Modalı Açıcı
-        function openBookingModal(serviceName) {
-            const modal = document.getElementById('bookingModal');
-            const select = document.getElementById('modalServiceSelect');
-            if (!modal) return;
-
-            if (select && serviceName) {
-                const target = serviceName.toLowerCase();
-                let matched = false;
-
-                // 1. Aşama: Tam Değer Eşleşmesi
-                for (let i = 0; i < select.options.length; i++) {
-                    if (select.options[i].value === serviceName) {
-                        select.selectedIndex = i;
-                        matched = true;
-                        break;
-                    }
-                }
-
-                // 2. Aşama: Akıllı Anahtar Kelime Eşleşmesi
-                if (!matched) {
-                    for (let i = 0; i < select.options.length; i++) {
-                        const optText = select.options[i].text.toLowerCase();
-                        if (
-                            (target.includes('ergen') && optText.includes('ergen')) ||
-                            (target.includes('çift') && optText.includes('çift')) ||
-                            (target.includes('yetişkin') && optText.includes('yetişkin')) ||
-                            (target.includes('online') && optText.includes('online')) ||
-                            (target.includes('moxo') && optText.includes('moxo')) ||
-                            (target.includes('kariyer') && optText.includes('kariyer')) ||
-                            (target.includes('eğitim') && optText.includes('eğitim'))
-                        ) {
-                            select.selectedIndex = i;
-                            matched = true;
-                            break;
-                        }
-                    }
-                }
-            }
-
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeBookingModal() {
-            const modal = document.getElementById('bookingModal');
-            if (modal) {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }
-            document.body.style.overflow = '';
-        }
-
-        const blogPosts = {
-            post1: {
-                category: "Kaygı",
-                title: "Kaygı Nedir? Zihnin Sürekli Bir Sonraki İhtimali Düşünmesi",
-                content: `
-                    <p>Bazen ortada henüz gerçekleşmiş bir şey yoktur ama zihnimiz çoktan harekete geçmiştir.</p>
-                    <p class="italic text-stone-700">“Ya kötü bir şey olursa?”<br>“Ya yetiştiremezsem?”<br>“Ya işler düşündüğüm gibi gitmezse?”</p>
-                    <p>Kaygı çoğu zaman tam da burada ortaya çıkar: Henüz yaşanmamış bir ihtimal, zihnimizde şimdiden yaşanan bir deneyime dönüşebilir.</p>
-                    <p>Oysa kaygının kendisi hayatımızın olağan parçalarından biridir. Bir iş görüşmesi öncesinde, önemli bir sınavdan önce veya belirsiz bir kararın eşiğinde kaygı hissetmek, insan olmanın doğal bir parçasıdır. Asıl üzerinde durulması gereken soru çoğu zaman “Neden kaygılanıyorum?” değil, “Kaygı hayatımda nasıl bir yer kaplamaya başladı?” sorusudur.</p>
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kaygı Bize Ne Söylüyor?</h4>
-                    <p>Kaygı çoğu zaman bir tehdit ihtimaline dikkat çeker. Bazen gerçekten hazırlanmamız gereken bir durum vardır; bazen ise zihnimiz henüz gerçekleşmemiş onlarca ihtimali aynı anda değerlendirmeye çalışır. Bu nedenle kaygı yalnızca zihinde yaşanan bir düşünce değildir; kalp atışlarının hızlanması, kasların gerilmesi, huzursuzluk, mide rahatsızlıkları, nefes değişiklikleri veya uyku güçlükleri gibi bedensel deneyimler de eşlik edebilir. Her insan kaygıyı aynı biçimde deneyimlemez.</p>
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kaygıyı Ortadan Kaldırmaya Çalışmak</h4>
-                    <p>Kaygı rahatsız edici olduğunda doğal olarak ondan kurtulmak isteriz. Kaçınmak, sürekli düşünmek, güvence aramak veya her şeyi kontrol etmeye çalışmak kısa süreli bir rahatlama sağlayabilir. Fakat bazı durumlarda bu rahatlama, kaygıyla mücadeleyi daha da güçlendirebilir.</p>
-                    <p>Örneğin bir kişi topluluk içinde konuşmaktan kaygı duyuyorsa her seferinde konuşmaktan kaçınmak o an için rahatlatıcı olabilir. Ancak zaman içerisinde “Konuşursam baş edemem.” düşüncesinin daha da güçlenmesine yol açabilir. Bu nedenle kaygıyla çalışmak, yalnızca kaygıyı azaltmaya odaklanmak anlamına gelmez.</p>
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kaygı Varken de Yaşamak</h4>
-                    <p>Kaygının hiç olmadığı bir yaşam gerçekçi bir hedef olmayabilir. Daha işlevsel bir soru bazen şudur: “Kaygı geldiğinde hayatımı nasıl yaşamaya devam edebilirim?” Çünkü yaşamın önemli kararları, ilişkileri veya sorumlulukları her zaman kendimizi tamamen hazır hissettiğimiz anlarda karşımıza çıkmaz.</p>
-                    <p>Psikolojik danışmanlık sürecinde kişinin kaygıyı hangi durumlarda yaşadığı, kaygıya nasıl karşılık verdiği ve kaygının yaşamındaki hareket alanını ne ölçüde daralttığı birlikte ele alınabilir. Amaç kişinin kendisini kaygıdan arındırması değil; kaygıyla kurduğu ilişkiyi daha yakından tanıması ve yaşamında önem verdiği alanlara yeniden yer açabilmesidir.</p>
-                `
-            },
-            post2: {
-                category: "Belirsizlik",
-                title: "Gelecek Kaygısı: Henüz Yaşanmamış Bir Hayatın Yükünü Bugünden Taşımak",
-                content: `
-                    <p>Gelecek henüz yaşanmamıştır. Buna rağmen bazen bütün günümüzü gelecekte geçirebiliriz. Bir sınavın sonucu, iş bulup bulamayacağımız, ekonomik koşullar, ilişkimizin nereye gideceği veya birkaç yıl sonra nerede olacağımız...</p>
-                    <p>Zihin belirsizliği sevmediğinde geleceğe ilişkin sorular çoğalır:</p>
-                    <p class="italic text-stone-700">“Ya olmazsa?”<br>“Ya yanlış karar verirsem?”<br>“Ya işler kontrolden çıkarsa?”</p>
-                    <p>Gelecek kaygısı çoğu zaman geleceğin
