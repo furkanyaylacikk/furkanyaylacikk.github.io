@@ -137,7 +137,7 @@
 <body class="selection:bg-brand-sand selection:text-brand-textDark">
 
     <!-- Header Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <header class="fixed top-0 left-0 right-0 z-40 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 rounded-full bg-brand-accent text-white font-serif font-semibold text-lg flex items-center justify-center tracking-wider group-hover:bg-brand-accentHover transition-colors">
@@ -162,7 +162,7 @@
             </nav>
 
             <div class="hidden sm:flex items-center gap-3">
-                <button onclick="openBookingModal()" class="bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-medium px-5 py-2.5 rounded-lg transition-all duration-200 flex items-center gap-2 shadow-sm">
+                <button type="button" onclick="openBookingModal()" class="bg-brand-accent hover:bg-brand-accentHover text-white text-xs font-medium px-5 py-2.5 rounded-lg transition-all duration-200 flex items-center gap-2 shadow-sm">
                     <i class="fa-regular fa-calendar-check text-xs"></i>
                     <span>Randevu Al</span>
                 </button>
@@ -185,7 +185,7 @@
                 </a>
                 <a href="#sss" onclick="toggleMobileMenu()" class="py-1 hover:text-brand-accent">Sıkça Sorulan Sorular</a>
                 <div class="pt-4 border-t border-stone-200 flex flex-col gap-3">
-                    <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full bg-brand-accent text-white py-3 rounded-xl font-medium text-xs shadow-sm">
+                    <button type="button" onclick="toggleMobileMenu(); openBookingModal();" class="w-full bg-brand-accent text-white py-3 rounded-xl font-medium text-xs shadow-sm text-center">
                         Randevu Al
                     </button>
                     <a href="https://wa.me/905529389759" target="_blank" class="w-full bg-emerald-800 text-white py-3 rounded-xl font-medium text-xs flex items-center justify-center gap-2">
@@ -220,7 +220,7 @@
                     </p>
 
                     <div class="flex flex-wrap items-center gap-4 pt-2">
-                        <button onclick="openBookingModal()" class="bg-brand-accent hover:bg-brand-accentHover text-white text-sm font-medium px-6 py-3.5 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-lg">
+                        <button type="button" onclick="openBookingModal()" class="bg-brand-accent hover:bg-brand-accentHover text-white text-sm font-medium px-6 py-3.5 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-lg">
                             <span>Randevu Talebi Oluştur</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </button>
@@ -434,7 +434,6 @@
                     </div>
                 </div>
 
-                <!-- Tabs -->
                 <div class="flex items-center justify-between flex-wrap gap-4 mb-8 pt-4 border-t border-stone-200">
                     <div class="text-xs font-semibold uppercase tracking-wider text-brand-textMuted flex items-center gap-2">
                         <i class="fa-solid fa-layer-group text-brand-accent"></i>
@@ -607,7 +606,7 @@
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">Yetişkin</span>
-                            <button onclick="openBookingModal('Yetişkinlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
+                            <button type="button" onclick="openBookingModal('Yetişkinlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
                         </div>
                     </div>
 
@@ -623,7 +622,7 @@
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">Ergen</span>
-                            <button onclick="openBookingModal('Ergenlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
+                            <button type="button" onclick="openBookingModal('Ergenlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
                         </div>
                     </div>
 
@@ -639,7 +638,7 @@
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">Çift</span>
-                            <button onclick="openBookingModal('Çiftlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
+                            <button type="button" onclick="openBookingModal('Çiftlerle Psikolojik Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
                         </div>
                     </div>
 
@@ -655,7 +654,7 @@
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">Meet / Zoom</span>
-                            <button onclick="openBookingModal('Online Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
+                            <button type="button" onclick="openBookingModal('Online Danışmanlık')" class="text-xs text-brand-accent font-semibold hover:underline">Randevu Al &rarr;</button>
                         </div>
                     </div>
 
@@ -671,7 +670,7 @@
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">MOXO d-CPT</span>
-                            <button onclick="openBookingModal('MOXO Dikkat Testi')" class="text-xs text-brand-accent font-semibold hover:underline">Bilgi Al &rarr;</button>
+                            <button type="button" onclick="openBookingModal('MOXO Dikkat Testi')" class="text-xs text-brand-accent font-semibold hover:underline">Bilgi Al &rarr;</button>
                         </div>
                     </div>
 
@@ -687,7 +686,7 @@
                         </div>
                         <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
                             <span class="text-xs font-medium text-brand-textDark bg-brand-cardBg px-2.5 py-1 rounded-md">Bireysel</span>
-                            <button onclick="openBookingModal('Eğitim ve Kariyer Danışmanlığı')" class="text-xs text-brand-accent font-semibold hover:underline">Bilgi Al &rarr;</button>
+                            <button type="button" onclick="openBookingModal('Eğitim ve Kariyer Danışmanlığı')" class="text-xs text-brand-accent font-semibold hover:underline">Bilgi Al &rarr;</button>
                         </div>
                     </div>
                 </div>
@@ -712,7 +711,7 @@
             </div>
         </section>
 
-        <!-- Blog / Yazılarım Section (9 Yazı Entegre Edildi) -->
+        <!-- Blog / Yazılarım Section -->
         <section id="yazilarim" class="py-24 bg-brand-bg border-b border-stone-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
@@ -747,7 +746,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post1')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post1')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -769,7 +768,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post2')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post2')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -791,7 +790,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post3')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post3')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -813,7 +812,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post4')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post4')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -835,7 +834,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post5')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post5')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -857,7 +856,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post6')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post6')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -879,7 +878,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post7')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post7')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -901,7 +900,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post8')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post8')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -923,7 +922,7 @@
                             </p>
                         </div>
                         <div class="pt-6">
-                            <button onclick="openBlogModal('post9')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
+                            <button type="button" onclick="openBlogModal('post9')" class="text-xs font-semibold text-brand-accent hover:underline flex items-center gap-1.5">
                                 <span>Yazının Devamını Oku</span>
                                 <i class="fa-solid fa-arrow-right text-[10px]"></i>
                             </button>
@@ -990,7 +989,7 @@
                             <p id="actGuidanceQuote" class="text-xs text-stone-200 italic font-serif my-3 leading-relaxed">
                                 "Denge anlık bir hedef değil, sürekli bir farkındalık sürecidir. Hangi alana biraz daha şefkat göstermek istersiniz?"
                             </p>
-                            <button onclick="openBookingModal('Değerler Testi Değerlendirmesi')" class="mt-1 bg-amber-500 hover:bg-amber-600 text-stone-900 font-semibold px-4 py-2 rounded-xl text-xs transition-colors shadow">
+                            <button type="button" onclick="openBookingModal('Değerler Testi')" class="mt-1 bg-amber-500 hover:bg-amber-600 text-stone-900 font-semibold px-4 py-2 rounded-xl text-xs transition-colors shadow">
                                 Bu Sonucu Seans Esnasında Değerlendirin
                             </button>
                         </div>
@@ -1011,7 +1010,7 @@
 
                 <div class="space-y-3.5">
                     <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden">
-                        <button onclick="toggleAccordion('faq1')" class="w-full p-5 sm:p-6 text-left flex justify-between items-center text-brand-textDark font-semibold text-sm sm:text-base focus:outline-none">
+                        <button type="button" onclick="toggleAccordion('faq1')" class="w-full p-5 sm:p-6 text-left flex justify-between items-center text-brand-textDark font-semibold text-sm sm:text-base focus:outline-none">
                             <span>Seanslar ne kadar sürer ve sıklığı nasıl belirlenir?</span>
                             <i id="faq1-icon" class="fa-solid fa-plus text-brand-accent text-xs transition-transform"></i>
                         </button>
@@ -1021,7 +1020,7 @@
                     </div>
 
                     <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden">
-                        <button onclick="toggleAccordion('faq2')" class="w-full p-5 sm:p-6 text-left flex justify-between items-center text-brand-textDark font-semibold text-sm sm:text-base focus:outline-none">
+                        <button type="button" onclick="toggleAccordion('faq2')" class="w-full p-5 sm:p-6 text-left flex justify-between items-center text-brand-textDark font-semibold text-sm sm:text-base focus:outline-none">
                             <span>Konya'daki yüz yüze seanslar nerede gerçekleşmektedir?</span>
                             <i id="faq2-icon" class="fa-solid fa-plus text-brand-accent text-xs transition-transform"></i>
                         </button>
@@ -1031,7 +1030,7 @@
                     </div>
 
                     <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden">
-                        <button onclick="toggleAccordion('faq3')" class="w-full p-5 sm:p-6 text-left flex justify-between items-center text-brand-textDark font-semibold text-sm sm:text-base focus:outline-none">
+                        <button type="button" onclick="toggleAccordion('faq3')" class="w-full p-5 sm:p-6 text-left flex justify-between items-center text-brand-textDark font-semibold text-sm sm:text-base focus:outline-none">
                             <span>Online seans ile yüz yüze seans arasında etki farkı var mıdır?</span>
                             <i id="faq3-icon" class="fa-solid fa-plus text-brand-accent text-xs transition-transform"></i>
                         </button>
@@ -1041,7 +1040,7 @@
                     </div>
 
                     <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden">
-                        <button onclick="toggleAccordion('faq4')" class="w-full p-5 sm:p-6 text-left flex justify-between items-center text-brand-textDark font-semibold text-sm sm:text-base focus:outline-none">
+                        <button type="button" onclick="toggleAccordion('faq4')" class="w-full p-5 sm:p-6 text-left flex justify-between items-center text-brand-textDark font-semibold text-sm sm:text-base focus:outline-none">
                             <span>İlk ön görüşme süreci nasıl işler?</span>
                             <i id="faq4-icon" class="fa-solid fa-plus text-brand-accent text-xs transition-transform"></i>
                         </button>
@@ -1054,7 +1053,7 @@
             </div>
         </section>
 
-        <!-- İletişim & Lokasyon Section -->
+        <!-- İletişim & Lokasyon Section (Sayfa İçi Randevu Formu) -->
         <section id="randevu" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-12 gap-12">
@@ -1139,14 +1138,14 @@
                         <h3 class="font-serif-heading text-2xl text-brand-textDark font-bold mb-1">Randevu Talep Formu</h3>
                         <p class="text-xs text-brand-textMuted mb-6">Bilgilerinizi ilettiğinizde çalışma saatleri içerisinde tarafınıza dönüş sağlanacaktır.</p>
 
-                        <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <form id="pageContactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
                             <div class="grid sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-xs font-semibold text-brand-textDark mb-1">Adınız Soyadınız</label>
+                                    <label class="block text-xs font-semibold text-brand-textDark mb-1">Adınız Soyadınız *</label>
                                     <input type="text" required placeholder="Ad Soyad" class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-semibold text-brand-textDark mb-1">Telefon Numarası</label>
+                                    <label class="block text-xs font-semibold text-brand-textDark mb-1">Telefon Numarası *</label>
                                     <input type="tel" required placeholder="05XX XXX XX XX" class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
                                 </div>
                             </div>
@@ -1155,20 +1154,20 @@
                                 <div>
                                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Hizmet Formatı</label>
                                     <select class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
-                                        <option>Yetişkinlerle Psikolojik Danışmanlık</option>
-                                        <option>Ergenlerle Psikolojik Danışmanlık</option>
-                                        <option>Çiftlerle Psikolojik Danışmanlık</option>
-                                        <option>Online Danışmanlık</option>
-                                        <option>MOXO Dikkat Testi</option>
-                                        <option>Eğitim ve Kariyer Danışmanlığı</option>
+                                        <option value="Yetişkinlerle Psikolojik Danışmanlık">Yetişkinlerle Psikolojik Danışmanlık</option>
+                                        <option value="Ergenlerle Psikolojik Danışmanlık">Ergenlerle Psikolojik Danışmanlık</option>
+                                        <option value="Çiftlerle Psikolojik Danışmanlık">Çiftlerle Psikolojik Danışmanlık</option>
+                                        <option value="Online Danışmanlık">Online Danışmanlık</option>
+                                        <option value="MOXO Dikkat Testi">MOXO Dikkat Testi</option>
+                                        <option value="Eğitim ve Kariyer Danışmanlığı">Eğitim ve Kariyer Danışmanlığı</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label class="block text-xs font-semibold text-brand-textDark mb-1">Uygun Zaman Dilimi</label>
                                     <select class="w-full bg-white border border-stone-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-brand-accent">
-                                        <option>Hafta İçi Gündüz</option>
-                                        <option>Hafta İçi Akşam (17:00 Sonrası)</option>
-                                        <option>Hafta Sonu</option>
+                                        <option value="Hafta İçi Gündüz">Hafta İçi Gündüz</option>
+                                        <option value="Hafta İçi Akşam (17:00 Sonrası)">Hafta İçi Akşam (17:00 Sonrası)</option>
+                                        <option value="Hafta Sonu">Hafta Sonu</option>
                                     </select>
                                 </div>
                             </div>
@@ -1245,10 +1244,10 @@
         </div>
     </footer>
 
-    <!-- Randevu Modal -->
+    <!-- Randevu Modal (Tüm Butonların Tetiklediği Pencere) -->
     <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4" onclick="handleBackdropClick(event)">
         <div class="bg-white max-w-md w-full rounded-3xl p-6 sm:p-8 shadow-2xl relative border border-stone-200" onclick="event.stopPropagation()">
-            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-lg" aria-label="Kapat">
+            <button type="button" onclick="closeBookingModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-lg p-1" aria-label="Kapat">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
@@ -1258,13 +1257,13 @@
                 <p class="text-xs text-brand-textMuted mt-0.5">İhtiyaçlarınızı değerlendirmek üzere bilgilerinizi bırakabilirsiniz.</p>
             </div>
 
-            <form onsubmit="handleModalSubmit(event)" class="space-y-3.5">
+            <form id="modalBookingForm" onsubmit="handleModalSubmit(event)" class="space-y-3.5">
                 <div>
-                    <label class="block text-xs font-semibold text-brand-textDark mb-1">Adınız Soyadınız</label>
+                    <label class="block text-xs font-semibold text-brand-textDark mb-1">Adınız Soyadınız *</label>
                     <input type="text" required placeholder="Ad Soyad" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
                 </div>
                 <div>
-                    <label class="block text-xs font-semibold text-brand-textDark mb-1">Telefon / WhatsApp</label>
+                    <label class="block text-xs font-semibold text-brand-textDark mb-1">Telefon / WhatsApp *</label>
                     <input type="tel" required placeholder="05XX XXX XX XX" class="w-full bg-brand-bg border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-brand-accent">
                 </div>
                 <div>
@@ -1288,7 +1287,7 @@
     <!-- Blog Okuma Modal -->
     <div id="blogModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4" onclick="closeBlogModal()">
         <div class="bg-white max-w-2xl w-full rounded-3xl p-6 sm:p-9 shadow-2xl relative border border-stone-200 max-h-[85vh] overflow-y-auto" onclick="event.stopPropagation()">
-            <button onclick="closeBlogModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-lg p-2" aria-label="Kapat">
+            <button type="button" onclick="closeBlogModal()" class="absolute top-5 right-5 text-stone-400 hover:text-stone-800 text-lg p-2" aria-label="Kapat">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div id="blogModalCategory" class="text-xs font-semibold text-brand-accent uppercase tracking-wider mb-1.5"></div>
@@ -1298,14 +1297,15 @@
     </div>
 
     <!-- Toast Bildirimi -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-brand-accent text-white px-5 py-3.5 rounded-2xl shadow-xl z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-3 border border-white/20">
+    <div id="toast" class="fixed bottom-6 right-6 bg-brand-accent text-white px-5 py-3.5 rounded-2xl shadow-xl z-50 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-3 border border-white/20 pointer-events-none">
         <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
         <span id="toastMessage" class="text-xs font-medium">Talebiniz başarıyla alındı!</span>
     </div>
 
     <script>
         function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
+            const menu = document.getElementById('mobileMenu');
+            if (menu) menu.classList.toggle('hidden');
         }
 
         function switchMethodology(type) {
@@ -1320,43 +1320,48 @@
             const mbsrBadge = document.getElementById('mbsrBadgeState');
 
             if (type === 'act') {
-                actBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-brand-accent text-white shadow-xs";
-                mbsrBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all text-brand-textDark hover:text-brand-accent";
-                actPanel.classList.remove('hidden');
-                actPanel.classList.add('grid');
-                mbsrPanel.classList.add('hidden');
-                mbsrPanel.classList.remove('grid');
+                if (actBtn) actBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-brand-accent text-white shadow-xs";
+                if (mbsrBtn) mbsrBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all text-brand-textDark hover:text-brand-accent";
+                if (actPanel) { actPanel.classList.remove('hidden'); actPanel.classList.add('grid'); }
+                if (mbsrPanel) { mbsrPanel.classList.add('hidden'); mbsrPanel.classList.remove('grid'); }
 
-                detailTitle.innerText = "ACT — Psikolojik Esneklik Modelinde Altı Temel Süreç";
-                actSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-brand-accent ring-2 ring-brand-accent/10";
-                mbsrSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-stone-200 hover:border-brand-accent";
+                if (detailTitle) detailTitle.innerText = "ACT — Psikolojik Esneklik Modelinde Altı Temel Süreç";
+                if (actSummary) actSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-brand-accent ring-2 ring-brand-accent/10";
+                if (mbsrSummary) mbsrSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-stone-200 hover:border-brand-accent";
 
-                actBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-accent"></span> Aktif';
-                actBadge.className = "text-xs font-semibold text-brand-textDark flex items-center gap-1.5";
-                mbsrBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-stone-300"></span> İncele &rarr;';
-                mbsrBadge.className = "text-xs font-semibold text-brand-textMuted flex items-center gap-1.5";
+                if (actBadge) {
+                    actBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-accent"></span> Aktif';
+                    actBadge.className = "text-xs font-semibold text-brand-textDark flex items-center gap-1.5";
+                }
+                if (mbsrBadge) {
+                    mbsrBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-stone-300"></span> İncele &rarr;';
+                    mbsrBadge.className = "text-xs font-semibold text-brand-textMuted flex items-center gap-1.5";
+                }
             } else {
-                mbsrBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-brand-accent text-white shadow-xs";
-                actBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all text-brand-textDark hover:text-brand-accent";
-                mbsrPanel.classList.remove('hidden');
-                mbsrPanel.classList.add('grid');
-                actPanel.classList.add('hidden');
-                actPanel.classList.remove('grid');
+                if (mbsrBtn) mbsrBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all bg-brand-accent text-white shadow-xs";
+                if (actBtn) actBtn.className = "px-4 py-1.5 rounded-lg text-xs font-semibold transition-all text-brand-textDark hover:text-brand-accent";
+                if (mbsrPanel) { mbsrPanel.classList.remove('hidden'); mbsrPanel.classList.add('grid'); }
+                if (actPanel) { actPanel.classList.add('hidden'); actPanel.classList.remove('grid'); }
 
-                detailTitle.innerText = "MBSR — Bilinçli Farkındalık Temelli Temel Boyutlar ve Uygulamalar";
-                mbsrSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-brand-accent ring-2 ring-brand-accent/10";
-                actSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-stone-200 hover:border-brand-accent";
+                if (detailTitle) detailTitle.innerText = "MBSR — Bilinçli Farkındalık Temelli Temel Boyutlar ve Uygulamalar";
+                if (mbsrSummary) mbsrSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-brand-accent ring-2 ring-brand-accent/10";
+                if (actSummary) actSummary.className = "cursor-pointer bg-white p-8 rounded-3xl border-2 transition-all shadow-sm border-stone-200 hover:border-brand-accent";
 
-                mbsrBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-accent"></span> Aktif';
-                mbsrBadge.className = "text-xs font-semibold text-brand-textDark flex items-center gap-1.5";
-                actBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-stone-300"></span> İncele &rarr;';
-                actBadge.className = "text-xs font-semibold text-brand-textMuted flex items-center gap-1.5";
+                if (mbsrBadge) {
+                    mbsrBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-brand-accent"></span> Aktif';
+                    mbsrBadge.className = "text-xs font-semibold text-brand-textDark flex items-center gap-1.5";
+                }
+                if (actBadge) {
+                    actBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-stone-300"></span> İncele &rarr;';
+                    actBadge.className = "text-xs font-semibold text-brand-textMuted flex items-center gap-1.5";
+                }
             }
         }
 
         function toggleAccordion(id) {
             const content = document.getElementById(id);
             const icon = document.getElementById(id + '-icon');
+            if (!content) return;
             const isOpen = content.classList.contains('open');
 
             document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
@@ -1367,16 +1372,24 @@
 
             if (!isOpen) {
                 content.classList.add('open');
-                icon.classList.remove('fa-plus');
-                icon.classList.add('fa-minus');
+                if (icon) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                }
             }
         }
 
         function updateValuesWheel() {
-            const v1 = parseInt(document.getElementById('val1').value);
-            const v2 = parseInt(document.getElementById('val2').value);
-            const v3 = parseInt(document.getElementById('val3').value);
-            const v4 = parseInt(document.getElementById('val4').value);
+            const v1El = document.getElementById('val1');
+            const v2El = document.getElementById('val2');
+            const v3El = document.getElementById('val3');
+            const v4El = document.getElementById('val4');
+            if (!v1El || !v2El || !v3El || !v4El) return;
+
+            const v1 = parseInt(v1El.value);
+            const v2 = parseInt(v2El.value);
+            const v3 = parseInt(v3El.value);
+            const v4 = parseInt(v4El.value);
 
             document.getElementById('val1Text').innerText = v1 + ' / 10';
             document.getElementById('val2Text').innerText = v2 + ' / 10';
@@ -1387,34 +1400,71 @@
             document.getElementById('overallScore').innerText = averagePercent + '%';
 
             const quoteEl = document.getElementById('actGuidanceQuote');
-            if (averagePercent < 45) {
-                quoteEl.innerText = '"Şu an bazı yaşam alanlarında tıkanıklık hissetmeniz çok doğal. Küçük ama kararlı bir adım, pusulanızı yeniden ayarlayabilir."';
-            } else if (averagePercent < 75) {
-                quoteEl.innerText = '"Denge anlık değil, sürekli bir farkındalık sürecidir. Hangi alana biraz daha şefkat göstermek istersiniz?"';
-            } else {
-                quoteEl.innerText = '"Değerlerinizle hizalı bir yaşam sürdürüyorsunuz. Bu farkındalığı koruyarak yolunuza devam edin."';
+            if (quoteEl) {
+                if (averagePercent < 45) {
+                    quoteEl.innerText = '"Şu an bazı yaşam alanlarında tıkanıklık hissetmeniz çok doğal. Küçük ama kararlı bir adım, pusulanızı yeniden ayarlayabilir."';
+                } else if (averagePercent < 75) {
+                    quoteEl.innerText = '"Denge anlık değil, sürekli bir farkındalık sürecidir. Hangi alana biraz daha şefkat göstermek istersiniz?"';
+                } else {
+                    quoteEl.innerText = '"Değerlerinizle hizalı bir yaşam sürdürüyorsunuz. Bu farkındalığı koruyarak yolunuza devam edin."';
+                }
             }
         }
 
+        // Akıllı Eşleştirme Yapan Randevu Modalı Açıcı
         function openBookingModal(serviceName) {
             const modal = document.getElementById('bookingModal');
             const select = document.getElementById('modalServiceSelect');
-            if (serviceName && select) {
+            if (!modal) return;
+
+            if (select && serviceName) {
+                const target = serviceName.toLowerCase();
+                let matched = false;
+
+                // 1. Aşama: Tam Değer Eşleşmesi
                 for (let i = 0; i < select.options.length; i++) {
-                    if (select.options[i].value === serviceName || serviceName.includes(select.options[i].text)) {
+                    if (select.options[i].value === serviceName) {
                         select.selectedIndex = i;
+                        matched = true;
                         break;
                     }
                 }
+
+                // 2. Aşama: Akıllı Anahtar Kelime Eşleşmesi
+                if (!matched) {
+                    for (let i = 0; i < select.options.length; i++) {
+                        const optText = select.options[i].text.toLowerCase();
+                        if (
+                            (target.includes('ergen') && optText.includes('ergen')) ||
+                            (target.includes('çift') && optText.includes('çift')) ||
+                            (target.includes('yetişkin') && optText.includes('yetişkin')) ||
+                            (target.includes('online') && optText.includes('online')) ||
+                            (target.includes('moxo') && optText.includes('moxo')) ||
+                            (target.includes('kariyer') && optText.includes('kariyer')) ||
+                            (target.includes('eğitim') && optText.includes('eğitim'))
+                        ) {
+                            select.selectedIndex = i;
+                            matched = true;
+                            break;
+                        }
+                    }
+                }
             }
+
             modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeBookingModal() {
-            document.getElementById('bookingModal').classList.add('hidden');
+            const modal = document.getElementById('bookingModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
+            document.body.style.overflow = '';
         }
 
-        // 9 Blog Yazısının Eksiksiz Veri Kümesi
         const blogPosts = {
             post1: {
                 category: "Kaygı",
@@ -1424,14 +1474,11 @@
                     <p class="italic text-stone-700">“Ya kötü bir şey olursa?”<br>“Ya yetiştiremezsem?”<br>“Ya işler düşündüğüm gibi gitmezse?”</p>
                     <p>Kaygı çoğu zaman tam da burada ortaya çıkar: Henüz yaşanmamış bir ihtimal, zihnimizde şimdiden yaşanan bir deneyime dönüşebilir.</p>
                     <p>Oysa kaygının kendisi hayatımızın olağan parçalarından biridir. Bir iş görüşmesi öncesinde, önemli bir sınavdan önce veya belirsiz bir kararın eşiğinde kaygı hissetmek, insan olmanın doğal bir parçasıdır. Asıl üzerinde durulması gereken soru çoğu zaman “Neden kaygılanıyorum?” değil, “Kaygı hayatımda nasıl bir yer kaplamaya başladı?” sorusudur.</p>
-                    
                     <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kaygı Bize Ne Söylüyor?</h4>
                     <p>Kaygı çoğu zaman bir tehdit ihtimaline dikkat çeker. Bazen gerçekten hazırlanmamız gereken bir durum vardır; bazen ise zihnimiz henüz gerçekleşmemiş onlarca ihtimali aynı anda değerlendirmeye çalışır. Bu nedenle kaygı yalnızca zihinde yaşanan bir düşünce değildir; kalp atışlarının hızlanması, kasların gerilmesi, huzursuzluk, mide rahatsızlıkları, nefes değişiklikleri veya uyku güçlükleri gibi bedensel deneyimler de eşlik edebilir. Her insan kaygıyı aynı biçimde deneyimlemez.</p>
-
                     <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kaygıyı Ortadan Kaldırmaya Çalışmak</h4>
                     <p>Kaygı rahatsız edici olduğunda doğal olarak ondan kurtulmak isteriz. Kaçınmak, sürekli düşünmek, güvence aramak veya her şeyi kontrol etmeye çalışmak kısa süreli bir rahatlama sağlayabilir. Fakat bazı durumlarda bu rahatlama, kaygıyla mücadeleyi daha da güçlendirebilir.</p>
                     <p>Örneğin bir kişi topluluk içinde konuşmaktan kaygı duyuyorsa her seferinde konuşmaktan kaçınmak o an için rahatlatıcı olabilir. Ancak zaman içerisinde “Konuşursam baş edemem.” düşüncesinin daha da güçlenmesine yol açabilir. Bu nedenle kaygıyla çalışmak, yalnızca kaygıyı azaltmaya odaklanmak anlamına gelmez.</p>
-
                     <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kaygı Varken de Yaşamak</h4>
                     <p>Kaygının hiç olmadığı bir yaşam gerçekçi bir hedef olmayabilir. Daha işlevsel bir soru bazen şudur: “Kaygı geldiğinde hayatımı nasıl yaşamaya devam edebilirim?” Çünkü yaşamın önemli kararları, ilişkileri veya sorumlulukları her zaman kendimizi tamamen hazır hissettiğimiz anlarda karşımıza çıkmaz.</p>
                     <p>Psikolojik danışmanlık sürecinde kişinin kaygıyı hangi durumlarda yaşadığı, kaygıya nasıl karşılık verdiği ve kaygının yaşamındaki hareket alanını ne ölçüde daralttığı birlikte ele alınabilir. Amaç kişinin kendisini kaygıdan arındırması değil; kaygıyla kurduğu ilişkiyi daha yakından tanıması ve yaşamında önem verdiği alanlara yeniden yer açabilmesidir.</p>
@@ -1444,202 +1491,4 @@
                     <p>Gelecek henüz yaşanmamıştır. Buna rağmen bazen bütün günümüzü gelecekte geçirebiliriz. Bir sınavın sonucu, iş bulup bulamayacağımız, ekonomik koşullar, ilişkimizin nereye gideceği veya birkaç yıl sonra nerede olacağımız...</p>
                     <p>Zihin belirsizliği sevmediğinde geleceğe ilişkin sorular çoğalır:</p>
                     <p class="italic text-stone-700">“Ya olmazsa?”<br>“Ya yanlış karar verirsem?”<br>“Ya işler kontrolden çıkarsa?”</p>
-                    <p>Gelecek kaygısı çoğu zaman geleceğin kendisinden çok, belirsizlikle kurduğumuz ilişkiyle ilgilidir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Geleceği Bilmek İstemek</h4>
-                    <p>İnsan zihninin geleceği tahmin etmeye çalışması son derece anlaşılabilir bir durumdur. Plan yapmak, seçenekleri değerlendirmek ve olası sonuçları düşünmek yaşamımızı düzenlememize yardımcı olur. Fakat plan yapmak ile geleceği zihinsel olarak tekrar tekrar yaşamaya çalışmak arasında önemli bir fark vardır. Bir noktadan sonra düşünmek çözüm üretmekten çıkıp aynı sorunun farklı biçimlerde yeniden sorulmasına dönüşebilir. Zihin bir cevap bulsa bile yeni bir soru üretebilir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kontrol Etme Çabası</h4>
-                    <p>Gelecek kaygısı yaşayan kişi bazen belirsizliği azaltmak için daha fazla kontrol etmeye çalışır. Daha fazla araştırmak, tekrar tekrar plan yapmak, başkalarından güvence istemek veya olabilecek bütün senaryoları önceden hesaplamak buna örnek olabilir. Ancak gelecekteki bütün ihtimalleri kontrol etmek mümkün değildir. Bu noktada önemli bir ayrım ortaya çıkar: Hazırlık yapmak başka, belirsizliği tamamen ortadan kaldırmaya çalışmak başkadır.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Bugünün İçinde Bir Yer Açmak</h4>
-                    <p>Gelecekle ilgilenmekten tamamen vazgeçmek gerekmez. Aksine, geleceğe yönelik planlar yaşamın önemli bir parçasıdır. Ancak kendimize şu soruyu sormak yararlı olabilir: “Gelecekle ilgili düşünürken bugünümü ne kadar kaçırıyorum?” Çünkü gelecekteki bir sonucu değiştirmek için yapabileceğimiz birçok şey aslında bugün gerçekleşir. Bazen geleceğe yönelik en gerçekçi adım, bugünün içinde atılabilecek küçük bir adımdır.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Belirsizlikle Yaşayabilmek</h4>
-                    <p>Psikolojik danışmanlıkta gelecek kaygısı ele alınırken yalnızca “olumsuz düşünceleri değiştirmek” üzerine odaklanmak yerine, belirsizliğe karşı geliştirilen tutumlar da değerlendirilebilir. Çünkü yaşamın önemli bir bölümü kesinlik içermez. Amaç bütün belirsizlikleri ortadan kaldırmak değil; belirsizlik varken de kişinin yaşamını sürdürebilmesine alan açmaktır.</p>
-                `
-            },
-            post3: {
-                category: "Stres",
-                title: "Stres Nedir? Bazen Sorun Stres Değil, Durmadan Devam Etmektir",
-                content: `
-                    <p>Bir günün içinde kaç farklı sorumluluğu aynı anda taşıyoruz? İş, eğitim, aile, ilişkiler, ekonomik konular, gelecek planları... Bazen gün bittiğinde bedenimiz hâlâ günün temposunun içindedir.</p>
-                    <p>Stres çoğu zaman hayatımızdan tamamen çıkarılması gereken bir düşman gibi düşünülür. Oysa stres, yaşamın değişen koşullarına verdiğimiz doğal tepkilerden biridir. Bizi harekete geçirebilir, dikkatli olmamızı sağlayabilir ve bazı durumlara hazırlayabilir. Sorun, stresin varlığından çok stresin yaşamımızda ne kadar süreyle ve nasıl kaldığıyla ilgili olabilir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Stres Bedenin ve Zihnin Hazırlanma Biçimlerinden Biri</h4>
-                    <p>Önemli bir görüşme öncesinde heyecanlanmak veya bir sınavdan önce daha dikkatli hâle gelmek olağandır. Bedenimiz ve zihnimiz karşılaştığımız durumun önemli olduğunu fark eder ve buna göre hazırlanır. Ancak stresli durum sona ermesine rağmen beden ve zihin sürekli alarmda kalıyorsa uykuya geçmek zorlaşabilir, dikkati toplamak güçleşebilir, tahammül azalabilir ve kişi sürekli yorgun hissedebilir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Sürekli Meşgul Olmak Her Zaman Verimli Olmak Değildir</h4>
-                    <p>Stresli dönemlerde dinlenmeyi ertelemek kolaydır: “Şunu da bitireyim.”, “Biraz daha dayanmalıyım.”, “Sonra dinlenirim.” Fakat “sonra” sürekli erteleniyorsa bedenin ve zihnin toparlanması için yeterli alan oluşmayabilir. Dinlenme, yapılacaklar listesinin sonunda kalan boş bir zaman değil; sürdürülebilir bir yaşamın parçalarından biridir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kontrol Edemediklerimiz</h4>
-                    <p>Stresli olduğumuzda her şeyi kontrol etmeye çalışabiliriz. Fakat başkalarının davranışları, gelecekte yaşanacak olaylar veya geçmişteki durumlar üzerinde tam kontrolümüz yoktur. Bu nedenle şu ayrım anlamlı olabilir: Neyi değiştirebilirim? Neye yalnızca vereceğim yanıtı seçebilirim? Neyi kontrol etmeye çalışmak beni daha da yoruyor?</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Stresle İlişkimizi Yeniden Düşünmek</h4>
-                    <p>Stresle çalışmak her zaman “daha sakin biri olmak” anlamına gelmez. Bazen mesele yaşamımızdaki yükleri, beklentileri, sınırları ve dinlenme biçimimizi yeniden değerlendirmektir. Psikolojik danışmanlık sürecinde stresin hangi koşullarda arttığı, stres karşısındaki alışılmış tepkiler ve günlük yaşam dengesi birlikte ele alınabilir.</p>
-                `
-            },
-            post4: {
-                category: "Ergenlik",
-                title: "Ergenlik Döneminde Duygusal Değişimler: “Beni Kimse Anlamıyor” Dediğinde",
-                content: `
-                    <p>Ergenlik döneminde bazen çok küçük görünen bir olay, genç için son derece önemli olabilir. Bir arkadaşın söylediği bir söz, sınavdan alınan bir puan, aileyle yaşanan bir tartışma veya görünüşle ilgili bir düşünce...</p>
-                    <p>Yetişkin açısından “geçer” gibi görünen bir durum, ergen açısından o an oldukça yoğun yaşanabilir. Bunun nedeni ergenlik döneminin yalnızca fiziksel değişimlerden ibaret olmamasıdır. Bu dönem aynı zamanda kendilik algısının, ilişkilerin, bağımsızlık ihtiyacının ve geleceğe ilişkin düşüncelerin yeniden şekillendiği bir süreçtir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">“Artık Çocuk Değilim”</h4>
-                    <p>Ergenlikte önemli bir ihtiyaç daha görünür hâle gelir: Kendi kararlarını verebilme isteği. Ancak bağımsızlaşma isteği ile ebeveynlerin koyduğu sınırlar her zaman aynı noktada buluşmayabilir. “Ben kendim karar verebilirim.”, “Bana güvenmiyorsunuz.”, “Beni çocuk yerine koyuyorsunuz.” gibi ifadeler gerilimin bir parçası olabilir. Bu durum ilişkinin bozulduğu anlamına gelmez; yeni bir ilişki biçiminin kurulma sürecidir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Duygular Neden Bu Kadar Yoğun Görünebilir?</h4>
-                    <p>Sosyal kabul, arkadaşlıklar, akademik başarı, beden algısı ve gelecek gibi konular bu dönemde daha fazla önem kazanır. Bu nedenle ergenin davranışına yalnızca “Neden böyle davranıyor?” sorusuyla bakmak yerine, “Bu davranışın arkasında hangi ihtiyaç olabilir?” sorusunu sormak çok daha açıklayıcıdır.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Ebeveyn İçin Zor Kısım</h4>
-                    <p>Ergenle iletişim kurarken ebeveynin ilk refleksi çoğu zaman çözüm üretmek olabilir: “Bunu kafana takma.”, “Daha çok çalış.”, “Arkadaşlarını boş ver.” Ancak bazen genç kişinin ihtiyacı çözümden önce anlaşılmaktır. Bu, her davranışın onaylanması anlamına gelmez. Sınırlar yine sınırdır; fakat sınır koymak ile duyguyu reddetmek aynı şey değildir. Bazen sadece “Bunun senin için gerçekten zor olduğunu görüyorum.” diyebilmek güvenli bir alan açar.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Ne Zaman Psikolojik Danışmanlık Düşünülebilir?</h4>
-                    <p>Her duygusal dalgalanma psikolojik danışmanlık gerektirmez. Ancak yaşanan güçlüklerin uzun süre devam etmesi; okul yaşamını, arkadaşlıkları veya aile ilişkilerini belirgin biçimde etkilemesi durumunda profesyonel destek değerlendirilebilir.</p>
-                `
-            },
-            post5: {
-                category: "Akademik",
-                title: "Sınav Kaygısı: Bazen Sınavdan Çok, Sınavın Anlamından Korkarız",
-                content: `
-                    <p>Bir sınav yalnızca sorulardan oluşmaz. Bazı öğrenciler için sınav; aile beklentileri, gelecek planları, başarı algısı ve “yeterli olup olmadığı” ile ilgili çok daha büyük bir anlam taşır. Bu nedenle sınav kaygısını yalnızca “sınavdan korkmak” şeklinde düşünmek yetersiz kalabilir. Bazen asıl soru şudur: “Bu sınavın sonucu benim için ne anlama geliyor?”</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Bir Puan Neyi Belirler?</h4>
-                    <p>“Bu sınavı kazanamazsam ne olacak?”, “Yeterince başarılı değilim.”, “Herkes benden daha iyi.” gibi düşünceler sınavın kendisinden daha büyük bir baskı oluşturabilir. Bir puanın kişinin bütün değerini, kapasitesini veya geleceğini belirlemediğini bilmek kolay olabilir. Ancak bunu sınav anında gerçekten hissedebilmek daha farklı bir meseledir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Kaygının Bedendeki Karşılığı</h4>
-                    <p>Kaygı yalnızca düşüncelerle yaşanmaz; kalp atışlarının hızlanması, ellerin terlemesi, mide rahatsızlığı veya dikkat dağınıklığı gibi fiziksel deneyimler ortaya çıkabilir. Sınav sırasında “Zihnim tamamen boşaldı.” hissi de yaşanabilir. Bu tür deneyimler kişinin başarısız olacağı anlamına gelmez; bedenin yoğun uyarılmışlığına verilen doğal bir tepkidir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Daha Çok Çalışmak Her Zaman Çözüm mü?</h4>
-                    <p>Çalışmak elbette önemlidir. Ancak bazı öğrenciler kaygıyı azaltmak için sürekli daha fazla çalışmaya yönelir. Bir noktadan sonra çalışma, hazırlık olmaktan çıkıp kaygıyı kontrol etme yöntemine dönüşebilir. Bu nedenle sınav kaygısıyla çalışırken yalnızca çalışma miktarına değil, sınava yüklenen anlama da bakmak gerekir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Sınav Sonucundan Daha Büyük Bir Çerçeve</h4>
-                    <p>Bir sınav önemlidir; ancak bir insanın bütün hikâyesi değildir. Psikolojik danışmanlık sürecinde sınav kaygısı ele alınırken akademik hedeflerin yanı sıra başarıya yüklenen anlam, öz değerlendirmeler, aile dinamikleri ve kaygı karşısındaki başa çıkma davranışları da değerlendirilir.</p>
-                `
-            },
-            post6: {
-                category: "Rehber",
-                title: "Psikolojik Danışmanlık Nedir? İnsan Neden Psikolojik Danışmanlığa Başvurur?",
-                content: `
-                    <p>“Gerçekten psikolojik danışmanlık almam gerekiyor mu?” Bu soru, profesyonel destek düşüncesinin hemen öncesinde birçok kişinin aklından geçebilir. Çünkü psikolojik danışmanlık denildiğinde bazen yalnızca ağır psikolojik krizler düşünülür.</p>
-                    <p>Oysa insanın destek aramasının tek nedeni “dayanamayacak durumda olmak” değildir. Bazen kişi yalnızca hayatında tekrar eden bir döngüyü anlamak ister. Bazen bir kararın eşiğindedir. Bazen ilişkilerinde ne olduğunu anlamlandıramaz veya uzun süredir taşıdığı bir yükü güvenli bir ortamda konuşmak ister.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Tavsiye Alma Süreci Değildir</h4>
-                    <p>Psikolojik danışmanlıkta danışmanın görevi danışanın hayatı adına karar vermek değildir: “Şunu yapmalısın.”, “Bunu bırak.” gibi doğrudan yönlendirmelerden çok, kişinin kendi deneyimini anlamasına ve seçeneklerini değerlendirmesine alan açmak esastır. Bu nedenle psikolojik danışmanlık, hazır reçetelerden çok kişinin kendi yaşamına yakından bakabileceği profesyonel bir eşlik sürecidir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">“Sorunum Yeterince Büyük Değil” Yanılgısı</h4>
-                    <p>Psikolojik danışmanlığa başvurmak için yaşadığınız güçlüğü başkalarıyla karşılaştırmanız gerekmez. “Başkalarının daha büyük dertleri var.” düşüncesi destek almayı erteletebilir. Oysa kişinin yaşadığı deneyimin yaşamında ne kadar yer kapladığı ve işlevselliğini ne kadar etkilediği çok daha anlamlı bir ölçüttür.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Bir Zayıflık Göstergesi Değildir</h4>
-                    <p>Destek istemek, kişinin kendi hayatına ilişkin sorumluluk almasının en olgun yollarından biridir. Süreçte amaç bütün zorlukları sihirli bir şekilde ortadan kaldırmak değil; yaşananları daha anlaşılır hâle getirmek, ihtiyaçları fark etmek ve daha bilinçli seçimler yapabilmektir.</p>
-                `
-            },
-            post7: {
-                category: "ACT",
-                title: "Zihnimizle Savaşmayı Bırakmak: Bilişsel Ayrışma Nedir?",
-                content: `
-                    <p>Zihnimiz bazen oldukça ikna edici konuşur: “Bunu yapamazsın.”, “Kesin kötü olacak.”, “Yeterince iyi değilsin.” Üstelik zihnin söyledikleri çoğu zaman yalnızca birer düşünce olarak değil, sanki tartışmasız mutlak gerçeklermiş gibi algılanır.</p>
-                    <p>Kabul ve Adanmışlık Terapisi’nin (ACT) temel kavramlarından biri olan bilişsel ayrışma (defüzyon) tam olarak burada devreye girer. Mesele düşünceleri susturmak değildir; mesele, düşünce ile gerçeklik arasındaki farkı yeniden görebilmektir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Zihnimiz Neden Bu Kadar İkna Edici?</h4>
-                    <p>Düşünceler yalnızca kelimelerden oluşmaz; onlara anılar, duygular ve beden duyumları eşlik eder. Örneğin kişi geçmişteki bir başarısızlığını hatırladığında “Yine başarısız olacağım.” düşüncesine kapılabilir. Bu düşünce o kadar gerçek hissedilebilir ki kişi henüz gerçekleşmemiş bir durum karşısında bile geri çekilebilir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Düşünceyi Fark Eden Konumuna Geçmek</h4>
-                    <div class="bg-stone-100 p-4 rounded-xl border border-stone-200 my-2 text-xs">
-                        <p class="font-semibold text-brand-textDark">“Ben başarısızım.” yerine;</p>
-                        <p class="text-brand-accent mt-0.5"><em>“Zihnim şu anda başarısız olduğuma dair bir hikâye anlatıyor.”</em> diyebilmek.</p>
-                    </div>
-                    <p>İkinci ifade düşünceyi yok etmez ancak düşünceye bakış açımızı değiştirir. Kişi düşüncenin içinde boğulmak yerine onu fark eden gözlemci konumuna geçer. Her düşünceyle tartışmak, onun kanıtını aramak yorucudur. Bilişsel ayrışma, düşüncenin doğruluğunu çözmeye çalışmadan onun sadece zihinsel bir olay olduğunu fark etmeyi sağlar.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Yaşam Düşüncelerden Daha Büyüktür</h4>
-                    <p>Zihnimiz hayatımız hakkında sürekli yorum yapar; ancak yaşam yalnızca bu yorumlardan ibaret değildir. ACT açısından amaç, zihni susturmak değil; zorlayıcı düşünceler orada var olmaya devam etse bile bizim için anlamlı olan değerler doğrultusunda hareket edebilme esnekliğini kazanmaktır.</p>
-                `
-            },
-            post8: {
-                category: "Değerler Odaklı",
-                title: "Hedefler mi, Değerler mi? Hayatın Pusulası",
-                content: `
-                    <p>“Bu hedefe ulaşırsam her şey yoluna girecek.” Hayatımızı çoğu zaman bu cümlelerin etrafında kurarız: İyi bir iş, yüksek bir gelir, sınavı kazanmak, evlenmek... Bunların hepsi önemlidir; fakat bir hedef gerçekleştiğinde hayat bitmez, hemen yenisi gelir.</p>
-                    <p>Bu nedenle ACT yaklaşımında kritik bir ayrım yapılır: Hedefler ulaşılacak varış noktalarını, değerler ise yolculuk boyunca bize rehberlik eden pusulayı gösterir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Bir Hedefin Sonu Vardır, Değerlerin Sonu Yoktur</h4>
-                    <p>Bir sınavı kazanabilir veya bir okuldan mezun olabilirsiniz; hedefler sonuç odaklıdır ve tamamlandıklarında biterler. Değerler ise tamamlanacak bir liste değildir. Örneğin “öğrenmek” bir değerdir; ne kadar öğrenirseniz öğrenin bu değer bitmez. “Yakın ilişkiler kurmak” bir değerdir; bir kez iyi davrandınız diye tamamlanmış sayılmaz. Değerler, yaşam boyu tekrar tekrar seçtiğimiz yönelimlerdir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Mutlu Olduğumda Değerlerime Göre Yaşarım Yanılgısı</h4>
-                    <p>“Önce kaygım geçsin, önce motivasyonum gelsin, sonra adımı atarım.” düşüncesi anlaşılırdır. Fakat hayatı yalnızca iyi hissettiğimiz anlarda yaşamaya kalkarsak birçok şeyi sonsuza dek erteleyebiliriz. Değer odaklı yaşamın özü, zorlayıcı duyguların varlığına rağmen kendimiz için anlamlı olan küçük bir davranışı seçebilmektir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Hedefe Ulaşamadığımızda Pusula Neyi Gösterir?</h4>
-                    <p>Bir hedefin gerçekleşmemesi üzüntü yaratabilir. Ancak sınav istediğimiz gibi geçmese ya da bir iş başvurusu reddedilse bile, kişi kendisi için önemli olan değerleri (örneğin dürüstlük, çaba, öğrenme) yaşamaya devam edebilir. Değerler, yalnızca hedefe ulaştığımızda değil; işler yolunda gitmediğinde de bize hangi yöne yürüyeceğimizi fısıldar.</p>
-                `
-            },
-            post9: {
-                category: "MBSR",
-                title: "Stres Anında Otomatik Pilottan Farkındalıklı Yanıta Geçiş",
-                content: `
-                    <p>Bazen günün nasıl geçtiğini anlamadan akşam olur. Bir toplantıda fiziksel olarak oradayızdır ama zihnimiz kilometrelerce uzaktadır. Birini dinlerken vereceğimiz cevabı kurgulamaktan anlatılanı duymayabiliriz. Bu deneyimlere otomatik pilot denir.</p>
-                    <p>Otomatik pilot bir kusur değildir; beynin enerjiyi tasarruflu kullanma yoludur. Fakat stres yükseldiğinde otomatik pilot kalıplaşmış savunma tepkilerine yol açar. İşte bu anlarda farkındalık hayati bir önem kazanır.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Üç Nefeslik Duraklama Alanı</h4>
-                    <p>Bunu stresi hemen yok etme çabası olarak değil, durup olanı fark etme alanı olarak görebiliriz:</p>
-                    <ul class="list-disc list-inside space-y-1 text-xs pl-2">
-                        <li><strong>İlk nefes (Zihni fark et):</strong> Zihniniz şu an ne söylüyor? “Yetişemeyeceğim”, “Çok iş var”... Düşünceyi değiştirmeye çalışmadan yalnızca fark edin.</li>
-                        <li><strong>İkinci nefes (Bedeni fark et):</strong> Omuzlar nasıl? Çene sıkılı mı? Nefes nerede? Bedeni düzeltmeye çalışmadan, gerilimi şefkatle fark edin.</li>
-                        <li><strong>Üçüncü nefes (Çevreye dön):</strong> Bulunduğunuz yerdeki bir sese, ayakların zemine temasına odaklanın. Ve sorun: “Şu an gerçekten neye ihtiyacım var?”</li>
-                    </ul>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Farkındalık Zihni Boşaltmak Değildir</h4>
-                    <p>Mindfulness zihni tamamen susturmak anlamına gelmez. Zihnin düşünce üretmesi pratiğin başarısız olduğu anlamına gelmez; dikkatin dağıldığını fark ettiğiniz an onu nazikçe geri getirebilmek zaten farkındalığın ta kendisidir.</p>
-
-                    <h4 class="font-serif-heading text-lg font-bold text-brand-textDark pt-2">Farkındalık Günlük Yaşamda Başlar</h4>
-                    <p>Kahve içerken sadece kahvenin sıcaklığını hissetmek, yürürken adımların ritmine odaklanmak, birini cevabı düşünmeden dinlemek... Bunların her biri dikkati şimdiki ana çapalamaktır. Bazen farkındalık büyük değişimlerle değil, birkaç saniyelik bir duraklama ile başlar.</p>
-                `
-            }
-        };
-
-        function openBlogModal(postKey) {
-            const post = blogPosts[postKey];
-            if (!post) return;
-            document.getElementById('blogModalCategory').innerText = post.category;
-            document.getElementById('blogModalTitle').innerText = post.title;
-            document.getElementById('blogModalContent').innerHTML = post.content;
-            document.getElementById('blogModal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeBlogModal() {
-            document.getElementById('blogModal').classList.add('hidden');
-            document.body.style.overflow = '';
-        }
-
-        function handleBackdropClick(event) {
-            if (event.target.id === 'bookingModal') closeBookingModal();
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const toastMsg = document.getElementById('toastMessage');
-            toastMsg.innerText = message || 'Talebiniz başarıyla alındı!';
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            toast.classList.add('translate-y-0', 'opacity-100');
-            setTimeout(() => {
-                toast.classList.remove('translate-y-0', 'opacity-100');
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 4000);
-        }
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            showToast('Randevu talebiniz başarıyla iletildi. En kısa sürede dönüş sağlanacaktır.');
-            event.target.reset();
-        }
-
-        function handleModalSubmit(event) {
-            event.preventDefault();
-            closeBookingModal();
-            showToast('Randevu talebiniz alındı. İletişim bilgileriniz üzerinden size ulaşılacaktır.');
-            event.target.reset();
-        }
-    </script>
-</body>
-</html>
+                    <p>Gelecek kaygısı çoğu zaman geleceğin
