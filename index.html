@@ -1650,21 +1650,54 @@
             }, 4000);
         }
 
+        // WhatsApp Yönlendirme Yardımcısı
+        function sendToWhatsApp(fullName, phone, service, timeSlot) {
+            var msg = "🔔 YENİ RANDEVU TALEBİ\n" +
+                      "Ad Soyad: " + (fullName || "-") + "\n" +
+                      "Telefon: " + (phone || "-") + "\n" +
+                      "Hizmet: " + (service || "-") + "\n" +
+                      "Uygun Zaman: " + (timeSlot || "Belirtilmedi");
+
+            var waUrl = "https://api.whatsapp.com/send?phone=905529389759&text=" + encodeURIComponent(msg);
+            window.open(waUrl, "_blank");
+        }
+
         // Sayfa İçi Form Gönderimi
         function handlePageFormSubmit(e) {
-            e.preventDefault();
+            if (e && e.preventDefault) {
+                e.preventDefault();
+            }
             var form = e.target;
-            showToast('Randevu talebiniz alındı, en kısa sürede dönüş sağlanacaktır.');
+            
+            var name = form.fullName ? form.fullName.value.trim() : "";
+            var phone = form.phone ? form.phone.value.trim() : "";
+            var service = form.service ? form.service.value : "";
+            var timeSlot = form.timeSlot ? form.timeSlot.value : "Belirtilmedi";
+            // Not / Başvuru nedeni alanı kasten mesaja eklenmedi
+
+            showToast("WhatsApp'a yönlendiriliyorsunuz...");
+            sendToWhatsApp(name, phone, service, timeSlot);
             form.reset();
+            return false;
         }
 
         // Modal İçi Form Gönderimi
         function handleModalFormSubmit(e) {
-            e.preventDefault();
+            if (e && e.preventDefault) {
+                e.preventDefault();
+            }
             var form = e.target;
+            
+            var name = form.modalFullName ? form.modalFullName.value.trim() : "";
+            var phone = form.modalPhone ? form.modalPhone.value.trim() : "";
+            var service = form.modalService ? form.modalService.value : "";
+            var timeSlot = "Ön Görüşmede Belirlenecek";
+
             closeBookingModal();
-            showToast('Talebiniz başarıyla iletildi!');
+            showToast("WhatsApp'a yönlendiriliyorsunuz...");
+            sendToWhatsApp(name, phone, service, timeSlot);
             form.reset();
+            return false;
         }
 
         // ESC Tuşu İle Modalları Kapatma Desteği
